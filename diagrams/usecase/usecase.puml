@@ -36,8 +36,6 @@ rectangle "Market" {
     (buy item) .> (transfer money) : include 
 
     (transfer money) -- bank
-    
-
 
 
 }
