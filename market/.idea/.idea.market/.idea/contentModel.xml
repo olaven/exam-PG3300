@@ -13,6 +13,7 @@
           </e>
         </e>
         <e p="Program.cs" t="Include" />
+        <e p="test" t="Include" />
       </e>
       <e p="market.sln" t="IncludeFlat" />
       <e p="packages" t="ExcludeRecursive" />
