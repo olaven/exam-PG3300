@@ -14,8 +14,10 @@ Exam in Software Design, at Kristiania University College
     * C# sin Random funksjonalitet er i seg selv ikke trådsikker, løsninger på dette kan googles.
     * Det er greit å benytte Sleepfor å simulere at deler av løsningen tar tid/få tiden til å gå.
 - [ ] Dokumentasjon
+    - [ ] Simulering av folks interagering med et marked, ikke en simulering av et marked 
     - [ ] Patterns dokumenteres 
     - [ ] Skriv om multithreadingen, og hva som kunne skjedd om den ikke var trådsikker 
+    - [ ] Composition vs aggregation med eksempler til class diagram 
     - [ ] Forklar alle patterns
         - [ ] Hva gjør de 
         - [ ] Hvor bruker vi dem 
