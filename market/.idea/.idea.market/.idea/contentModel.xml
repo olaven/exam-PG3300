@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="$PROJECT_DIR$" t="IncludeFlat">
+    <e p="C:\SoftwareEksamen\eksamen-PG3300\market" t="IncludeFlat">
       <e p="market" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
         <e p="market.csproj" t="IncludeRecursive" />
@@ -18,7 +18,7 @@
       <e p="market.sln" t="IncludeFlat" />
       <e p="packages" t="ExcludeRecursive" />
     </e>
-    <e p="$USER_HOME$/Library/Caches/Rider2018.2/extResources" t="IncludeRecursive" />
-    <e p="$USER_HOME$/Library/Caches/Rider2018.2/resharper-host/local/Transient/ReSharperHost/v182/SolutionCaches/_market.-1665615751.00" t="ExcludeRecursive" />
+    <e p="C:\Users\tstur\.Rider2018.2\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\tstur\.Rider2018.2\system\resharper-host\local\Transient\ReSharperHost\v182\SolutionCaches\_market.-1826880676.00" t="ExcludeRecursive" />
   </component>
 </project>

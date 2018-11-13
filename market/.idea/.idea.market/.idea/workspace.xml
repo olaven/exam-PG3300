@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="030ea218-b118-42a8-b6a8-bc12018fda28" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../diagrams/class/placeholder" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.market/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.market/.idea/contentModel.xml" afterDir="false" />
@@ -15,6 +16,9 @@
       <change beforePath="$PROJECT_DIR$/../program/program/obj/Debug/netcoreapp2.1/program.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../program/program/obj/Debug/netcoreapp2.1/program.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../program/program/obj/Debug/netcoreapp2.1/program.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../program/program/obj/Debug/netcoreapp2.1/program.csprojAssemblyReference.cache" afterDir="false" />
     </list>
+=======
+    <list default="true" id="94385085-e4bf-4304-886a-3ba360ed2ad7" name="Default Changelist" comment="" />
+>>>>>>> fc252f436d2a881634448652b01ede68e2ab6ac3
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +26,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FUSProjectUsageTrigger">
+<<<<<<< HEAD
     <session id="-23870135">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
@@ -29,37 +34,61 @@
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.5" value="1" />
           <entry key="project.opened" value="2" />
+=======
+    <session id="-544122662">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.4" value="1" />
+          <entry key="project.opened" value="1" />
+>>>>>>> fc252f436d2a881634448652b01ede68e2ab6ac3
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
+<<<<<<< HEAD
           <entry key="Config" value="1" />
           <entry key="cs" value="4" />
           <entry key="csproj" value="1" />
+=======
+          <entry key="cs" value="1" />
+>>>>>>> fc252f436d2a881634448652b01ede68e2ab6ac3
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
+<<<<<<< HEAD
           <entry key="C#" value="4" />
           <entry key="Config" value="1" />
           <entry key="Csproj" value="1" />
+=======
+          <entry key="C#" value="1" />
+>>>>>>> fc252f436d2a881634448652b01ede68e2ab6ac3
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
+<<<<<<< HEAD
           <entry key="cs" value="157" />
           <entry key="csproj" value="36" />
+=======
+          <entry key="cs" value="109" />
+>>>>>>> fc252f436d2a881634448652b01ede68e2ab6ac3
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
+<<<<<<< HEAD
           <entry key="C#" value="157" />
           <entry key="Csproj" value="36" />
+=======
+          <entry key="C#" value="109" />
+>>>>>>> fc252f436d2a881634448652b01ede68e2ab6ac3
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
+<<<<<<< HEAD
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/market/Program.cs">
@@ -84,6 +113,19 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="225">
               <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+=======
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/market/Program.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="1" lean-forward="true" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+              <folding>
+                <marker date="1542117494566" expanded="true" signature="31:145" ph="{...}" />
+                <marker date="1542117494566" expanded="true" signature="53:143" ph="{...}" />
+                <marker date="1542117494566" expanded="true" signature="104:137" ph="{...}" />
+              </folding>
+>>>>>>> fc252f436d2a881634448652b01ede68e2ab6ac3
             </state>
           </provider>
         </entry>
@@ -95,15 +137,22 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/market/Program.cs" root0="FORCE_HIGHLIGHTING" />
+<<<<<<< HEAD
     <setting file="file://$USER_HOME$/.config/NuGet/NuGet.Config" root0="FORCE_HIGHLIGHTING" />
+=======
+>>>>>>> fc252f436d2a881634448652b01ede68e2ab6ac3
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/market/SomeClass.cs" />
         <option value="$PROJECT_DIR$/market/SomeClassTest.cs" />
         <option value="$PROJECT_DIR$/market/SoundTest.cs" />
         <option value="$PROJECT_DIR$/market/market.csproj" />
+=======
+        <option value="$PROJECT_DIR$/market/Program.cs" />
+>>>>>>> fc252f436d2a881634448652b01ede68e2ab6ac3
       </list>
     </option>
   </component>
@@ -114,10 +163,15 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
+    <option name="x" value="218" />
+    <option name="y" value="89" />
     <option name="width" value="1440" />
     <option name="height" value="900" />
   </component>
+<<<<<<< HEAD
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+=======
+>>>>>>> fc252f436d2a881634448652b01ede68e2ab6ac3
   <component name="ProjectView">
     <navigator currentView="SolutionExplorer" proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -189,6 +243,7 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
+<<<<<<< HEAD
       <changelist id="030ea218-b118-42a8-b6a8-bc12018fda28" name="Default Changelist" comment="" />
       <created>1542102724756</created>
       <option name="number" value="Default" />
@@ -196,11 +251,23 @@
       <updated>1542102724756</updated>
       <workItem from="1542102727209" duration="2470000" />
       <workItem from="1542110795402" duration="1543000" />
+=======
+      <changelist id="94385085-e4bf-4304-886a-3ba360ed2ad7" name="Default Changelist" comment="" />
+      <created>1542105377988</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1542105377988</updated>
+      <workItem from="1542105380908" duration="3373000" />
+>>>>>>> fc252f436d2a881634448652b01ede68e2ab6ac3
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="4013000" />
+=======
+    <option name="totallyTimeSpent" value="3373000" />
+>>>>>>> fc252f436d2a881634448652b01ede68e2ab6ac3
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -212,12 +279,27 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
+<<<<<<< HEAD
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2532189" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Inspection Results" weight="0.32920793" />
+=======
+    <frame x="218" y="89" width="1440" height="900" extended-state="0" />
+    <layout>
+      <window_info id="Favorites" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="NuGet" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Unit Tests" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+>>>>>>> fc252f436d2a881634448652b01ede68e2ab6ac3
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -225,6 +307,7 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
+<<<<<<< HEAD
       <window_info anchor="bottom" id="NuGet" order="7" weight="0.32920793" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
@@ -237,16 +320,29 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Errors In Solution" order="3" />
       <window_info anchor="right" id="Database" order="4" />
+=======
+      <window_info anchor="right" id="Errors In Solution" />
+      <window_info anchor="right" id="Database" />
+      <window_info anchor="right" id="Unit Tests Coverage" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+>>>>>>> fc252f436d2a881634448652b01ede68e2ab6ac3
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+<<<<<<< HEAD
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
+=======
+  <component name="UnityProjectConfiguration" hasMinimizedUI="null" />
+>>>>>>> fc252f436d2a881634448652b01ede68e2ab6ac3
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+<<<<<<< HEAD
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
@@ -285,6 +381,18 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+=======
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/market/Program.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="1" lean-forward="true" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+          <folding>
+            <marker date="1542117494566" expanded="true" signature="31:145" ph="{...}" />
+            <marker date="1542117494566" expanded="true" signature="53:143" ph="{...}" />
+            <marker date="1542117494566" expanded="true" signature="104:137" ph="{...}" />
+          </folding>
+>>>>>>> fc252f436d2a881634448652b01ede68e2ab6ac3
         </state>
       </provider>
     </entry>
