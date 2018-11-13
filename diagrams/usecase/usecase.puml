@@ -1,0 +1,45 @@
+@startuml Market
+
+actor person
+
+actor customer
+actor salesman 
+actor bank
+
+person <|-- customer
+person <|-- salesman
+
+rectangle "Market" {
+
+    (buy item) 
+    (bargain for item)
+    (put item up for sale)
+    (transfer money)
+    (choose item)
+
+    note "if enough money" as buyNote
+    note "almost enough money" as bargainNote
+    :customer: -- (choose item) 
+    :salesman: -- (put item up for sale)
+    
+    buyNote .. (buy item)
+    (choose item) <. buyNote : extends
+
+    bargainNote .. (bargain for item) 
+    (choose item) <.. bargainNote : extends
+
+    (bargain for item) ..> (buy item)
+
+
+
+
+    (buy item) .> (transfer money) : include 
+
+    (transfer money) -- bank
+    
+
+
+
+}
+
+@enduml
