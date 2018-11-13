@@ -4,7 +4,6 @@ actor person
 
 actor customer
 actor salesman 
-actor bank
 
 person <|-- customer
 person <|-- salesman
@@ -16,11 +15,14 @@ rectangle "Market" {
     (put item up for sale)
     (transfer money)
     (choose item)
+    (consider bargin)
+    (transfer money)
 
     note "if enough money" as buyNote
     note "almost enough money" as bargainNote
     :customer: -- (choose item) 
     :salesman: -- (put item up for sale)
+    :salesman: -- (transfer money)
     
     buyNote .. (buy item)
     (choose item) <. buyNote : extends
@@ -28,14 +30,13 @@ rectangle "Market" {
     bargainNote .. (bargain for item) 
     (choose item) <.. bargainNote : extends
 
-    (bargain for item) ..> (buy item)
-
+    (bargain for item) ..> (consider bargin)
+    (consider bargin) ..> (buy item)
+    (consider bargin) .. (put item up for sale)
 
 
 
     (buy item) .> (transfer money) : include 
-
-    (transfer money) -- bank
     
 
 
