@@ -6,9 +6,22 @@ Exam in Software Design, at Kristiania University College
 - [ ] Klassediagram -> Alle patterns 
 - [ ] Sekvensdiagram 
 - [ ] Multithreaded løsning (trådsikker!)
+- [ ] Implementering 
+    - [ ] Operator overlasting 
+    - [ ] Properties (bruk vanlige 
+    - [ ] "java-style" felter også, for å vise at vi kan det)
+    - [ ] Unit testing med NUnit
+    * C# sin Random funksjonalitet er i seg selv ikke trådsikker, løsninger på dette kan googles.
+    * Det er greit å benytte Sleepfor å simulere at deler av løsningen tar tid/få tiden til å gå.
 - [ ] Dokumentasjon
     - [ ] Patterns dokumenteres 
-    - [ ] 
+    - [ ] Skriv om multithreadingen, og hva som kunne skjedd om den ikke var trådsikker 
+    - [ ] Forklar alle patterns
+        - [ ] Hva gjør de 
+        - [ ] Hvor bruker vi dem 
+        - [ ] Hva oppnår de der de brukes (GRASP?)
+    - [ ] Skriv om GRASP 
+        - [ ] Hvilke prinsipper følges, hvor 
 
 Dag 1: 
 
