@@ -4,7 +4,8 @@ namespace Market
 {
     public abstract class ItemDecorator : Item
     {
-        private readonly Item _item; 
+        private readonly Item _item;
+        protected readonly PriceAdjuster priceAdjuster; 
         
         public string Name { get; set; }
         public double Price { get; set; }
@@ -13,6 +14,7 @@ namespace Market
         protected ItemDecorator(Item original)
         {
             _item = original; 
+            priceAdjuster = new PriceAdjuster();
         }
 
         public virtual string getCondition()

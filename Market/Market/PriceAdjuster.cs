@@ -5,7 +5,7 @@ namespace Market
     public class PriceAdjuster
     {
         Random random = new Random();
-        
+
         /// <summary>
         /// Adjusts the price of the given item.
         /// Having a negative min allows negative
@@ -15,9 +15,9 @@ namespace Market
         /// <param name="min"></param>
         /// <param name="max"></param>
         /// <returns></returns>
-        public void getNew(ItemDecorator decoratedItem, int min, int max)
+        public void adjustPriceOf(Item item, int min, int max)
         {
-            decoratedItem.Price += random.Next(min, max); 
+            item.Price += random.Next(min, max); 
         }
     }
 }

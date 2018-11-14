@@ -19,6 +19,7 @@ class ConcreteItem implements Item {
 
 abstract ItemDecorator implements Item {
     - item : Item 
+    - priceAdjuster : PriceAdjuster 
 }
 
 class PriceAdjuster {

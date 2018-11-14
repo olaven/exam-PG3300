@@ -1,25 +1,14 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.1",
-    "signature": "763cb84a8fd5af2de31b53079f2f991875ba737a"
+    "signature": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
   },
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v2.1": {
       "Market/1.0.0": {
-        "dependencies": {
-          "NUnit": "3.11.0"
-        },
         "runtime": {
           "Market.dll": {}
-        }
-      },
-      "NUnit/3.11.0": {
-        "runtime": {
-          "lib/netstandard2.0/nunit.framework.dll": {
-            "assemblyVersion": "3.11.0.0",
-            "fileVersion": "3.11.0.0"
-          }
         }
       }
     }
@@ -29,13 +18,6 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
-    },
-    "NUnit/3.11.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-zecrYxUA5p5w8AZ2bvbBbiUIcrQnZAVPrziNMSWMdcOi0D2Oe7yKUNivWPIQMcUwQDHmWtS/ijnD48ubU/eHZQ==",
-      "path": "nunit/3.11.0",
-      "hashPath": "nunit.3.11.0.nupkg.sha512"
     }
   }
 }
