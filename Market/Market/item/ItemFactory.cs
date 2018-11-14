@@ -1,12 +1,13 @@
 using System;
+using Market; 
 
-namespace Market
+namespace Item
 {
     public class ItemFactory
     {
         public void getNew(String name, double price, Person person)
         {
-            Item item  = new ConcreteItem(name, price, person);
+            IItem item  = new ConcreteItem(name, price, person);
             
             
         }

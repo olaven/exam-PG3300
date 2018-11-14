@@ -1,6 +1,9 @@
-namespace Market
+using System; 
+using Market; 
+
+namespace Item
 {
-    public class ConcreteItem : Item
+    public class ConcreteItem : IItem
     {
         public string Name { get; set; }
         public double Price { get; set; }

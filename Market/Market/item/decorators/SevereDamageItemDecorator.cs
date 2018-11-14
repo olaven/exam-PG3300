@@ -1,8 +1,8 @@
-namespace Market
+namespace Item
 {
     public class SevereDamageItemDecorator : ItemDecorator
     {
-        public SevereDamageItemDecorator(Item original) : base(original)
+        public SevereDamageItemDecorator(IItem original) : base(original)
         {
             priceAdjuster.adjustPriceOf(original, -70, -10);
         }

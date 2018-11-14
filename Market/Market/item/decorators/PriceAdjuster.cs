@@ -1,6 +1,6 @@
 using System;
 
-namespace Market
+namespace Item
 {
     public class PriceAdjuster
     {
@@ -15,7 +15,7 @@ namespace Market
         /// <param name="min"></param>
         /// <param name="max"></param>
         /// <returns></returns>
-        public void adjustPriceOf(Item item, int min, int max)
+        public void adjustPriceOf(IItem item, int min, int max)
         {
             item.Price += _random.Next(min, max); 
         }

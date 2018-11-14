@@ -1,4 +1,5 @@
 ﻿using System;
+using Item; 
 
 namespace Market
 {
@@ -6,7 +7,7 @@ namespace Market
     {
         private static void Main(string[] args)
         {
-            Item myItem = new ConcreteItem("myItem", 200, new Salesman("name"));
+            IItem myItem = new ConcreteItem("myItem", 200, new Salesman("name"));
             NoDamageItemDecorator damaged = new NoDamageItemDecorator(myItem);
 
             Console.Write(myItem.getInformation());

@@ -13,6 +13,7 @@ Exam in Software Design, at Kristiania University College
     - [ ] "java-style" felter også, for å vise at vi kan det)
     - [ ] Ha flere solutions i et project 
     - [ ] Bruke c# regions 
+    - [ ] Kjøre på med en namespace til 
     - [ ] Unit testing med NUnit
     * C# sin Random funksjonalitet er i seg selv ikke trådsikker, løsninger på dette kan googles.
     * Det er greit å benytte Sleepfor å simulere at deler av løsningen tar tid/få tiden til å gå.

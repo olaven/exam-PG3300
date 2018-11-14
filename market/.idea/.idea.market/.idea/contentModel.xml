@@ -14,7 +14,7 @@
             <e p="SevereDamageItemDecorator.cs" t="Include" />
             <e p="WithWingsItemDecorator.cs" t="Include" />
           </e>
-          <e p="Item.cs" t="Include" />
+          <e p="IItem.cs" t="Include" />
           <e p="ItemDecorator.cs" t="Include" />
           <e p="ItemFactory.cs" t="Include" />
           <e p="test" t="Include" />

@@ -1,17 +1,18 @@
 using System;
+using Market; 
 
-namespace Market
+namespace Item
 {
-    public abstract class ItemDecorator : Item
+    public abstract class ItemDecorator : IItem
     {
-        private readonly Item _item;
+        private readonly IItem _item;
         protected readonly PriceAdjuster priceAdjuster; 
         
         public string Name { get; set; }
         public double Price { get; set; }
         public Person Owner { get; set; }
 
-        protected ItemDecorator(Item original)
+        protected ItemDecorator(IItem original)
         {
             _item = original; 
             priceAdjuster = new PriceAdjuster();

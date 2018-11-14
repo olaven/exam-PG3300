@@ -1,10 +1,10 @@
 using System;
 
-namespace Market
+namespace Item
 {
     public class WithWingsItemDecorator : ItemDecorator
     {
-        public WithWingsItemDecorator(Item original) : base(original)
+        public WithWingsItemDecorator(IItem original) : base(original)
         {
             priceAdjuster.adjustPriceOf(original, 5, 15);
         }

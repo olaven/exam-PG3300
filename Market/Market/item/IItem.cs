@@ -1,8 +1,9 @@
 using System;
+using Market; 
 
-namespace Market
+namespace Item
 {
-    public interface Item
+    public interface IItem
     {
         String Name { get; set; }
         double Price { get; set; }

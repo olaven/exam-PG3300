@@ -1,4 +1,5 @@
 using System;
+using Item; 
 using System.Collections.Generic;
 using System.Reflection.Metadata.Ecma335;
 
@@ -7,7 +8,7 @@ namespace Market
     public abstract class Person
     {
         protected Wallet Wallet;
-        protected List<Item> Items;
+        protected List<IItem> Items;
         protected string Name;
 
         protected Person() : this("unknown")
@@ -17,7 +18,7 @@ namespace Market
         protected Person(string name)
         {
             Wallet = new Wallet();
-            Items = new List<Item>();
+            Items = new List<IItem>();
             this.Name = name;
         }
 
