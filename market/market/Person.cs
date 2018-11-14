@@ -1,17 +1,27 @@
+using System;
 using System.Collections.Generic;
+using System.Reflection.Metadata.Ecma335;
 
 namespace Market
 {
     public abstract class Person
     {
-        protected Wallet _wallet;
-        protected List<Item> _items;
+        protected Wallet Wallet;
+        protected List<Item> Items;
+        protected string Name;
 
-        public Person()
+        protected Person() : this("unknown")
         {
-            _wallet = new Wallet();
-            _items = new List<Item>();
         }
+
+        protected Person(string name)
+        {
+            Wallet = new Wallet();
+            Items = new List<Item>();
+            this.Name = name;
+        }
+
+        protected abstract void Act();
 
 
     }
