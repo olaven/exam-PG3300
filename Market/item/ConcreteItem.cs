@@ -6,7 +6,19 @@ namespace Item
     public class ConcreteItem : IItem
     {
         public string Name { get; set; }
-        public double Price { get; set; }
+
+        public double Price
+        {
+            get { return Price; }
+            set
+            {
+                if (value > Price)
+                {
+                    Price = 0; 
+                }
+            }
+        }
+
         public Person Owner { get; set; }
 
         public ConcreteItem(string name, double price, Person owner)
