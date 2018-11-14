@@ -681,23 +681,23 @@
     ]
   },
   "packageFolders": {
-    "/Users/olav/.nuget/packages/": {},
+    "/Users/tordjon/.nuget/packages/": {},
     "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/olav/Documents/skole/kristiania/3_semester/software_design/eksamen-PG3300/Market/Market/Market.csproj",
+      "projectUniqueName": "/Users/tordjon/Documents/eksamen-PG3300/market/market/market.csproj",
       "projectName": "Market",
-      "projectPath": "/Users/olav/Documents/skole/kristiania/3_semester/software_design/eksamen-PG3300/Market/Market/Market.csproj",
-      "packagesPath": "/Users/olav/.nuget/packages/",
-      "outputPath": "/Users/olav/Documents/skole/kristiania/3_semester/software_design/eksamen-PG3300/Market/Market/obj/",
+      "projectPath": "/Users/tordjon/Documents/eksamen-PG3300/market/market/market.csproj",
+      "packagesPath": "/Users/tordjon/.nuget/packages/",
+      "outputPath": "/Users/tordjon/Documents/eksamen-PG3300/market/market/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "/Users/olav/.config/NuGet/NuGet.Config"
+        "/Users/tordjon/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.1"

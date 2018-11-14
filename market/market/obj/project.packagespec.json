@@ -1,10 +1,10 @@
 ﻿{
   "version": "1.0.0",
   "restore": {
-    "projectUniqueName": "/Users/olav/Documents/skole/kristiania/3_semester/software_design/eksamen-PG3300/Market/Market/Market.csproj",
+    "projectUniqueName": "/Users/tordjon/Documents/eksamen-PG3300/market/market/market.csproj",
     "projectName": "Market",
-    "projectPath": "/Users/olav/Documents/skole/kristiania/3_semester/software_design/eksamen-PG3300/Market/Market/Market.csproj",
-    "outputPath": "/Users/olav/Documents/skole/kristiania/3_semester/software_design/eksamen-PG3300/Market/Market/obj/",
+    "projectPath": "/Users/tordjon/Documents/eksamen-PG3300/market/market/market.csproj",
+    "outputPath": "/Users/tordjon/Documents/eksamen-PG3300/market/market/obj/",
     "projectStyle": "PackageReference",
     "fallbackFolders": [
       "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
