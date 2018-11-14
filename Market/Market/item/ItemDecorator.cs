@@ -15,6 +15,10 @@ namespace Market
         {
             _item = original; 
             priceAdjuster = new PriceAdjuster();
+
+            Name = _item.Name;
+            Price = _item.Price;
+            Owner = _item.Owner; 
         }
 
         public virtual string getCondition()

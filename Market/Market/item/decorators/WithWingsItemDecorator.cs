@@ -6,7 +6,7 @@ namespace Market
     {
         public WithWingsItemDecorator(Item original) : base(original)
         {
-            Price += new Random().Next(20, 30); 
+            priceAdjuster.adjustPriceOf(original, 5, 15);
         }
 
         public override string getModification()

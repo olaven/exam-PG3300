@@ -4,7 +4,7 @@ namespace Market
 {
     public class PriceAdjuster
     {
-        Random random = new Random();
+        readonly Random _random = new Random();
 
         /// <summary>
         /// Adjusts the price of the given item.
@@ -17,7 +17,7 @@ namespace Market
         /// <returns></returns>
         public void adjustPriceOf(Item item, int min, int max)
         {
-            item.Price += random.Next(min, max); 
+            item.Price += _random.Next(min, max); 
         }
     }
 }

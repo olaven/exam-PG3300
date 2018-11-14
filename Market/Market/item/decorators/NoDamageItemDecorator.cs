@@ -4,7 +4,7 @@ namespace Market
     {
         public NoDamageItemDecorator(Item original) : base(original)
         {
-            priceAdjuster.adjustPriceOf(original, 5, 20);
+            priceAdjuster.adjustPriceOf(this, 5, 20);
         }
 
         public override string getDamage()
