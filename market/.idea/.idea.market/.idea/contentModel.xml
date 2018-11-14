@@ -1,17 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
+<<<<<<< HEAD
     <e p="$PROJECT_DIR$" t="IncludeFlat">
       <e p="Market" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
         <e p="ConcreteItem.cs" t="Include" />
+=======
+    <e p="C:\SoftwareEksamen\eksamen-PG3300\market" t="IncludeFlat">
+      <e p="market" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+>>>>>>> facd46c7b03e5f4e6d7dea76cce06808083a978f
         <e p="Customer.cs" t="Include" />
         <e p="Item.cs" t="Include" />
         <e p="ItemDecorator.cs" t="Include" />
         <e p="ItemFactory.cs" t="Include" />
         <e p="Market.cs" t="Include" />
         <e p="Market.csproj" t="IncludeRecursive" />
+<<<<<<< HEAD
         <e p="NoDamageItemDecorator.cs" t="Include" />
+=======
+>>>>>>> facd46c7b03e5f4e6d7dea76cce06808083a978f
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp2.1" t="Include">
@@ -24,15 +33,25 @@
         <e p="PriceAdjuster.cs" t="Include" />
         <e p="Program.cs" t="Include" />
         <e p="Salesman.cs" t="Include" />
+<<<<<<< HEAD
         <e p="SevereDamageItemDecorator.cs" t="Include" />
         <e p="Simulation.cs" t="Include" />
         <e p="Wallet.cs" t="Include" />
         <e p="WithWingsItemDecorator.cs" t="Include" />
+=======
+        <e p="Simulation.cs" t="Include" />
+        <e p="Wallet.cs" t="Include" />
+>>>>>>> facd46c7b03e5f4e6d7dea76cce06808083a978f
       </e>
       <e p="market.sln" t="IncludeFlat" />
       <e p="packages" t="ExcludeRecursive" />
     </e>
+<<<<<<< HEAD
     <e p="$USER_HOME$/Library/Caches/Rider2018.2/extResources" t="IncludeRecursive" />
     <e p="$USER_HOME$/Library/Caches/Rider2018.2/resharper-host/local/Transient/ReSharperHost/v182/SolutionCaches/_market.-1665615751.00" t="ExcludeRecursive" />
+=======
+    <e p="C:\Users\tstur\.Rider2018.2\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\tstur\.Rider2018.2\system\resharper-host\local\Transient\ReSharperHost\v182\SolutionCaches\_market.-1826880676.00" t="ExcludeRecursive" />
+>>>>>>> facd46c7b03e5f4e6d7dea76cce06808083a978f
   </component>
 </project>
