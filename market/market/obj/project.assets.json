@@ -676,24 +676,41 @@
     ]
   },
   "packageFolders": {
+<<<<<<< HEAD
     "C:\\Users\\tstur\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+=======
+    "/Users/tordjon/.nuget/packages/": {},
+    "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
+>>>>>>> 9aa52453bef62750e47b089d25508daeff35c35d
   },
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "C:\\SoftwareEksamen\\eksamen-PG3300\\market\\Market\\Market.csproj",
       "projectName": "Market",
       "projectPath": "C:\\SoftwareEksamen\\eksamen-PG3300\\market\\Market\\Market.csproj",
       "packagesPath": "C:\\Users\\tstur\\.nuget\\packages\\",
       "outputPath": "C:\\SoftwareEksamen\\eksamen-PG3300\\market\\Market\\obj\\",
+=======
+      "projectUniqueName": "/Users/tordjon/Documents/eksamen-PG3300/market/market/market.csproj",
+      "projectName": "Market",
+      "projectPath": "/Users/tordjon/Documents/eksamen-PG3300/market/market/market.csproj",
+      "packagesPath": "/Users/tordjon/.nuget/packages/",
+      "outputPath": "/Users/tordjon/Documents/eksamen-PG3300/market/market/obj/",
+>>>>>>> 9aa52453bef62750e47b089d25508daeff35c35d
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
+<<<<<<< HEAD
         "C:\\Users\\tstur\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+=======
+        "/Users/tordjon/.config/NuGet/NuGet.Config"
+>>>>>>> 9aa52453bef62750e47b089d25508daeff35c35d
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.1"

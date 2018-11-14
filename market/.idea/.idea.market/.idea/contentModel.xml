@@ -1,26 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
+<<<<<<< HEAD
     <e p="C:\SoftwareEksamen\eksamen-PG3300\market" t="IncludeFlat">
       <e p="market" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
         <e p="Customer.cs" t="Include" />
         <e p="Market.csproj" t="IncludeRecursive" />
+=======
+    <e p="$PROJECT_DIR$" t="IncludeFlat">
+      <e p="market" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Customer.cs" t="Include" />
+        <e p="Item.cs" t="Include" />
+        <e p="Market.cs" t="Include" />
+        <e p="market.csproj" t="IncludeRecursive" />
+>>>>>>> 9aa52453bef62750e47b089d25508daeff35c35d
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp2.1" t="Include">
-              <e p="Market.AssemblyInfo.cs" t="Include" />
+              <e p="market.AssemblyInfo.cs" t="Include" />
             </e>
           </e>
         </e>
+        <e p="Person.cs" t="Include" />
         <e p="Program.cs" t="Include" />
         <e p="Salesman.cs" t="Include" />
+<<<<<<< HEAD
         <e p="Simulation.cs" t="Include" />
+=======
+        <e p="Wallet.cs" t="Include" />
+>>>>>>> 9aa52453bef62750e47b089d25508daeff35c35d
       </e>
       <e p="market.sln" t="IncludeFlat" />
       <e p="packages" t="ExcludeRecursive" />
     </e>
+<<<<<<< HEAD
     <e p="C:\Users\tstur\.Rider2018.2\system\extResources" t="IncludeRecursive" />
     <e p="C:\Users\tstur\.Rider2018.2\system\resharper-host\local\Transient\ReSharperHost\v182\SolutionCaches\_market.-1826880676.00" t="ExcludeRecursive" />
+=======
+    <e p="$USER_HOME$/Library/Caches/Rider2018.2/extResources" t="IncludeRecursive" />
+    <e p="$USER_HOME$/Library/Caches/Rider2018.2/resharper-host/local/Transient/ReSharperHost/v182/SolutionCaches/_market.-2050062826.00" t="ExcludeRecursive" />
+>>>>>>> 9aa52453bef62750e47b089d25508daeff35c35d
   </component>
 </project>

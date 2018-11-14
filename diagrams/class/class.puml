@@ -40,7 +40,7 @@ class Wallet {
     + <<Property>> Balance : double 
 }
 
-class Person {
+abstract Person {
     # wallet : Wallet 
     # items : List<Item> 
     + act : void 
@@ -61,7 +61,10 @@ class Salesman extends Person {
 note "Singleton" as singleton
 class Market {
     - instance : Market
-    + getInstance() : Market    
+    - items : List<Item>
+    + getInstance() : Market   
+    + addForSale(item : Item) : void  
+    + sellItem(item : Item) : void 
 }
 
 Market .. singleton

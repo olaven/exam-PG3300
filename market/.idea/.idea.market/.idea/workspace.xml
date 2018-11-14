@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="edec1af0-509f-43c8-ae2b-420381ecf45f" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/market/Customer.cs" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/market/Salesman.cs" afterDir="false" />
@@ -17,6 +18,14 @@
       <change beforePath="$PROJECT_DIR$/market/obj/market.csproj.nuget.g.targets" beforeDir="false" afterPath="$PROJECT_DIR$/market/obj/market.csproj.nuget.g.targets" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/market/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/market/obj/project.assets.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/market/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/market/obj/project.packagespec.json" afterDir="false" />
+=======
+    <list default="true" id="a73e80f4-13b6-45c6-964c-9ec0cfe93212" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/market/Customer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/market/Salesman.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.market/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.market/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.market/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.market/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/market/Person.cs" beforeDir="false" afterPath="$PROJECT_DIR$/market/Person.cs" afterDir="false" />
+>>>>>>> 9aa52453bef62750e47b089d25508daeff35c35d
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,33 +34,56 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FUSProjectUsageTrigger">
+<<<<<<< HEAD
     <session id="-544122662">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
           <entry key="project.open.time.5" value="1" />
           <entry key="project.open.time.9" value="1" />
           <entry key="project.opened" value="2" />
+=======
+    <session id="-1259431726">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.0" value="1" />
+          <entry key="project.opened" value="1" />
+>>>>>>> 9aa52453bef62750e47b089d25508daeff35c35d
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
+<<<<<<< HEAD
           <entry key="cs" value="4" />
           <entry key="puml" value="4" />
+=======
+          <entry key="cs" value="7" />
+          <entry key="xml" value="1" />
+>>>>>>> 9aa52453bef62750e47b089d25508daeff35c35d
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
+<<<<<<< HEAD
           <entry key="C#" value="4" />
           <entry key="PlantUML file" value="4" />
+=======
+          <entry key="C#" value="7" />
+          <entry key="XML" value="1" />
+>>>>>>> 9aa52453bef62750e47b089d25508daeff35c35d
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
+<<<<<<< HEAD
           <entry key="cs" value="800" />
+=======
+          <entry key="cs" value="968" />
+>>>>>>> 9aa52453bef62750e47b089d25508daeff35c35d
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
+<<<<<<< HEAD
           <entry key="C#" value="800" />
         </counts>
       </usages-collector>
@@ -64,20 +96,57 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="550">
               <caret line="48" selection-start-line="48" selection-end-line="48" />
+=======
+          <entry key="C#" value="968" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.js.language.service.starts" />
+      <usages-collector id="statistics.vcs.git.usages" />
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/market/Market.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="288">
+              <caret line="18" column="20" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
+              <folding>
+                <marker date="1542190995628" expanded="true" signature="51:485" ph="{...}" />
+                <marker date="1542190995628" expanded="true" signature="77:483" ph="{...}" />
+                <marker date="1542190995628" expanded="true" signature="183:339" ph="{...}" />
+                <marker date="1542190995628" expanded="true" signature="386:475" ph="{...}" />
+              </folding>
+>>>>>>> 9aa52453bef62750e47b089d25508daeff35c35d
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/../diagrams/class/class.puml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="17">
               <caret line="1" selection-start-line="1" selection-end-line="1" />
+=======
+        <entry file="file://$PROJECT_DIR$/market/Person.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="144">
+              <caret line="9" column="23" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
+              <folding>
+                <marker date="1542194202630" expanded="true" signature="6:89" ph="..." />
+                <marker date="1542194202630" expanded="true" signature="107:526" ph="{...}" />
+                <marker date="1542194202630" expanded="true" signature="142:524" ph="{...}" />
+                <marker date="1542194202630" expanded="true" signature="294:314" ph="{...}" />
+                <marker date="1542194202630" expanded="true" signature="353:476" ph="{...}" />
+              </folding>
+>>>>>>> 9aa52453bef62750e47b089d25508daeff35c35d
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/market/Program.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="153">
@@ -86,12 +155,24 @@
                 <marker date="1542193108569" expanded="true" signature="31:224" ph="{...}" />
                 <marker date="1542193108569" expanded="true" signature="58:222" ph="{...}" />
                 <marker date="1542193108569" expanded="true" signature="112:216" ph="{...}" />
+=======
+        <entry file="file://$PROJECT_DIR$/market/Salesman.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="96">
+              <caret line="6" column="8" selection-start-line="6" selection-start-column="8" selection-end-line="9" selection-end-column="9" />
+              <folding>
+                <marker date="1542194168336" expanded="true" signature="31:279" ph="{...}" />
+                <marker date="1542194168336" expanded="true" signature="68:277" ph="{...}" />
+                <marker date="1542194168336" expanded="true" signature="124:157" ph="{...}" />
+                <marker date="1542194168336" expanded="true" signature="195:271" ph="{...}" />
+>>>>>>> 9aa52453bef62750e47b089d25508daeff35c35d
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+<<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/market/Simulation.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="221">
@@ -101,30 +182,75 @@
                 <marker date="1542195326207" expanded="true" signature="81:459" ph="{...}" />
                 <marker date="1542195326207" expanded="true" signature="246:285" ph="{...}" />
                 <marker date="1542195326207" expanded="true" signature="312:444" ph="{...}" />
+=======
+        <entry file="file://$PROJECT_DIR$/market/Customer.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="64">
+              <caret line="4" column="23" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
+              <folding>
+                <marker date="1542194221756" expanded="true" signature="16:273" ph="{...}" />
+                <marker date="1542194221756" expanded="true" signature="53:271" ph="{...}" />
+                <marker date="1542194221756" expanded="true" signature="109:142" ph="{...}" />
+                <marker date="1542194221756" expanded="true" signature="189:265" ph="{...}" />
+>>>>>>> 9aa52453bef62750e47b089d25508daeff35c35d
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/market/Customer.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="68">
               <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
               <folding>
                 <marker date="1542190766584" expanded="true" signature="44:65" ph="{...}" />
+=======
+        <entry file="file://$PROJECT_DIR$/market/Item.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="64">
+              <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
+              <folding>
+                <marker date="1542190523850" expanded="true" signature="16:67" ph="{...}" />
+                <marker date="1542190523850" expanded="true" signature="44:65" ph="{...}" />
+>>>>>>> 9aa52453bef62750e47b089d25508daeff35c35d
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/market/Salesman.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="68">
               <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
               <folding>
                 <marker date="1542190789571" expanded="true" signature="44:65" ph="{...}" />
+=======
+        <entry file="file://$PROJECT_DIR$/market/Wallet.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="160">
+              <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
+              <folding>
+                <marker date="1542191438735" expanded="true" signature="16:169" ph="{...}" />
+                <marker date="1542191438735" expanded="true" signature="42:167" ph="{...}" />
+                <marker date="1542191438735" expanded="true" signature="116:161" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/market/Program.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <marker date="1542189238615" expanded="true" signature="31:172" ph="{...}" />
+                <marker date="1542189238615" expanded="true" signature="51:170" ph="{...}" />
+                <marker date="1542189238615" expanded="true" signature="97:164" ph="{...}" />
+>>>>>>> 9aa52453bef62750e47b089d25508daeff35c35d
               </folding>
             </state>
           </provider>
@@ -137,17 +263,36 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/market/Program.cs" root0="FORCE_HIGHLIGHTING" />
+<<<<<<< HEAD
     <setting file="file://$PROJECT_DIR$/market/Simulation.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/market/Customer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/market/Salesman.cs" root0="FORCE_HIGHLIGHTING" />
+=======
+    <setting file="file://$PROJECT_DIR$/market/Market.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/market/Person.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/market/Wallet.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/market/Item.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/market/Salesman.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/market/Customer.cs" root0="FORCE_HIGHLIGHTING" />
+>>>>>>> 9aa52453bef62750e47b089d25508daeff35c35d
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/market/Customer.cs" />
         <option value="$PROJECT_DIR$/market/Salesman.cs" />
         <option value="$PROJECT_DIR$/market/Program.cs" />
         <option value="$PROJECT_DIR$/market/Simulation.cs" />
+=======
+        <option value="$PROJECT_DIR$/market/Interface1.cs" />
+        <option value="$PROJECT_DIR$/market/Item.cs" />
+        <option value="$PROJECT_DIR$/market/Market.cs" />
+        <option value="$PROJECT_DIR$/market/Wallet.cs" />
+        <option value="$PROJECT_DIR$/market/Salesman.cs" />
+        <option value="$PROJECT_DIR$/market/Person.cs" />
+        <option value="$PROJECT_DIR$/market/Customer.cs" />
+>>>>>>> 9aa52453bef62750e47b089d25508daeff35c35d
       </list>
     </option>
   </component>
@@ -184,6 +329,59 @@
           <select />
         </subPane>
         <option name="show-all-files" value="false" />
+      </pane>
+    </panes>
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="SolutionExplorer" proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="SolutionExplorer">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="market" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="market" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Market" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+        <option name="show-all-files" value="false" />
+      </pane>
+      <pane id="FileSystemExplorer">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Project" type="161ac34:FileSystemExplorerRootNode" />
+              <item name="market" type="34e6ba20:FileSystemExplorerNode" />
+            </path>
+            <path>
+              <item name="Project" type="161ac34:FileSystemExplorerRootNode" />
+              <item name="market" type="34e6ba20:FileSystemExplorerNode" />
+              <item name=".idea" type="34e6ba20:FileSystemExplorerNode" />
+            </path>
+            <path>
+              <item name="Project" type="161ac34:FileSystemExplorerRootNode" />
+              <item name="market" type="34e6ba20:FileSystemExplorerNode" />
+              <item name=".idea" type="34e6ba20:FileSystemExplorerNode" />
+              <item name=".idea.market" type="34e6ba20:FileSystemExplorerNode" />
+            </path>
+            <path>
+              <item name="Project" type="161ac34:FileSystemExplorerRootNode" />
+              <item name="market" type="34e6ba20:FileSystemExplorerNode" />
+              <item name=".idea" type="34e6ba20:FileSystemExplorerNode" />
+              <item name=".idea.market" type="34e6ba20:FileSystemExplorerNode" />
+              <item name=".idea" type="34e6ba20:FileSystemExplorerNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
       </pane>
     </panes>
   </component>
@@ -229,6 +427,7 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
+<<<<<<< HEAD
       <changelist id="edec1af0-509f-43c8-ae2b-420381ecf45f" name="Default Changelist" comment="" />
       <created>1542189625720</created>
       <option name="number" value="Default" />
@@ -236,11 +435,23 @@
       <updated>1542189625720</updated>
       <workItem from="1542189629346" duration="1983000" />
       <workItem from="1542192576684" duration="2434000" />
+=======
+      <changelist id="a73e80f4-13b6-45c6-964c-9ec0cfe93212" name="Default Changelist" comment="" />
+      <created>1542189073361</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1542189073361</updated>
+      <workItem from="1542189074592" duration="3146000" />
+>>>>>>> 9aa52453bef62750e47b089d25508daeff35c35d
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="4417000" />
+=======
+    <option name="totallyTimeSpent" value="3146000" />
+>>>>>>> 9aa52453bef62750e47b089d25508daeff35c35d
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -252,12 +463,28 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
+<<<<<<< HEAD
     <frame x="-6" y="0" width="1136" height="1047" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24535316" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
+=======
+    <frame x="0" y="23" width="1440" height="900" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Favorites" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24964234" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="NuGet" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Unit Tests" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" visible="true" weight="0.32920793" />
+>>>>>>> 9aa52453bef62750e47b089d25508daeff35c35d
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -265,6 +492,7 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
+<<<<<<< HEAD
       <window_info anchor="bottom" id="NuGet" order="7" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" visible="true" weight="0.2683461" />
@@ -279,16 +507,28 @@
       <window_info anchor="right" id="Errors In Solution" order="4" />
       <window_info anchor="right" id="Database" order="5" />
       <window_info anchor="right" id="Unit Tests Coverage" order="6" weight="0.32995194" />
+=======
+      <window_info anchor="right" id="Errors In Solution" />
+      <window_info anchor="right" id="Database" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+>>>>>>> 9aa52453bef62750e47b089d25508daeff35c35d
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+<<<<<<< HEAD
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
+=======
+  <component name="UnityProjectConfiguration" hasMinimizedUI="null" />
+>>>>>>> 9aa52453bef62750e47b089d25508daeff35c35d
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+<<<<<<< HEAD
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/market/Customer.cs">
       <provider selected="true" editor-type-id="text-editor">
@@ -296,20 +536,74 @@
           <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
           <folding>
             <marker date="1542190766584" expanded="true" signature="44:65" ph="{...}" />
+=======
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" suspend="NONE" type="DotNet Exception Breakpoints">
+          <properties exception="System.Threading.ThreadAbortException" displayValue="System.Threading.ThreadAbortException" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/.idea/.idea.market/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3391">
+          <caret line="215" column="42" selection-start-line="215" selection-start-column="42" selection-end-line="215" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/market/Market.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="18" column="20" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
+          <folding>
+            <marker date="1542190995628" expanded="true" signature="51:485" ph="{...}" />
+            <marker date="1542190995628" expanded="true" signature="77:483" ph="{...}" />
+            <marker date="1542190995628" expanded="true" signature="183:339" ph="{...}" />
+            <marker date="1542190995628" expanded="true" signature="386:475" ph="{...}" />
+>>>>>>> 9aa52453bef62750e47b089d25508daeff35c35d
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/market/Salesman.cs">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="68">
           <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
           <folding>
             <marker date="1542190789571" expanded="true" signature="44:65" ph="{...}" />
+=======
+        <state relative-caret-position="96">
+          <caret line="6" column="8" selection-start-line="6" selection-start-column="8" selection-end-line="9" selection-end-column="9" />
+          <folding>
+            <marker date="1542194168336" expanded="true" signature="31:279" ph="{...}" />
+            <marker date="1542194168336" expanded="true" signature="68:277" ph="{...}" />
+            <marker date="1542194168336" expanded="true" signature="124:157" ph="{...}" />
+            <marker date="1542194168336" expanded="true" signature="195:271" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/market/Person.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="9" column="23" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
+          <folding>
+            <marker date="1542194202630" expanded="true" signature="6:89" ph="..." />
+            <marker date="1542194202630" expanded="true" signature="107:526" ph="{...}" />
+            <marker date="1542194202630" expanded="true" signature="142:524" ph="{...}" />
+            <marker date="1542194202630" expanded="true" signature="294:314" ph="{...}" />
+            <marker date="1542194202630" expanded="true" signature="353:476" ph="{...}" />
+>>>>>>> 9aa52453bef62750e47b089d25508daeff35c35d
+          </folding>
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/../diagrams/usecase/usecase.puml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="550">
@@ -321,21 +615,52 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" selection-start-line="1" selection-end-line="1" />
+=======
+    <entry file="file://$PROJECT_DIR$/market/Item.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
+          <folding>
+            <marker date="1542190523850" expanded="true" signature="16:67" ph="{...}" />
+            <marker date="1542190523850" expanded="true" signature="44:65" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/market/Wallet.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
+          <folding>
+            <marker date="1542191438735" expanded="true" signature="16:169" ph="{...}" />
+            <marker date="1542191438735" expanded="true" signature="42:167" ph="{...}" />
+            <marker date="1542191438735" expanded="true" signature="116:161" ph="{...}" />
+          </folding>
+>>>>>>> 9aa52453bef62750e47b089d25508daeff35c35d
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/market/Program.cs">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="153">
           <caret line="9" column="29" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
           <folding>
             <marker date="1542193108569" expanded="true" signature="31:224" ph="{...}" />
             <marker date="1542193108569" expanded="true" signature="58:222" ph="{...}" />
             <marker date="1542193108569" expanded="true" signature="112:216" ph="{...}" />
+=======
+        <state>
+          <folding>
+            <marker date="1542189238615" expanded="true" signature="31:172" ph="{...}" />
+            <marker date="1542189238615" expanded="true" signature="51:170" ph="{...}" />
+            <marker date="1542189238615" expanded="true" signature="97:164" ph="{...}" />
+>>>>>>> 9aa52453bef62750e47b089d25508daeff35c35d
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/market/Simulation.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -345,6 +670,17 @@
             <marker date="1542195326207" expanded="true" signature="81:459" ph="{...}" />
             <marker date="1542195326207" expanded="true" signature="246:285" ph="{...}" />
             <marker date="1542195326207" expanded="true" signature="312:444" ph="{...}" />
+=======
+    <entry file="file://$PROJECT_DIR$/market/Customer.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="4" column="23" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
+          <folding>
+            <marker date="1542194221756" expanded="true" signature="16:273" ph="{...}" />
+            <marker date="1542194221756" expanded="true" signature="53:271" ph="{...}" />
+            <marker date="1542194221756" expanded="true" signature="109:142" ph="{...}" />
+            <marker date="1542194221756" expanded="true" signature="189:265" ph="{...}" />
+>>>>>>> 9aa52453bef62750e47b089d25508daeff35c35d
           </folding>
         </state>
       </provider>
