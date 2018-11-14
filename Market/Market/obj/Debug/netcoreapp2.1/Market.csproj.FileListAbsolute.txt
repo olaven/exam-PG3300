@@ -1,0 +1,11 @@
+/Users/olav/Documents/skole/kristiania/3_semester/software_design/eksamen-PG3300/market/Market/bin/Debug/netcoreapp2.1/Market.deps.json
+/Users/olav/Documents/skole/kristiania/3_semester/software_design/eksamen-PG3300/market/Market/bin/Debug/netcoreapp2.1/Market.runtimeconfig.json
+/Users/olav/Documents/skole/kristiania/3_semester/software_design/eksamen-PG3300/market/Market/bin/Debug/netcoreapp2.1/Market.runtimeconfig.dev.json
+/Users/olav/Documents/skole/kristiania/3_semester/software_design/eksamen-PG3300/Market/Market/bin/Debug/netcoreapp2.1/Market.dll
+/Users/olav/Documents/skole/kristiania/3_semester/software_design/eksamen-PG3300/Market/Market/bin/Debug/netcoreapp2.1/Market.pdb
+/Users/olav/Documents/skole/kristiania/3_semester/software_design/eksamen-PG3300/Market/Market/obj/Debug/netcoreapp2.1/Market.csprojAssemblyReference.cache
+/Users/olav/Documents/skole/kristiania/3_semester/software_design/eksamen-PG3300/Market/Market/obj/Debug/netcoreapp2.1/Market.csproj.CoreCompileInputs.cache
+/Users/olav/Documents/skole/kristiania/3_semester/software_design/eksamen-PG3300/Market/Market/obj/Debug/netcoreapp2.1/Market.AssemblyInfoInputs.cache
+/Users/olav/Documents/skole/kristiania/3_semester/software_design/eksamen-PG3300/Market/Market/obj/Debug/netcoreapp2.1/Market.AssemblyInfo.cs
+/Users/olav/Documents/skole/kristiania/3_semester/software_design/eksamen-PG3300/Market/Market/obj/Debug/netcoreapp2.1/Market.dll
+/Users/olav/Documents/skole/kristiania/3_semester/software_design/eksamen-PG3300/Market/Market/obj/Debug/netcoreapp2.1/Market.pdb
