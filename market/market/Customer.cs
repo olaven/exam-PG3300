@@ -1,4 +1,4 @@
-namespace Market
+namespace FleaMarket
 {
     public class Customer : Person
     {

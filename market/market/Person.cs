@@ -3,7 +3,7 @@ using Item;
 using System.Collections.Generic;
 using System.Reflection.Metadata.Ecma335;
 
-namespace Market
+namespace FleaMarket
 {
     public abstract class Person
     {

@@ -1,8 +1,8 @@
 using System;
-using Market;
+using FleaMarket;
 
 
-namespace Market
+namespace FleaMarket
 {
     public class Salesman : Person
     {

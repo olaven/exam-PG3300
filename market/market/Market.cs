@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using Item; 
 
-namespace Market
+namespace FleaMarket
 {
     public class Market
     {

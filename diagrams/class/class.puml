@@ -13,7 +13,7 @@ namespace item {
         + getInformation() : String 
     }
 
-    Item o-- "1" Market.Person 
+    Item o-- "1" FleaMarket.Person 
 
     class ConcreteItem implements Item {
         / name : String 
@@ -41,7 +41,7 @@ namespace item {
     MoreInImplementation .. ItemDecorator
 }
 
-namespace Market {
+namespace FleaMarket {
     class ItemFactory {
         + getNew : Item  
     }
