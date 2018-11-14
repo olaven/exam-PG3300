@@ -5,9 +5,11 @@
       <e p="Market" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
         <e p="ConcreteItem.cs" t="Include" />
+        <e p="Customer.cs" t="Include" />
         <e p="Item.cs" t="Include" />
         <e p="ItemDecorator.cs" t="Include" />
         <e p="ItemFactory.cs" t="Include" />
+        <e p="Market.cs" t="Include" />
         <e p="Market.csproj" t="IncludeRecursive" />
         <e p="NoDamageItemDecorator.cs" t="Include" />
         <e p="obj" t="ExcludeRecursive">
@@ -21,7 +23,10 @@
         <e p="Person.cs" t="Include" />
         <e p="PriceAdjuster.cs" t="Include" />
         <e p="Program.cs" t="Include" />
+        <e p="Salesman.cs" t="Include" />
         <e p="SevereDamageItemDecorator.cs" t="Include" />
+        <e p="Simulation.cs" t="Include" />
+        <e p="Wallet.cs" t="Include" />
         <e p="WithWingsItemDecorator.cs" t="Include" />
       </e>
       <e p="market.sln" t="IncludeFlat" />

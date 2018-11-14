@@ -1,13 +1,20 @@
 ﻿{
   "version": "1.0.0",
   "restore": {
-    "projectUniqueName": "/Users/olav/Documents/skole/kristiania/3_semester/software_design/eksamen-PG3300/Market/Market/Market.csproj",
+<<<<<<< HEAD
+    "projectUniqueName": "C:\\SoftwareEksamen\\eksamen-PG3300\\market\\Market\\Market.csproj",
     "projectName": "Market",
-    "projectPath": "/Users/olav/Documents/skole/kristiania/3_semester/software_design/eksamen-PG3300/Market/Market/Market.csproj",
-    "outputPath": "/Users/olav/Documents/skole/kristiania/3_semester/software_design/eksamen-PG3300/Market/Market/obj/",
+    "projectPath": "C:\\SoftwareEksamen\\eksamen-PG3300\\market\\Market\\Market.csproj",
+    "outputPath": "C:\\SoftwareEksamen\\eksamen-PG3300\\market\\Market\\obj\\",
+=======
+    "projectUniqueName": "/Users/tordjon/Documents/eksamen-PG3300/market/market/market.csproj",
+    "projectName": "Market",
+    "projectPath": "/Users/tordjon/Documents/eksamen-PG3300/market/market/market.csproj",
+    "outputPath": "/Users/tordjon/Documents/eksamen-PG3300/market/market/obj/",
+>>>>>>> 9aa52453bef62750e47b089d25508daeff35c35d
     "projectStyle": "PackageReference",
     "fallbackFolders": [
-      "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+      "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
     ],
     "originalTargetFrameworks": [
       "netcoreapp2.1"
@@ -29,7 +36,7 @@
         "Microsoft.NETCore.App": {
           "suppressParent": "All",
           "target": "Package",
-          "version": "[2.1.0, )",
+          "version": "[2.1.0-preview2-26406-04, )",
           "autoReferenced": true
         },
         "NUnit": {
