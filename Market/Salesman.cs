@@ -1,11 +1,10 @@
 using System;
-using Market;
+using FleaMarket;
 
-namespace Market
+
+namespace FleaMarket
 {
-}
-
-public class Salesman : Person
+    public class Salesman : Person
     {
     
         public Salesman(string name) : base(name)
@@ -17,3 +16,6 @@ public class Salesman : Person
             throw new System.NotImplementedException();
         }
     }
+
+}
+

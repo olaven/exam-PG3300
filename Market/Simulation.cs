@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace Market
+namespace FleaMarket
 {
     public class Simulation
     {

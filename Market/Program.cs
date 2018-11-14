@@ -1,6 +1,7 @@
 ﻿using System;
+using Item; 
 
-namespace Market
+namespace FleaMarket
 {
     static class Program
     {

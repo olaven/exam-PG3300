@@ -1,92 +1,107 @@
 @startuml Class diagram 
 
 
-interface Item {
-    + <<Property>> Name : String 
-    + <<Property>> Price : double 
-    + <<Property>> Owner : Person 
-    + getCondition : String
-    + getDamage : String
-    + getModification : String
+
+namespace item {
+    interface Item {
+        + <<Property>> Name : String 
+        + <<Property>> Price : float 
+        + <<Property>> Owner : Person 
+        # getCondition : String
+        # getDamage : String
+        # getModification : String
+        + getInformation() : String 
+    }
+
+    Item o-- "1" FleaMarket.Person 
+
+    class ConcreteItem implements Item {
+        / name : String 
+    }
+
+    abstract ItemDecorator implements Item {
+        - item : Item 
+        - priceAdjuster : PriceAdjuster 
+    }
+
+    class PriceAdjuster {
+        newPrice(item : Item, min : int, max : int)
+    }
+
+    ItemDecorator *-- PriceAdjuster 
+
+    ItemDecorator "1" o-- Item 
+
+
+    class PerfectConditionItemDecorator extends ItemDecorator
+    class NoDamageItemDecorator extends ItemDecorator
+    class WithWingsModificationItemDecorator extends ItemDecorator
+
+    note "More in implementation" as MoreInImplementation
+    MoreInImplementation .. ItemDecorator
 }
 
-Item o-- "1" Person 
+namespace FleaMarket {
+    class ItemFactory {
+        + getNew : Item  
+    }
 
-class ConcreteItem implements Item {
-    / name : String 
+    ItemFactory -- Item : creates 
+
+    class Wallet {
+        + <<Property>> Balance : float 
+    }
+
+    abstract Person {
+        + <<Property>> name : String 
+        # wallet : Wallet 
+        # items : List<Item> 
+        + act : void 
+    }
+
+    Wallet "1" *-- Person
+    Person -- Market : trades 
+
+
+    class Customer extends Person {
+        / act : void 
+    }
+
+    class Salesman extends Person {
+        / act void 
+    }
+
+    note "Singleton" as singleton
+    class Market {
+        - instance : Market
+        - items : List<Item>
+        + getInstance() : Market   
+        + addForSale(item : Item) : void  
+        + sellItem(item : Item) : void 
+    }
+
+    Market .. singleton
+
+
+    class Program { 
+        + main() : void
+    }
+
+    class Simulation {
+        - customers : List<Customer> 
+        - salesmen : List<Salesman> 
+        ~ run() : void 
+    }
+
+    Program -- "1" Simulation : starts
+    Simulation o-- "*" Market
+
+    note "Legg in Flyweight pattern!" as flnote
+
+
+    Salesman -- ItemFactory : gets something to sell 
+
 }
-
-abstract ItemDecorator implements Item {
-    - item : Item 
-}
-
-ItemDecorator "1" o-- Item 
-
-
-class SevereDamageItemDecorator extends ItemDecorator
-class NoDamageItemDecorator extends ItemDecorator
-class WithWingsModificationItemDecorator extends ItemDecorator
-
-note "More in implementation" as MoreInImplementation
-MoreInImplementation .. ItemDecorator
-
-class ItemFactory {
-    + getNew : Item  
-}
-
-ItemFactory -- Item : creates 
-
-class Wallet {
-    + <<Property>> Balance : double 
-}
-
-abstract Person {
-    # wallet : Wallet 
-    # items : List<Item> 
-    + act : void 
-}
-
-Wallet "1" *-- Person
-Person -- Market : trades 
-
-
-class Customer extends Person {
-    / act : void 
-}
-
-class Salesman extends Person {
-    / act void 
-}
-
-note "Singleton" as singleton
-class Market {
-    - instance : Market
-    - items : List<Item>
-    + getInstance() : Market   
-    + addForSale(item : Item) : void  
-    + sellItem(item : Item) : void 
-}
-
-Market .. singleton
-
-
-class Program { 
-    + main() : void
-}
-
-class Simulation {
-    - customers : List<Customer> 
-    - salesmen : List<Salesman> 
-    ~ run() : void 
-}
-
-Program -- "1" Simulation : starts
-Simulation o-- Person
-
-note "Legg in Flyweight pattern!" as flnote
-
-
-Salesman -- ItemFactory : gets something to sell 
 
 
 @enduml
