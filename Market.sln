@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Market", "Market\Market.csproj", "{0ABC33AE-0997-4865-8DC7-D619399C5644}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarketTest", "MarketTest\MarketTest.csproj", "{E9776D36-E79E-4BBB-8089-31F809E73FA9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{0ABC33AE-0997-4865-8DC7-D619399C5644}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0ABC33AE-0997-4865-8DC7-D619399C5644}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0ABC33AE-0997-4865-8DC7-D619399C5644}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E9776D36-E79E-4BBB-8089-31F809E73FA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9776D36-E79E-4BBB-8089-31F809E73FA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9776D36-E79E-4BBB-8089-31F809E73FA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9776D36-E79E-4BBB-8089-31F809E73FA9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
