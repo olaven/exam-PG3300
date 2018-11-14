@@ -18,7 +18,6 @@ namespace Market
             salesmen.Add(new Salesman("Thomaster194"));
             customers.Add(new Customer("Olav"));
             customers.Add(new Customer("Tord"));
-        }
-        
+        }   
     }
 }
