@@ -15,9 +15,9 @@ namespace Market
 
         public void Run()
         {
-            salesmen.Add("Thomaster194");
-            customers.Add("Olav");
-            customers.Add("Tord");
+            salesmen.Add(new Salesman("Thomaster194"));
+            customers.Add(new Customer("Olav"));
+            customers.Add(new Customer("Tord"));
         }
         
     }
