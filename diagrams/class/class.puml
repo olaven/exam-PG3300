@@ -80,6 +80,8 @@ class Simulation {
 Program -- "1" Simulation : starts
 Simulation o-- Person
 
+note "Legg in Flyweight pattern!" as flnote
+
 
 Salesman -- ItemFactory : gets something to sell 
 

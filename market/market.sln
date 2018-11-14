@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "market", "market\market.csproj", "{D1940EA8-6B80-4498-8C46-CEC91EDEABA1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Market", "Market\Market.csproj", "{0ABC33AE-0997-4865-8DC7-D619399C5644}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -8,9 +8,9 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{D1940EA8-6B80-4498-8C46-CEC91EDEABA1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D1940EA8-6B80-4498-8C46-CEC91EDEABA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D1940EA8-6B80-4498-8C46-CEC91EDEABA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D1940EA8-6B80-4498-8C46-CEC91EDEABA1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0ABC33AE-0997-4865-8DC7-D619399C5644}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0ABC33AE-0997-4865-8DC7-D619399C5644}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0ABC33AE-0997-4865-8DC7-D619399C5644}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0ABC33AE-0997-4865-8DC7-D619399C5644}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
