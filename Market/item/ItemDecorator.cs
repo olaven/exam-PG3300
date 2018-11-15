@@ -6,7 +6,7 @@ namespace Item
     public abstract class ItemDecorator : IItem
     {
         private readonly IItem _item;
-        
+        protected Random Random;
         public string Name { get; set; }
         public Person Owner { get; set; }
 
@@ -16,10 +16,12 @@ namespace Item
 
             Name = _item.Name;
             Owner = _item.Owner; 
+            Random = new Random();        
+            
         }
         
         
-        public double getPrice()
+        public virtual double getPrice()
         {
             return _item.getPrice();
         }

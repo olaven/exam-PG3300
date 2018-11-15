@@ -2,11 +2,19 @@ namespace Item
 {
     public class DecentConditionItemDecorator : ItemDecorator
     {
+
+        private int _priceAdjustment;
+        
         public DecentConditionItemDecorator(IItem original) : base(original)
         {
-            priceAdjuster.adjustPriceOf(original, -10, 10);
+            _priceAdjustment = Random.Next(-10, 10); 
         }
 
+
+        public override double getPrice()
+        {
+            return base.getPrice() + _priceAdjustment;
+        }
         public override string getCondition()
         {
             return "decent condition"; 
