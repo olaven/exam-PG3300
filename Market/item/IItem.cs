@@ -12,10 +12,10 @@ namespace Item
 
 
         double getPrice();
-        String getCondition();
-        String getDamage();
-        String getModification();
-        String getInformation(); 
+        string getCondition();
+        string getDamage();
+        string getModification();
+        string getInformation(); 
     }
     
     

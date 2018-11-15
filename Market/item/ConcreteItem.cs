@@ -6,20 +6,24 @@ namespace Item
     public class ConcreteItem : IItem
     {
         public string Name { get; set; }
-        protected double price = 0;
+        public Person Owner { get; set; }
+
+        private readonly double _price; 
         
 
-        public Person Owner { get; set; }
+        
 
         public ConcreteItem(string name, double price, Person owner)
         {
             Name = name;
             Owner = owner;
+
+            this._price = price; 
         }
         
         public double getPrice()
         {
-            return price;
+            return _price;
         }
         
         public string getCondition()
