@@ -20,6 +20,16 @@ namespace FleaMarket
             get { return _market ?? (_market = new Market()); }     
         }
 
+        public List<IItem> GetItems()
+        {
+            return _items;
+        }
+
+        public void AddItem(IItem item)
+        {
+            _items.Add(item);
+        }
+
 
     }
 }
