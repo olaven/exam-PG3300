@@ -10,7 +10,7 @@ namespace FleaMarket
 
         public Simulation()
         {
-            Run();
+            //Run();
         }
 
         public void Run()

@@ -6,15 +6,15 @@ namespace Item
     public class ConcreteItem : IItem
     {
         public string Name { get; set; }
-
+        private double price = 0;
         public double Price
         {
-            get { return Price; }
+            get => price;
             set
             {
-                if (value > Price)
+                if (value > 0)
                 {
-                    Price = 0; 
+                    price = value; 
                 }
             }
         }
