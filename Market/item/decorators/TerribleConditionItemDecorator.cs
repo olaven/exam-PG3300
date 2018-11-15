@@ -10,7 +10,7 @@ namespace Item
 
         public override string getCondition()
         {
-            return "terrible condition"; 
+            return base.getCondition() +  "terrible condition"; 
         }
     }
 }
