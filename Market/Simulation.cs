@@ -26,7 +26,9 @@ namespace FleaMarket
             _customers.Add(new Customer(GetRandomName()));
             _customers.Add(new Customer(GetRandomName()));
             _customers.Add(new Customer(GetRandomName()));
-
+            
+            _customers.ForEach(c => Console.WriteLine(c.Wallet.Balance));
+            
             var x = _saleCount / _salesmen.Count;
             foreach(var salesman in _salesmen)
             {
@@ -39,33 +41,32 @@ namespace FleaMarket
 
         public void Run()
         {
-            while (true)
+            Thread thread = new Thread(() =>
             {
-                Thread.Sleep(2000);
-                Salesman seller = _salesmen.ToArray()[_random.Next(0, _salesmen.Count())];
-                seller.Act();
-                
-                Customer customer  = _customers.ToArray()[_random.Next(0, _customers.Count())];
-                customer.Act();
-
-
-            }
+                while (true)
+                {
+                    Thread.Sleep(2000);
+                    Salesman seller = _salesmen.ToArray()[_random.Next(0, _salesmen.Count())];
+                    Salesman otherSeller = _salesmen.ToArray()[_random.Next(0, _salesmen.Count())];
+                    seller.Act();
+                    otherSeller.Act();
+                    //Console.Write("\n");
+                }
+            });
             
+            thread.Start();
         }
 
-        private string GetRandomName(){
-        if (_names.Count < 1)
+        private string GetRandomName()
         {
-            return "John Doe";
+            if (_names.Count < 1)
+            {
+                return "John Doe";
+            }
+            var r = _random.Next(0, _names.Count);
+            string name = (string) _names[r];
+            _names.RemoveAt(r);
+            return name;
         }
-        var r = _random.Next(0, _names.Count);
-        string name = (string) _names[r];
-        _names.RemoveAt(r);
-        return name;
     }
-    
-    
-    }
-    
- 
 }

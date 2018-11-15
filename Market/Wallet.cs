@@ -1,3 +1,5 @@
+using System;
+
 namespace FleaMarket
 {
     public class Wallet
@@ -6,7 +8,7 @@ namespace FleaMarket
 
         public Wallet()
         {
-            Balance = 0;
+            Balance = new Random().Next(200,400);
         }
     }
 }

@@ -19,7 +19,6 @@ namespace Item
             IItem item = new ConcreteItem("Item x", 200 ,person);
             foreach(Decoration dec in decorations)
             {
-                Console.WriteLine(dec);
                 switch (dec)
                 {
                     case Decoration.TerribleCondition:

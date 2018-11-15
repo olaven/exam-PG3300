@@ -1,26 +1,20 @@
 using System;
 using Item; 
 using System.Collections.Generic;
-using System.Reflection.Metadata.Ecma335;
 
 namespace FleaMarket
 {
     public abstract class Person
     {
-        protected Wallet Wallet;
+        public Wallet Wallet { get; }
+        public string Name { get; }
         protected List<IItem> Items;
-        protected string Name;
-
+        
         protected Person(string name)
         {
             Wallet = new Wallet();
             Items = new List<IItem>();
-            this.Name = name;
-        }
-
-        public string GetName()
-        {
-            return Name;
+            Name = name;
         }
 
         public List<IItem> GetItems()

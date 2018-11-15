@@ -5,17 +5,16 @@ Exam in Software Design, at Kristiania University College
 - [ ] Use case for salesman (i det eksisterende, vise generalisering)
 - [ ] Klassediagram -> Alle patterns 
 - [X] Sekvensdiagram for factory 
-- [ ] Sekvensdiagram for handel 
 - [ ] Gå over alle klasser og se om klassediagrammet matcher implementasjon 
 - [ ] Multithreaded løsning (trådsikker!)
 - [ ] Implementering 
     - [ ] Operator overlasting 
     - [ ] c#-style kommentar-doc
-    - [ ] Properties 
+    - [X] Properties 
     - [X] "java-style" felter også, for å vise at vi kan det
     - [ ] Ha flere projects i en solution 
     - [X] Bruke c# regions 
-    - [ ] Kjøre på med en namespace til 
+    - [X] To namespaces
     - [ ] Unit testing med NUnit
     * C# sin Random funksjonalitet er i seg selv ikke trådsikker, løsninger på dette kan googles.
     * Det er greit å benytte Sleepfor å simulere at deler av løsningen tar tid/få tiden til å gå. (Ikke der vi har brukt det så langt)
@@ -25,7 +24,7 @@ Exam in Software Design, at Kristiania University College
         - [ ] Factory -> Itemfactory 
         - [ ] Decorator -> ItemDecorator 
         - [ ] Singleoton -> Market 
-        - [ ] Composite -> ?? 
+        - [ ] Composite -> ?? Kanskje person sayhi? 
         - [ ] Facade -> Act (?) 
         - [ ] Flyweight -> ?? 
         - [ ] MVP -> ?? 

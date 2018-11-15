@@ -47,10 +47,10 @@ namespace Item
         public string getInformation()
         {
             return "" +
-                   "\nName: " + Name +
+                   "Name: " + Name +
                    "\nPrice: " + getPrice() +
                    "\nOwner: " + Owner + //TODO: Fix en fin toString på person 
-                   "\n\n"
+                   ""
                 ; 
         }
 

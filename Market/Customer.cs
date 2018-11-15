@@ -1,4 +1,6 @@
 using System;
+using System.Threading;
+using Item;
 
 namespace FleaMarket
 {
@@ -6,13 +8,36 @@ namespace FleaMarket
     {
         public Customer(string name) : base(name)
         {
-
-        }
+            Market.Instance.EventHappening += (sender, eventArgs) => { 
+                Act();
+            };
+        }        
 
         public override void Act()
         {
 
-            Console.WriteLine("Customer acting");
+            new Thread(() =>
+            {
+                Thread.Sleep(new Random().Next(50, 100));
+                
+                Market.Instance.BuyItem(this);
+            }).Start(); 
+
         }
     }
 }
+
+/*
+
+var items = Market.Instance.GetItems();
+                if (items.Count != 0)
+                {
+                    Console.WriteLine(Name + "Customer acting");
+                    
+                    IItem item = items.ToArray()[0];
+                    Market.Instance.GetItems().Remove(item);
+
+                    Console.WriteLine(Name + " bought:");
+                    Console.WriteLine(item.getInformation());
+                    Console.WriteLine("\n");
+                }*/
