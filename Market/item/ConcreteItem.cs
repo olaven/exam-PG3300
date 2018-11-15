@@ -24,17 +24,17 @@ namespace Item
         
         public string getCondition()
         {
-            return "not specified"; 
+            return ""; 
         }
 
         public string getDamage()
         {
-            return "not specified"; 
+            return ""; 
         }
 
         public string getModification()
         {
-            return "not specified"; 
+            return ""; 
         }
 
         public string getInformation()
