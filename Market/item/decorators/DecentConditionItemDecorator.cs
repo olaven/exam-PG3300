@@ -2,8 +2,6 @@ namespace Item
 {
     public class DecentConditionItemDecorator : ItemDecorator
     {
-
-        private int _priceAdjustment;
         
         public DecentConditionItemDecorator(IItem original) : base(original)
         {
