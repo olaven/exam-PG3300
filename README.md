@@ -20,6 +20,7 @@ Exam in Software Design, at Kristiania University College
 - [ ] Dokumentasjon
     - [ ] Simulering av folks interagering med et marked, ikke en simulering av et marked 
     - [ ] Patterns dokumenteres 
+    - [ ] skriv om regions 
     - [ ] Skriv om multithreadingen, og hva som kunne skjedd om den ikke var trådsikker 
     - [ ] Composition vs aggregation med eksempler til class diagram 
     - [ ] Forklar alle patterns

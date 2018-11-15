@@ -5,8 +5,8 @@
 namespace item {
     interface Item {
         + <<Property>> Name : String 
-        + <<Property>> Price : float 
         + <<Property>> Owner : Person 
+        # getPrice() : float
         # getCondition : String
         # getDamage : String
         # getModification : String
@@ -16,7 +16,7 @@ namespace item {
     Item o-- "1" FleaMarket.Person 
 
     class ConcreteItem implements Item {
-        / name : String 
+        / Name : String 
     }
 
     abstract ItemDecorator implements Item {

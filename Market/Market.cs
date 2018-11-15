@@ -10,7 +10,7 @@ namespace FleaMarket
 
         private Market()
         {
-            //private to prohobit instantiation of market object for other classes.
+            //private to prohibit instantiation of market object for other classes.
             _items = new List<IItem>();
             
         }

@@ -22,7 +22,7 @@ namespace Item
             
         }
         
-        
+        #region Delegated methods 
         public virtual double getPrice()
         {
             return _item.getPrice();
@@ -42,6 +42,7 @@ namespace Item
         {
             return _item.getModification(); 
         }
+        #endregion
 
         public string getInformation()
         {

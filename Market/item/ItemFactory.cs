@@ -6,6 +6,7 @@ namespace Item
     public static class ItemFactory
     {
         
+        #region Decorations-enum 
         public enum Decoration
         {
             ModerateDamage,
@@ -18,16 +19,11 @@ namespace Item
             WithWheels,
             WithWings
         }
+        #endregion 
 
         
         
-        /*public void getNew(string name, double price, Person person)
-        {
-            IItem item  = new ConcreteItem(name, price, person);
-            
-            
-        }*/
-
+        #region getting a random-decorated item 
         public static IItem getItem(Decoration[] decorations, Person person)
         {    
             IItem item = new ConcreteItem("Item x", 200 , person);
@@ -92,5 +88,6 @@ namespace Item
 
             return decorations;
         }
+        #endregion
     }
 }
