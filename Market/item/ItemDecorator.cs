@@ -45,7 +45,13 @@ namespace Item
 
         public string getInformation()
         {
-            return "" +
+            return "" + Name + 
+                   " with " + 
+                   getModification() + 
+                   " in " + getCondition() + 
+                   " that has " + getDamage() +
+                   " for " + getPrice() + ",-";
+            /*return "" +
                    "\nName: " + _item.Name +
                    "\nPrice: " + _item.getPrice() +
                    "\nOwner: " + _item.Owner + //TODO: Fix en fin toString på person 
@@ -56,6 +62,7 @@ namespace Item
                    "\nModification: " + getModification() +
                    "\n\n"
                 ; 
+                */
         }
     }
 }

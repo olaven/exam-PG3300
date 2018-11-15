@@ -11,10 +11,6 @@ namespace FleaMarket
         protected List<IItem> Items;
         protected string Name;
 
-        protected Person() : this("unknown")
-        {
-        }
-
         protected Person(string name)
         {
             Wallet = new Wallet();
@@ -32,7 +28,12 @@ namespace FleaMarket
             return Items;
         }
 
-        protected abstract void Act();
+        public void AddItem(IItem item)
+        {
+            Items.Add(item);
+        }
+
+        public abstract void Act();
 
 
     }

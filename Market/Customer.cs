@@ -1,3 +1,5 @@
+using System;
+
 namespace FleaMarket
 {
     public class Customer : Person
@@ -7,9 +9,10 @@ namespace FleaMarket
 
         }
 
-        protected override void Act()
+        public override void Act()
         {
-            throw new System.NotImplementedException();
+
+            Console.WriteLine("Customer acting");
         }
     }
 }

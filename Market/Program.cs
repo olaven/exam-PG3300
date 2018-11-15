@@ -7,10 +7,11 @@ namespace FleaMarket
     {
         private static void Main(string[] args)
         {
-            IItem item1 = ItemFactory.GetRandomItem(new Salesman("kjell"), 5);
-            Console.WriteLine(item1.getInformation());
-            //Simulation simulation = new Simulation();
-           // simulation.Run();
+           // IItem item1 = ItemFactory.GetRandomItem(new Salesman("kjell"), 5);
+          //  Console.WriteLine(item1.getInformation());
+            
+            Simulation simulation = new Simulation(10);
+            simulation.Run();
         }
     }
 }
