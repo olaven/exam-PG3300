@@ -18,7 +18,10 @@ namespace Item
             Name = name;
             Owner = owner;
 
-            this._price = price; 
+            if (price > 0)
+            {
+                this._price = price; 
+            }
         }
         
         public double getPrice()

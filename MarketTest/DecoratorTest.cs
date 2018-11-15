@@ -24,14 +24,6 @@ namespace MarketTest
         }
 
         [Test]
-        public void shouldGiveDecentCondition()
-        {
-            _item = new DecentConditionItemDecorator(_item);
-            
-            Assert.That(_item.getDamage(), Is.EqualTo("decent damage"));
-        }
-
-        [Test]
         public void shouldGivePerfectCondition()
         {
             _item = new PerfectConditionItemDecorator(_item);
