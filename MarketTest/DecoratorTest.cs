@@ -45,7 +45,7 @@ namespace MarketTest
             PriceAdjuster adjuster = new PriceAdjuster();
             adjuster.adjustPriceOf(_item, -100, -11); // has to be negative price if something is wrong
             
-            Assert.That(_item, Is.EqualTo(_item.Price));
+            Assert.That(_item.Price, Is.GreaterThanOrEqualTo(1));
         }
 
         [Test]
