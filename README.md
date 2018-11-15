@@ -4,7 +4,8 @@ Exam in Software Design, at Kristiania University College
 ## Todos 
 - [ ] Use case for salesman (i det eksisterende, vise generalisering)
 - [ ] Klassediagram -> Alle patterns 
-- [ ] Sekvensdiagram 
+- [X] Sekvensdiagram for factory 
+- [ ] Sekvensdiagram for handel 
 - [ ] Gå over alle klasser og se om klassediagrammet matcher implementasjon 
 - [ ] Multithreaded løsning (trådsikker!)
 - [ ] Implementering 
