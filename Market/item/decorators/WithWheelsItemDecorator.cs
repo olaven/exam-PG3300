@@ -6,6 +6,7 @@ namespace Item
     {
         public WithWheelsItemDecorator(IItem original) : base(original)
         {
+            
             priceAdjuster.adjustPriceOf(original, 30, 70);
         }
 
