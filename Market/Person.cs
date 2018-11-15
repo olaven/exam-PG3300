@@ -22,6 +22,16 @@ namespace FleaMarket
             this.Name = name;
         }
 
+        public string GetName()
+        {
+            return Name;
+        }
+
+        public List<IItem> GetItems()
+        {
+            return Items;
+        }
+
         protected abstract void Act();
 
 
