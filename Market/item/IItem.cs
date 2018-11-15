@@ -3,6 +3,8 @@ using FleaMarket;
 
 namespace Item
 {
+
+  
     public interface IItem
     {
         String Name { get; set; }
@@ -17,4 +19,6 @@ namespace Item
         String getModification();
         String getInformation(); 
     }
+    
+    
 }

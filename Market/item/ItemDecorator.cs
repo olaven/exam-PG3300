@@ -40,9 +40,9 @@ namespace Item
         public string getInformation()
         {
             return "" +
-                   "\nName: " + Name +
-                   "\nPrice: " + Price +
-                   "\nOwner: " + Owner + //TODO: Fix en fin toString på person 
+                   "\nName: " + _item.Name +
+                   "\nPrice: " + _item.Price +
+                   "\nOwner: " + _item.Owner + //TODO: Fix en fin toString på person 
                    "\n\n" +
                    
                    "\nCondition: " + getCondition() +

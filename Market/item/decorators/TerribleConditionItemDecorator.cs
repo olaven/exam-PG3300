@@ -4,7 +4,7 @@ namespace Item
     {
         public TerribleConditionItemDecorator(IItem original) : base(original)
         {
-            priceAdjuster.adjustPriceOf(original, -30, -60);
+            priceAdjuster.adjustPriceOf(original, -60, -30);
         }
 
         public override string getCondition()

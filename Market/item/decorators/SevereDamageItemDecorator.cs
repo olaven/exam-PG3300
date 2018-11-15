@@ -4,7 +4,7 @@ namespace Item
     {
         public SevereDamageItemDecorator(IItem original) : base(original)
         {
-            priceAdjuster.adjustPriceOf(original, -70, -10);
+            priceAdjuster.adjustPriceOf(original, -20, -70);
         }
 
         public override string getDamage()

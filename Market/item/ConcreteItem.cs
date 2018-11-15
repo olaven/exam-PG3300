@@ -6,7 +6,7 @@ namespace Item
     public class ConcreteItem : IItem
     {
         public string Name { get; set; }
-        private double price = 0;
+        protected double price = 0;
         public double Price
         {
             get => price;
