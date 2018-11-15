@@ -6,9 +6,14 @@ namespace Item
     {
         public ModerateDamageItemDecorator(IItem original) : base(original)
         {
-            priceAdjuster.adjustPriceOf(original, 5, 15);
+            _priceAdjustment = Random.Next(5, 15); 
         }
 
+
+        public override double getPrice()
+        {
+            return base.getPrice() + _priceAdjustment;
+        }
         public override string getModification()
         {
             return "with a small bump";

@@ -2,11 +2,18 @@ namespace Item
 {
     public class NoDamageItemDecorator : ItemDecorator
     {
+        
         public NoDamageItemDecorator(IItem original) : base(original)
         {
-            priceAdjuster.adjustPriceOf(this, 5, 20);
+            _priceAdjustment = Random.Next(5, 20); 
         }
 
+
+        public override double getPrice()
+        {
+            return base.getPrice() + _priceAdjustment;
+        }
+        
         public override string getDamage()
         {
             return "no damage"; 

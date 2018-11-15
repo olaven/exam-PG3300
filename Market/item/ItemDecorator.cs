@@ -10,6 +10,8 @@ namespace Item
         public string Name { get; set; }
         public Person Owner { get; set; }
 
+        protected int _priceAdjustment;
+
         protected ItemDecorator(IItem original)
         {
             _item = original; 
