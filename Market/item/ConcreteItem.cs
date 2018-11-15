@@ -7,27 +7,21 @@ namespace Item
     {
         public string Name { get; set; }
         protected double price = 0;
-        public double Price
-        {
-            get => price;
-            set
-            {
-                if (value > 0)
-                {
-                    price = value; 
-                }
-            }
-        }
+        
 
         public Person Owner { get; set; }
 
         public ConcreteItem(string name, double price, Person owner)
         {
             Name = name;
-            Price = price;
             Owner = owner;
         }
-
+        
+        public double getPrice()
+        {
+            return price;
+        }
+        
         public string getCondition()
         {
             return "not specified"; 
@@ -47,7 +41,7 @@ namespace Item
         {
             return "" +
                    "\nName: " + Name +
-                   "\nPrice: " + Price +
+                   "\nPrice: " + getPrice() +
                    "\nOwner: " + Owner + //TODO: Fix en fin toString på person 
                    "\n\n"
                 ; 
