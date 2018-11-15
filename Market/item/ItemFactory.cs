@@ -30,7 +30,7 @@ namespace Item
             
         }*/
 
-        public static IItem getItem(List<Decoration> decorations, Person person)
+        public static IItem GetItem(List<Decoration> decorations, Person person)
         {    
             IItem item = new ConcreteItem("Item x", 200 ,person);
             foreach(Decoration dec in decorations)
@@ -77,14 +77,14 @@ namespace Item
         }
 
 
-        public static IItem getRandomItem(Person person, int numberOfDecorations)
+        public static IItem GetRandomItem(Person person, int numberOfDecorations)
         {
-            List<Decoration> decorations = getRandomDecorations(numberOfDecorations);
+            List<Decoration> decorations = GetRandomDecorations(numberOfDecorations);
 
-            return getItem(decorations, person);
+            return GetItem(decorations, person);
         }
 
-        private static List<Decoration> getRandomDecorations(int numberOfItems)
+        private static List<Decoration> GetRandomDecorations(int numberOfItems)
         {    
             
             Random random = new Random();
