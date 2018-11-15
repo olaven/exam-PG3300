@@ -42,10 +42,8 @@ namespace MarketTest
         [Test]
         public void priceCannotBeZero()
         {
-            PriceAdjuster adjuster = new PriceAdjuster();
-            adjuster.adjustPriceOf(_item, -100, -11); // has to be negative price if something is wrong
-            
-            Assert.That(_item.Price, Is.GreaterThanOrEqualTo(1));
+            IItem item = new ConcreteItem("Thomas", -100, new Customer("customer name"));
+            Assert.That(_item.getPrice(), Is.GreaterThanOrEqualTo(0));
         }
 
         [Test]
@@ -53,7 +51,7 @@ namespace MarketTest
         {
             _item = new TerribleConditionItemDecorator(_item);
             
-            Assert.That(_item.Price < 100, Is.True);
+            Assert.That(_item.getPrice() < 100, Is.True);
             
         }
     }
