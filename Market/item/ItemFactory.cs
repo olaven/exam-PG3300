@@ -6,25 +6,15 @@ namespace Item
     public static class ItemFactory
     {
         
-        #region Decorations-enum 
-        public enum Decoration
-        {
-            ModerateDamage,
-            MultipleDamage,
-            NoDamage,
-            DecentCondition,
-            PerfectCondition,
-            TerribleCondition,
-            WithTrumpStickers,
-            WithWheels,
-            WithWings
-        }
-        #endregion 
-
-        
-        
         #region getting a random-decorated item 
-        public static IItem getItem(Decoration[] decorations, Person person)
+        public static IItem GetRandomItem(Person person, int numberOfDecorations)
+        {
+            Decoration[] decorations = GetRandomDecorations(numberOfDecorations);
+
+            return GetItem(decorations, person);
+        }
+        
+        private static IItem GetItem(Decoration[] decorations, Person person)
         {    
             IItem item = new ConcreteItem("Item x", 200 , person);
             foreach(Decoration dec in decorations)
@@ -66,15 +56,7 @@ namespace Item
             return item;
         }
 
-
-        public static IItem getRandomItem(Person person, int numberOfDecorations)
-        {
-            Decoration[] decorations = getRandomDecorations(numberOfDecorations);
-
-            return getItem(decorations, person);
-        }
-
-        private static Decoration[] getRandomDecorations(int numberOfItems)
+        private static Decoration[] GetRandomDecorations(int numberOfItems)
         {    
             
             Random random = new Random();
@@ -89,5 +71,18 @@ namespace Item
             return decorations;
         }
         #endregion
+    }
+    
+    public enum Decoration
+    {
+        ModerateDamage,
+        MultipleDamage,
+        NoDamage,
+        DecentCondition,
+        PerfectCondition,
+        TerribleCondition,
+        WithTrumpStickers,
+        WithWheels,
+        WithWings
     }
 }
