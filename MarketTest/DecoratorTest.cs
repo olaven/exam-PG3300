@@ -24,14 +24,6 @@ namespace MarketTest
         }
 
         [Test]
-        public void shouldGiveDecentCondition()
-        {
-            _item = new DecentConditionItemDecorator(_item);
-            
-            Assert.That(_item.getDamage(), Is.EqualTo("decent damage"));
-        }
-
-        [Test]
         public void shouldGivePerfectCondition()
         {
             _item = new PerfectConditionItemDecorator(_item);
@@ -40,10 +32,10 @@ namespace MarketTest
         }
 
         [Test]
-        public void priceCannotBeZero()
+        public void priceCantBeLessThan0()
         {
             IItem item = new ConcreteItem("Thomas", -100, new Customer("customer name"));
-            Assert.That(_item.getPrice(), Is.GreaterThanOrEqualTo(0));
+            Assert.That(item.getPrice(), Is.GreaterThanOrEqualTo(0));
         }
 
         [Test]

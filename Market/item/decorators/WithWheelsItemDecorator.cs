@@ -17,7 +17,7 @@ namespace Item
 
         public override string getModification()
         {
-            return "with wheels"; 
+            return  base.getModification() + "with wheels"; 
         }
     }
 }

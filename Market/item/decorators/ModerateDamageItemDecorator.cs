@@ -14,9 +14,9 @@ namespace Item
         {
             return base.getPrice() + _priceAdjustment;
         }
-        public override string getModification()
+        public override string getDamage()
         {
-            return "with a small bump";
+            return base.getDamage() +  "with a small bump";
         }
     }
 }

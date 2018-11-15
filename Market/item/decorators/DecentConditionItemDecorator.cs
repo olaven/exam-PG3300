@@ -15,7 +15,7 @@ namespace Item
         }
         public override string getCondition()
         {
-            return "decent condition"; 
+            return base.getCondition() + "decent condition"; 
         }
     }
 }

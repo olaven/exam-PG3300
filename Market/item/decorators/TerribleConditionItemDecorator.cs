@@ -7,10 +7,15 @@ namespace Item
         {
             _priceAdjustment = Random.Next(-60, -30); 
         }
+        
+        public override double getPrice()
+        {
+            return base.getPrice() + _priceAdjustment;
+        }
 
         public override string getCondition()
         {
-            return "terrible condition"; 
+            return base.getCondition() +  "terrible condition"; 
         }
     }
 }

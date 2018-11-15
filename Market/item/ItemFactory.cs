@@ -1,24 +1,25 @@
 using System;
+using System.Collections.Generic;
 using FleaMarket; 
 
 namespace Item
 {
     public static class ItemFactory
     {
-        
         #region getting a random-decorated item 
         public static IItem GetRandomItem(Person person, int numberOfDecorations)
         {
-            Decoration[] decorations = GetRandomDecorations(numberOfDecorations);
+            List<Decoration> decorations = GetRandomDecorations(numberOfDecorations);
 
             return GetItem(decorations, person);
         }
-        
-        private static IItem GetItem(Decoration[] decorations, Person person)
+
+        private static IItem GetItem(List<Decoration> decorations, Person person)
         {    
-            IItem item = new ConcreteItem("Item x", 200 , person);
+            IItem item = new ConcreteItem("Item x", 200 ,person);
             foreach(Decoration dec in decorations)
             {
+                Console.WriteLine(dec);
                 switch (dec)
                 {
                     case Decoration.TerribleCondition:
@@ -46,8 +47,11 @@ namespace Item
                         item = new NoDamageItemDecorator(item);
                         break;
                     case Decoration.ModerateDamage:
-                        item = new DecentConditionItemDecorator(item);
+                        item = new ModerateDamageItemDecorator(item);
                         break;
+                    case Decoration.NoDecoration:
+                        break;
+                    
                 }
                 
             }
@@ -56,17 +60,25 @@ namespace Item
             return item;
         }
 
-        private static Decoration[] GetRandomDecorations(int numberOfItems)
+        private static List<Decoration> GetRandomDecorations(int numberOfItems)
         {    
             
             Random random = new Random();
-            
+            List<Decoration> decorations = new List<Decoration>();
             Array values = Enum.GetValues(typeof(Decoration));
+
+            for (var i = 1; i < values.Length; i += 3)
+            {
+                var r = random.Next(0, 3) + i;
+                decorations.Add((Decoration) values.GetValue(r));
+            }
+           
+            /*Array values = Enum.GetValues(typeof(Decoration));
             Decoration[] decorations = new Decoration[numberOfItems];
             for (int i = 0; i < numberOfItems; i++)
             {
                 decorations[i] = (Decoration) values.GetValue(random.Next(values.Length));
-            }
+            }*/
 
             return decorations;
         }
@@ -83,6 +95,7 @@ namespace Item
         TerribleCondition,
         WithTrumpStickers,
         WithWheels,
-        WithWings
+        WithWings, 
+        NoDecoration
     }
 }

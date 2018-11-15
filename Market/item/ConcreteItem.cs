@@ -18,7 +18,10 @@ namespace Item
             Name = name;
             Owner = owner;
 
-            this._price = price; 
+            if (price > 0)
+            {
+                this._price = price; 
+            }
         }
         
         public double getPrice()
@@ -28,17 +31,17 @@ namespace Item
         
         public string getCondition()
         {
-            return "not specified"; 
+            return ""; 
         }
 
         public string getDamage()
         {
-            return "not specified"; 
+            return ""; 
         }
 
         public string getModification()
         {
-            return "not specified"; 
+            return ""; 
         }
 
         public string getInformation()
