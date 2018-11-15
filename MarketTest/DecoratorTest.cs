@@ -32,6 +32,14 @@ namespace MarketTest
         }
 
         [Test]
+        public void shouldGivePerfectCondition()
+        {
+            _item = new PerfectConditionItemDecorator(_item);
+            
+            Assert.That(_item.getCondition(), Is.EqualTo("perfect condition"));
+        }
+
+        [Test]
         public void priceCannotBeZero()
         {
             PriceAdjuster adjuster = new PriceAdjuster();

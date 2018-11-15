@@ -1,4 +1,6 @@
 
+market/market/Simulation.cs
+
 # Created by https://www.gitignore.io/api/rider,csharp
 # Edit at https://www.gitignore.io/?templates=rider,csharp
 
@@ -408,3 +410,4 @@ fabric.properties
 
 # End of https://www.gitignore.io/api/rider,csharp
 */market.csproj.nuget.g.props
+>>>>>>> 1e097578a783bec86183a423393b36ecbbf79d46
