@@ -2,9 +2,10 @@ namespace Item
 {
     public class TerribleConditionItemDecorator : ItemDecorator
     {
+
         public TerribleConditionItemDecorator(IItem original) : base(original)
         {
-            priceAdjuster.adjustPriceOf(original, -60, -30);
+            _priceAdjustment = Random.Next(-60, -30); 
         }
 
         public override string getCondition()

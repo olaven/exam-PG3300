@@ -6,7 +6,7 @@ namespace Item
     public abstract class ItemDecorator : IItem
     {
         private readonly IItem _item;
-        protected Random Random;
+        protected readonly Random Random;
         public string Name { get; set; }
         public Person Owner { get; set; }
 
