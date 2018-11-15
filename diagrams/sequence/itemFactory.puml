@@ -1,0 +1,27 @@
+@startuml Sequence diagram
+
+activate Client 
+Client -> ItemFactory : Request a random item 
+
+loop i < number of decorators  
+    ItemFactory <-- ItemFactory : get random item
+end
+
+activate ItemFactory
+activate ConcreteItem
+
+ItemFactory -> ConcreteItem : create baseItem 
+ItemFactory <-- ConcreteItem : returns item 
+
+deactivate ConcreteItem
+
+loop each decoration 
+    ref over ItemFactory : get decorated item 
+end
+
+ItemFactory --> Client : decorated item 
+deactivate ItemFactory
+
+deactivate Client 
+
+@enduml
