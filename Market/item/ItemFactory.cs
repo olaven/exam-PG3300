@@ -6,31 +6,15 @@ namespace Item
 {
     public static class ItemFactory
     {
-        
-        public enum Decoration
-        {    
-            NoDecoration,
-            ModerateDamage,
-            MultipleDamage,
-            NoDamage,
-            DecentCondition,
-            PerfectCondition,
-            TerribleCondition,
-            WithTrumpStickers,
-            WithWheels,
-            WithWings
+        #region getting a random-decorated item 
+        public static IItem GetRandomItem(Person person, int numberOfDecorations)
+        {
+            List<Decoration> decorations = GetRandomDecorations(numberOfDecorations);
+
+            return GetItem(decorations, person);
         }
 
-        
-        
-        /*public void getNew(string name, double price, Person person)
-        {
-            IItem item  = new ConcreteItem(name, price, person);
-            
-            
-        }*/
-
-        public static IItem GetItem(List<Decoration> decorations, Person person)
+        private static IItem GetItem(List<Decoration> decorations, Person person)
         {    
             IItem item = new ConcreteItem("Item x", 200 ,person);
             foreach(Decoration dec in decorations)
@@ -76,14 +60,6 @@ namespace Item
             return item;
         }
 
-
-        public static IItem GetRandomItem(Person person, int numberOfDecorations)
-        {
-            List<Decoration> decorations = GetRandomDecorations(numberOfDecorations);
-
-            return GetItem(decorations, person);
-        }
-
         private static List<Decoration> GetRandomDecorations(int numberOfItems)
         {    
             
@@ -106,5 +82,20 @@ namespace Item
 
             return decorations;
         }
+        #endregion
+    }
+    
+    public enum Decoration
+    {
+        ModerateDamage,
+        MultipleDamage,
+        NoDamage,
+        DecentCondition,
+        PerfectCondition,
+        TerribleCondition,
+        WithTrumpStickers,
+        WithWheels,
+        WithWings, 
+        NoDecoration
     }
 }

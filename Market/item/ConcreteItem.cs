@@ -8,12 +8,12 @@ namespace Item
         public string Name { get; set; }
         public Person Owner { get; set; }
 
-        private readonly double _price; 
+        private readonly float _price; 
         
 
         
 
-        public ConcreteItem(string name, double price, Person owner)
+        public ConcreteItem(string name, float price, Person owner)
         {
             Name = name;
             Owner = owner;

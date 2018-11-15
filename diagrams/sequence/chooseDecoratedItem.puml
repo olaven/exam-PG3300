@@ -1,0 +1,29 @@
+@startuml Choose decorated item 
+
+
+ItemFactory -> ItemFactory 
+note left 
+    Having this self- 
+    reference makes PUML render 
+    Itemfactory as leftmost item 
+end note     
+
+alt DecentCondition
+    activate DecentConditionItemDecorator
+    ItemFactory -> DecentConditionItemDecorator : request item 
+    ItemFactory <-- DecentConditionItemDecorator : return decoated item 
+    deactivate DecentConditionItemDecorator
+else NoDamage
+    activate NoDamageItemDecorator
+    ItemFactory -> NoDamageItemDecorator : request item 
+    ItemFactory <-- NoDamageItemDecorator : return decoated item 
+    deactivate NoDamageItemDecorator
+else WithWings
+    activate WithWingsItemDecorator
+    ItemFactory -> WithWingsItemDecorator : request item 
+    ItemFactory <-- WithWingsItemDecorator : return decoated item 
+    deactivate WithWingsItemDecorator
+note left: Other decorators as well 
+end 
+
+@enduml
