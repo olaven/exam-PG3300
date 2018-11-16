@@ -39,7 +39,6 @@ namespace FleaMarket
 
         public List<IItem> GetItems()
         {
-            
             return _items;    
         }
 
@@ -59,6 +58,7 @@ namespace FleaMarket
             }
         }
 
+        //TODO: cleanup & refactor?
         public void BuyItem(Customer customer, IItem item)
         {
 
@@ -76,7 +76,7 @@ namespace FleaMarket
                     }
                     else
                     {
-                        Console.WriteLine("{0} tries to haggle, offers {1} for item with price {2}", customer.Name, customerBalance, itemPrice);
+                        // Console.WriteLine("{0} tries to haggle, offers {1} for item with price {2}", customer.Name, customerBalance, itemPrice);
                         //customer asks for bargain
                         if (seller.Bargain(itemPrice, customerBalance))
                         {
@@ -102,7 +102,12 @@ namespace FleaMarket
             _items.Remove(item);
             customer.Wallet.Balance -= itemPrice;
             seller.Wallet.Balance += itemPrice;
+            
             item.Owner = customer;
+
+            
+            seller.GetItems().Remove(item);
+            customer.GetItems().Add(item);
 
             Console.WriteLine("{0, 50} bought {1}", customer.Name, item.getInformation());
         }
