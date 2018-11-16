@@ -24,7 +24,7 @@ namespace Item
             }
         }
         
-        public double getPrice()
+        public float getPrice()
         {
             return _price;
         }
