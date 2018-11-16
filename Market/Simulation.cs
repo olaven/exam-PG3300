@@ -5,15 +5,6 @@ using System.Linq;
 using System.Threading;
 using Item;
 
-/*
- *En simuation skal:
- *
- * 1. lage personer
- * 2. kjøre evig (Thread.sleep mellom) 
- * 3. 
- * 
- */
-
 namespace FleaMarket
 {
     public class Simulation
@@ -33,14 +24,6 @@ namespace FleaMarket
             _salesmen = PopulateSalesmen();
             _customers = PopulateCustomers(); 
             
-            var x = _saleCount / _salesmen.Count;
-            foreach(var salesman in _salesmen)
-            {
-                for (var y = 0; y < x; y++)
-                {
-                    salesman.AddItem(ItemFactory.GetRandomItem(salesman, 5));
-                }
-            }
         }
 
         public void Run()
@@ -72,20 +55,34 @@ namespace FleaMarket
 
             return salesman; 
         }
+
+
+        private void GiveItemsTo(IEnumerable<Person> persons)
+        {
+            foreach (var person in persons)
+            {
+                IItem item = ItemFactory.GetRandomItem(person, 5); 
+                person.GetItems().Add(item);
+            }
+        }
         
         
         #region populating lists 
         private List<Salesman> PopulateSalesmen()
         {
             List<Person> persons = PopulatePersons(PersonType.Salesman, 5, 10);
-            return persons.Cast<Salesman>().ToList(); 
+            GiveItemsTo(persons); 
+            
+            return persons.Cast<Salesman>().ToList();
         }
+        
 
         private List<Customer> PopulateCustomers()
         {
             List<Person> persons = PopulatePersons(PersonType.Customer, 10, 15);
             return persons.Cast<Customer>().ToList(); 
         }
+        
 
         private List<Person> PopulatePersons(PersonType type, int min, int max)
         {
