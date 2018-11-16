@@ -70,19 +70,28 @@ namespace FleaMarket
             {
                 if (_items.Count != 0 && _items.Contains(item))
                 {
-                    if (customer.Wallet.Balance >= item.getPrice())
+                    var customerBalance = customer.Wallet.Balance;
+                    var seller = (Salesman) item.Owner;
+                    var itemPrice = item.getPrice();
+                    
+                    if (customerBalance >= itemPrice)
                     {
-                        Market.Instance.GetItems().Remove(item);
-                        customer.Wallet.Balance -= item.getPrice();
-                        item.Owner.Wallet.Balance += item.getPrice();
+                        _items.Remove(item);
+                        customer.Wallet.Balance -= itemPrice;
+                        seller.Wallet.Balance += itemPrice;
                         item.Owner = customer;
                        
                         Console.WriteLine("{0, 50} bought {1}", customer.Name, item.getInformation());
                     }
                     else
                     {
-                        Console.WriteLine(customer.Name + " wanted to buy item but could not afford it.");
-                        //prute?
+                        Console.WriteLine("{0} asks for bargain offers {1} for item with price {2}", customer.Name, customerBalance, itemPrice);
+                        //customer asks for bargain
+                        if (seller.Bargain(itemPrice, customerBalance))
+                        {
+                            Console.WriteLine("Bargain accepted");
+                        }
+                        
                     }
               
                 }

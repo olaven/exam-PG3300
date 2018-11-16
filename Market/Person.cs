@@ -30,5 +30,6 @@ namespace FleaMarket
         public abstract void Act();
 
 
+
     }
 }

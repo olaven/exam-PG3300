@@ -22,6 +22,13 @@ namespace FleaMarket
             Market.Instance.AddItem(itemForSale);
             Console.WriteLine("{0} put up their item for sale: {1}", Name, itemForSale.getInformation());
         }
+        
+        
+        public bool Bargain(float itemPrice, float customerBalance)
+        {
+            return new Random().Next(0,1)/10 < customerBalance/itemPrice;
+        }
+        
     }
 
 }
