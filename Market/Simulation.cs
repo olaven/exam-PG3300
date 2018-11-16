@@ -34,12 +34,12 @@ namespace FleaMarket
                 while (true)
                 {
                     Thread.Sleep(2000);
-                    GetRandomSeller().Act(); // may be several sellers / composite 
+                    GetRandomSellers().Act(); // may be several sellers / composite 
                 }
             }).Start();
         }
 
-        private Salesman GetRandomSeller()
+        private Salesman GetRandomSellers()
         {
             var amount = _random.Next(1, 3);
 
@@ -70,7 +70,7 @@ namespace FleaMarket
         #region populating lists 
         private List<Salesman> PopulateSalesmen()
         {
-            List<Person> persons = PopulatePersons(PersonType.Salesman, 5, 10);
+            List<Person> persons = PopulatePersons(PersonType.Salesman, 2, 4);
             GiveItemsTo(persons); 
             
             return persons.Cast<Salesman>().ToList();
@@ -79,21 +79,20 @@ namespace FleaMarket
 
         private List<Customer> PopulateCustomers()
         {
-            List<Person> persons = PopulatePersons(PersonType.Customer, 10, 15);
+            List<Person> persons = PopulatePersons(PersonType.Customer, 3, 6);
             return persons.Cast<Customer>().ToList(); 
         }
         
 
         private List<Person> PopulatePersons(PersonType type, int min, int max)
         {
-            PersonFactory _personFactory = new PersonFactory();
             
             var _amount = _random.Next(min, max);
             var _list = new List<Person>(); 
 
             for (var i = 0; i < _amount; i++)
             {
-                Person person = _personFactory.getPerson(type); 
+                Person person = PersonFactory.getPerson(type); 
                 _list.Add(person);
             }
 

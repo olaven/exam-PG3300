@@ -5,10 +5,10 @@ namespace FleaMarket
 {
     public class PersonFactory
     {
-        private readonly ArrayList _names = new ArrayList{"Petter", "Lars", "Carrie", "Nils", "Dormammu", "Hank", "Thomaster"};
-        private readonly Random _random = new Random();
+        private static readonly ArrayList _names = new ArrayList{"Petter", "Lars", "Carrie", "Nils", "Dormammu", "Hank", "Simon", "Mary", "Elon", "Tom", "Frank Jr." };
+        private static readonly Random _random = new Random();
         
-        public Person getPerson(PersonType type)
+        public static Person getPerson(PersonType type)
         {
             switch (type)
             {
@@ -21,7 +21,7 @@ namespace FleaMarket
             }
         }
         
-        private string GetRandomName()
+        private static string GetRandomName()
         {
             if (_names.Count < 1)
             {

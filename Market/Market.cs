@@ -70,15 +70,14 @@ namespace FleaMarket
             {
                 if (_items.Count != 0 && _items.Contains(item))
                 {
-
                     if (customer.Wallet.Balance >= item.getPrice())
                     {
                         Market.Instance.GetItems().Remove(item);
                         customer.Wallet.Balance -= item.getPrice();
                         item.Owner.Wallet.Balance += item.getPrice();
                         item.Owner = customer;
-                        Console.WriteLine(customer.Name +  " bought:");
-                        Console.WriteLine(item.getInformation());
+                       
+                        Console.WriteLine("{0, 50} bought {1}", customer.Name, item.getInformation());
                     }
                     else
                     {
