@@ -48,17 +48,15 @@ namespace FleaMarket
         {
             _items.Add(item);
             
-            
-            
-            SomeEvent(EventArgs.Empty);
+            SomeEvent(EventArgs.Empty); 
         }
 
-        protected void SomeEvent(EventArgs e)
+        protected void SomeEvent(EventArgs e) //TODO: Rename method 
         {
             EventHandler handler = EventHappening;
             if (handler != null)
             {
-                //gi beskjed til customers at de kan kjøpe?
+                //gi beskjed til customers at de kan kjøpe
                 handler(this, e);
             }
         }

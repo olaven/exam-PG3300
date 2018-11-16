@@ -12,12 +12,13 @@ Exam in Software Design, at Kristiania University College
     - [ ] c#-style kommentar-doc
     - [X] Properties 
     - [X] "java-style" felter også, for å vise at vi kan det
-    - [ ] Ha flere projects i en solution 
+    - [X] Ha flere projects i en solution 
     - [X] Bruke c# regions 
     - [X] To namespaces
     - [ ] Unit testing med NUnit
     * C# sin Random funksjonalitet er i seg selv ikke trådsikker, løsninger på dette kan googles.
     * Det er greit å benytte Sleepfor å simulere at deler av løsningen tar tid/få tiden til å gå. (Ikke der vi har brukt det så langt)
+    * Der hvor noe er med kun for å være med, må det nevnes BÅDE i kode og i dokumentasjon 
 - [ ] Dokumentasjon
     - [ ] Simulering av folks interagering med et marked, ikke en simulering av et marked 
     - [ ] Patterns dokumenteres 
@@ -30,7 +31,7 @@ Exam in Software Design, at Kristiania University College
         - [ ] MVP -> ?? 
     - [ ] Skriv om regions 
     - [ ] Skriv om kommentar-doc 
-    - [ ] Skriv om operator-overlsting 
+    - [ ] Skriv om operator-overlsting - ha med for å ha det med 
     - [ ] Skriv om Unit testing 
         - [ ] Hva det er 
         - [ ] Hvor vi har brukt det 
@@ -39,6 +40,7 @@ Exam in Software Design, at Kristiania University College
     - [ ] Skriv om diagrammene (med bilde)
         - [ ] Use case 
         - [ ] Class diagram 
+            - [ ] Forskjellige koblinger 
         - [ ] Sequence diagram 
             - [ ] Opt vs alt og hvorfor det som er valgt, er valgt 
             - [ ] Nevn annen syntaks som synkron/asynkron

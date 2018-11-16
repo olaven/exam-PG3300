@@ -5,29 +5,33 @@ using System.Linq;
 using System.Threading;
 using Item;
 
+/*
+ *En simuation skal:
+ *
+ * 1. lage personer
+ * 2. kjøre evig (Thread.sleep mellom) 
+ * 3. 
+ * 
+ */
+
 namespace FleaMarket
 {
     public class Simulation
     {
-
-        private readonly List<Salesman> _salesmen = new List<Salesman>();
-        private readonly List<Customer> _customers = new List<Customer>();
-        private readonly Random _random;
-        private readonly ArrayList _names = new ArrayList{"Petter", "Kjell", "Kari", "Nils", "Dormammu", "Hank", "Thomaster"};
+        private readonly Random _random; 
         private readonly int _saleCount;
+        
+        private readonly List<Salesman> _salesmen; 
+        private readonly List<Customer> _customers;  
+        
 
         public Simulation(int saleCount)
         {
             _saleCount = saleCount;
             _random = new Random();
-            _salesmen.Add(new Salesman(GetRandomName()));
-            _salesmen.Add(new Salesman(GetRandomName()));
-            _customers.Add(new Customer(GetRandomName()));
-            _customers.Add(new Customer(GetRandomName()));
-            _customers.Add(new Customer(GetRandomName()));
-            _customers.Add(new Customer(GetRandomName()));
-            
-            _customers.ForEach(c => Console.WriteLine(c.Wallet.Balance));
+
+            _salesmen = PopulateSalesmen();
+            _customers = PopulateCustomers(); 
             
             var x = _saleCount / _salesmen.Count;
             foreach(var salesman in _salesmen)
@@ -41,32 +45,64 @@ namespace FleaMarket
 
         public void Run()
         {
-            Thread thread = new Thread(() =>
+            
+            new Thread(() =>
             {
                 while (true)
                 {
                     Thread.Sleep(2000);
-                    Salesman seller = _salesmen.ToArray()[_random.Next(0, _salesmen.Count())];
-                    Salesman otherSeller = _salesmen.ToArray()[_random.Next(0, _salesmen.Count())];
-                    seller.Act();
-                    otherSeller.Act();
-                    //Console.Write("\n");
+                    GetRandomSeller().Act(); // may be several sellers / composite 
                 }
-            });
-            
-            thread.Start();
+            }).Start();
         }
 
-        private string GetRandomName()
+        private Salesman GetRandomSeller()
         {
-            if (_names.Count < 1)
+            var amount = _random.Next(1, 3);
+
+            int index = _random.Next(_salesmen.Count); 
+            CompositeSalesman salesman = new CompositeSalesman( _salesmen[index]);
+
+            // from 1, as first one is already added through constructor above. 
+            for (var i = 1; i < amount; i++)
             {
-                return "John Doe";
+                Salesman randomSalesman = _salesmen[_random.Next(_salesmen.Count)]; 
+                salesman.Add(randomSalesman); 
             }
-            var r = _random.Next(0, _names.Count);
-            string name = (string) _names[r];
-            _names.RemoveAt(r);
-            return name;
+
+            return salesman; 
         }
+        
+        
+        #region populating lists 
+        private List<Salesman> PopulateSalesmen()
+        {
+            List<Person> persons = PopulatePersons(PersonType.Salesman, 5, 10);
+            return persons.Cast<Salesman>().ToList(); 
+        }
+
+        private List<Customer> PopulateCustomers()
+        {
+            List<Person> persons = PopulatePersons(PersonType.Customer, 10, 15);
+            return persons.Cast<Customer>().ToList(); 
+        }
+
+        private List<Person> PopulatePersons(PersonType type, int min, int max)
+        {
+            PersonFactory _personFactory = new PersonFactory();
+            
+            var _amount = _random.Next(min, max);
+            var _list = new List<Person>(); 
+
+            for (var i = 0; i < _amount; i++)
+            {
+                Person person = _personFactory.getPerson(type); 
+                _list.Add(person);
+            }
+
+            return _list;
+        }
+        #endregion
+
     }
 }

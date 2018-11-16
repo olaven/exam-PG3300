@@ -1,7 +1,7 @@
 namespace FleaMarket
 {
-    public class PersonType
+    public enum PersonType
     {
-        
-    }
+        Salesman, Customer 
+    } 
 }
