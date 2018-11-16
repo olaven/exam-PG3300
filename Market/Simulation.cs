@@ -1,5 +1,4 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
@@ -61,8 +60,14 @@ namespace FleaMarket
         {
             foreach (var person in persons)
             {
-                IItem item = ItemFactory.GetRandomItem(person, 5); 
-                person.GetItems().Add(item);
+                
+                var amount = _random.Next(10, 30); 
+                for (var i = 0; i < amount; i++)
+                {
+                    var item = ItemFactory.GetRandomItem(person, 5);
+                    person.GetItems().Add(item);
+                }
+                
             }
         }
         
@@ -70,7 +75,7 @@ namespace FleaMarket
         #region populating lists 
         private List<Salesman> PopulateSalesmen()
         {
-            List<Person> persons = PopulatePersons(PersonType.Salesman, 2, 4);
+            var persons = PopulatePersons(PersonType.Salesman, 2, 4);
             GiveItemsTo(persons); 
             
             return persons.Cast<Salesman>().ToList();
