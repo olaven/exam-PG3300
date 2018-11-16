@@ -4,32 +4,36 @@ using System.Collections.Generic;
 
 namespace FleaMarket
 {
+    /// <summary>
+    /// Encapsulating the concept of
+    /// a person. Is never directly instanciated
+    /// (is abstract), but is extended by
+    /// Salesman and Customer.
+    /// Each person has:
+    /// <list type="bullet">
+    ///    <item>A name</item>
+    ///    <item>A wallet</item>
+    ///    <item>A list of belongings</item>
+    /// </list>
+    /// </summary>
     public abstract class Person
     {
-        public Wallet Wallet { get; }
         public string Name { get; }
+        public Wallet Wallet { get; }
         protected List<IItem> Items;
+        
         
         protected Person(string name)
         {
+            Name = name;
             Wallet = new Wallet();
             Items = new List<IItem>();
-            Name = name;
         }
 
         public List<IItem> GetItems()
         {
             return Items;
         }
-
-        public void AddItem(IItem item)
-        {
-            Items.Add(item);
-        }
-
-        public abstract void Act();
-
-
 
     }
 }

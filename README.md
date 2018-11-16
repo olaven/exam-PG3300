@@ -33,6 +33,7 @@ Exam in Software Design, at Kristiania University College
     - [ ] Skriv om regions 
     - [ ] Skriv om kommentar-doc 
     - [ ] Skriv om operator-overlsting - ha med for å ha det med 
+    - [ ] Skriv om events (delegation?? slå opp term)
     - [ ] Skriv om Unit testing 
         - [ ] Hva det er 
         - [ ] Hvor vi har brukt det 

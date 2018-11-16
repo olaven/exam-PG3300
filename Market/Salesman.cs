@@ -10,10 +10,9 @@ namespace FleaMarket
     {
     
         public Salesman(string name) : base(name)
-        {
+        {}
         
-        }
-        public override void Act()
+        public virtual void SellItem()
         {
             if(Items.Count < 1)
                 return;

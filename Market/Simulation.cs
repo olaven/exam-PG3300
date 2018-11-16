@@ -6,6 +6,11 @@ using Item;
 
 namespace FleaMarket
 {
+    /// <summary>
+    /// This runs the simulation itself.
+    /// Customers and salesmen are created
+    /// and trade with each other. 
+    /// </summary>
     public class Simulation
     {
         private readonly Random _random; 
@@ -33,7 +38,7 @@ namespace FleaMarket
                 while (true)
                 {
                     Thread.Sleep(2000);
-                    GetRandomSellers().Act(); // may be several sellers / composite 
+                    GetRandomSellers().SellItem(); // may be several sellers / composite 
                 }
             }).Start();
         }
@@ -55,7 +60,10 @@ namespace FleaMarket
             return salesman; 
         }
 
-
+        /// <summary>
+        /// Gives betwenn 5 and 8 items to the given persons 
+        /// </summary>
+        /// <param name="persons">Persons to give items to</param>
         private void GiveItemsTo(IEnumerable<Person> persons)
         {
             foreach (var person in persons)
@@ -75,6 +83,7 @@ namespace FleaMarket
         private List<Salesman> PopulateSalesmen()
         {
             var persons = PopulatePersons(PersonType.Salesman, 2, 4);
+            // salesmen have to own the items they sell 
             GiveItemsTo(persons); 
             
             return persons.Cast<Salesman>().ToList();
@@ -87,7 +96,19 @@ namespace FleaMarket
             return persons.Cast<Customer>().ToList(); 
         }
         
-
+        /// <summary>
+        /// Returns a list with the given type of person.
+        /// </summary>
+        /// <param name="type">
+        ///    Type of person 
+        /// </param>
+        /// <param name="min">
+        ///    Minimum amount of people 
+        /// </param>
+        /// <param name="max">
+        ///    Maximum amount or people 
+        /// </param>
+        /// <returns></returns>
         private List<Person> PopulatePersons(PersonType type, int min, int max)
         {
             

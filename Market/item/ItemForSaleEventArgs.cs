@@ -3,6 +3,11 @@ using Item;
 
 namespace FleaMarket
 {
+    /// <summary>
+    /// This EventArg holds an item.
+    /// This allows us to pass the item
+    /// through the event customers listen to. 
+    /// </summary>
     public class ItemForSaleEventArgs : EventArgs
     {
         public ItemForSaleEventArgs(IItem item)

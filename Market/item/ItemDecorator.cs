@@ -3,6 +3,14 @@ using FleaMarket;
 
 namespace Item
 {
+    /// <summary>
+    /// The item decorator extends *and* has an IItem.
+    /// Implementing IItem is done by using the IItem
+    /// internally to delegate functionality to it.
+    /// 
+    /// This is part of the decorator pattern, allowing
+    /// us to decorate (add functionality) in runtime. 
+    /// </summary>
     public abstract class ItemDecorator : IItem
     {
         private readonly IItem _item;
@@ -53,18 +61,6 @@ namespace Item
                    " in " + getCondition() + 
                    " that has " + getDamage() +
                    " for " + getPrice() + ",-";
-            /*return "" +
-                   "\nName: " + _item.Name +
-                   "\nPrice: " + _item.getPrice() +
-                   "\nOwner: " + _item.Owner + //TODO: Fix en fin toString på person 
-                   "\n\n" +
-                   
-                   "\nCondition: " + getCondition() +
-                   "\nDamage: " + getDamage() +
-                   "\nModification: " + getModification() +
-                   "\n\n"
-                ; 
-                */
         }
     }
 }
