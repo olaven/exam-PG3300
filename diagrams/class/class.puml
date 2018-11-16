@@ -19,6 +19,7 @@ namespace item {
         / Name : String 
     }
 
+
     abstract ItemDecorator implements Item {
         - item : Item
         # random : Random  
@@ -33,14 +34,25 @@ namespace item {
 
     note "More in implementation" as MoreInImplementation
     MoreInImplementation .. ItemDecorator
-}
 
-namespace FleaMarket {
+
+    enum Decoration {
+        NoDamage,
+        PerfectCondition,
+        WithWings, 
+    }
+
+    ItemFactory -- Decoration : uses 
+
     class ItemFactory {
         + getNew : Item  
     }
 
     ItemFactory -- Item : creates 
+}
+
+namespace FleaMarket {
+    
 
     class Wallet {
         + <<Property>> Balance : float 
@@ -63,6 +75,10 @@ namespace FleaMarket {
 
     class Salesman extends Person {
         / act void 
+    }
+
+    class PersonFactory {
+        + 
     }
 
     note "Singleton" as singleton
