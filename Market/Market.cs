@@ -10,8 +10,8 @@ namespace FleaMarket
         private static Market _market;
         private List<IItem> _items;
         public EventHandler EventHappening;
-        private readonly object staticLock = new object(); 
-        private static readonly object padlock = new object();
+        private readonly object _staticLock = new object(); 
+        private static readonly object Padlock = new object();
 
 
         private Market()
@@ -25,7 +25,7 @@ namespace FleaMarket
         {
             get
             {
-                lock (padlock)
+                lock (Padlock)
                 {
                     if (_market == null)
                     {
@@ -46,10 +46,6 @@ namespace FleaMarket
         public void AddItem(IItem item)
         {
             _items.Add(item);
-            
-
-            
-            
             ItemForSaleEvent(new ItemForSaleEventArgs(item));
         }
 
@@ -66,7 +62,7 @@ namespace FleaMarket
         public void BuyItem(Customer customer, IItem item)
         {
 
-            lock (staticLock)
+            lock (_staticLock)
             {
                 if (_items.Count != 0 && _items.Contains(item))
                 {

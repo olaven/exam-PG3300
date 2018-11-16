@@ -83,9 +83,13 @@ namespace FleaMarket {
 
     note "Singleton" as singleton
     class Market {
-        - instance : Market
-        - items : List<Item>
-        + getInstance() : Market   
+        
+        - _market : Market
+        - _items : List<IItem>
+        + EvenHappening : EventHandler
+        - _staticLock : object
+        - Padlock : object
+        + <<Property>> Instance : Market  
         + addForSale(item : Item) : void  
         + sellItem(item : Item) : void 
     }
@@ -98,9 +102,15 @@ namespace FleaMarket {
     }
 
     class Simulation {
-        - customers : List<Customer> 
-        - salesmen : List<Salesman> 
+        - _random : Random
+        - _saleCount int
+        - _customers : List<Customer> 
+        - _salesmen : List<Salesman> 
         ~ run() : void 
+        - Simulation(saleCount : int) : Siumlaton
+        - GetRandomSellers(): Salesman
+        - GiveItemsTo(persons : IEnumerable<Person>): void
+        
     }
 
     Program -- "1" Simulation : starts
