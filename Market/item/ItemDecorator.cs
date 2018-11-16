@@ -23,7 +23,8 @@ namespace Item
         }
         
         #region Delegated methods 
-        public virtual double getPrice()
+        
+        public virtual float getPrice()
         {
             return _item.getPrice();
         }
