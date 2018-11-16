@@ -12,7 +12,7 @@ namespace MarketTest
         {
             Person person = new Salesman("Petter");
             
-            Assert.That(person.GetName(), Is.EqualTo("Petter"));
+            Assert.That(person.Name, Is.EqualTo("Petter"));
         }
     }
 }
