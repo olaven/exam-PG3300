@@ -6,14 +6,28 @@ namespace Item
 {
     public static class ItemFactory
     {
-        #region getting a random-decorated item 
+        #region getting a decorated item 
+        
+        /// <summary>
+        /// Manufactures and returns a new item
+        /// with random decorations 
+        /// </summary>
+        /// <param name="decorations">The owner of the item</param>
+        /// <param name="person">The owner of the item</param>
+        /// <returns></returns>
         public static IItem GetRandomItem(Person person, int numberOfDecorations)
         {
-            List<Decoration> decorations = GetRandomDecorations(numberOfDecorations);
+            var decorations = GetRandomDecorations(numberOfDecorations);
 
             return GetItem(decorations, person);
         }
 
+        /// <summary>
+        /// Manufactures and returns a new item 
+        /// </summary>
+        /// <param name="decorations">The decorations to apply</param>
+        /// <param name="person">The owner of the item</param>
+        /// <returns></returns>
         private static IItem GetItem(List<Decoration> decorations, Person person)
         {   
             IItem item = new ConcreteItem("Item x", 200 ,person);
@@ -49,35 +63,32 @@ namespace Item
                         item = new ModerateDamageItemDecorator(item);
                         break;
                     case Decoration.NoDecoration:
-                        break;
-                    
+                        break;       
                 }
-                
             }
-
 
             return item;
         }
 
+        /// <summary>
+        /// Uses the "decorator-pattern"-structure
+        /// to apply different variations (decorations)
+        /// on the item. 
+        /// </summary>
+        /// <param name="numberOfItems">Amount of decorations</param>
+        /// <returns>A decorated item</returns>
         private static List<Decoration> GetRandomDecorations(int numberOfItems)
         {    
             
-            Random random = new Random();
-            List<Decoration> decorations = new List<Decoration>();
-            Array values = Enum.GetValues(typeof(Decoration));
+            var random = new Random();
+            var decorations = new List<Decoration>();
+            var values = Enum.GetValues(typeof(Decoration));
 
             for (var i = 1; i < values.Length; i += 3)
             {
                 var r = random.Next(0, 3) + i;
                 decorations.Add((Decoration) values.GetValue(r));
             }
-           
-            /*Array values = Enum.GetValues(typeof(Decoration));
-            Decoration[] decorations = new Decoration[numberOfItems];
-            for (int i = 0; i < numberOfItems; i++)
-            {
-                decorations[i] = (Decoration) values.GetValue(random.Next(values.Length));
-            }*/
 
             return decorations;
         }

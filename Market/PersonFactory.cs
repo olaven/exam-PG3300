@@ -3,11 +3,27 @@ using System.Collections;
 
 namespace FleaMarket
 {
+    /// <summary>
+    /// Static class for creating
+    /// Person-instances.
+    /// </summary>
     public class PersonFactory
     {
-        private static readonly ArrayList _names = new ArrayList{"Petter", "Lars", "Carrie", "Nils", "Dormammu", "Hank", "Simon", "Mary", "Elon", "Tom", "Frank Jr." };
+        private static readonly ArrayList _names = new ArrayList
+        {
+            "Petter", "Lars", "Carrie", "Nils", "Dormammu", 
+            "Hank", "Simon", "Mary", "Elon", "Tom", "Frank Jr.", 
+            "Guro", "Toad", "Zelda", "James", "David", "Molly"
+        };
         private static readonly Random _random = new Random();
         
+        
+        /// <summary>
+        /// Manufactures and returns a person. 
+        /// </summary>
+        /// <param name="type">The type of person</param>
+        /// <returns>A person</returns>
+        /// <exception cref="Exception"></exception>
         public static Person getPerson(PersonType type)
         {
             switch (type)
@@ -21,6 +37,12 @@ namespace FleaMarket
             }
         }
         
+        /// <summary>
+        /// Gets names that are not taken.
+        /// When every name is taken, a
+        /// default name, "John Doe", is used. 
+        /// </summary>
+        /// <returns>A name</returns>
         private static string GetRandomName()
         {
             if (_names.Count < 1)
@@ -34,3 +56,6 @@ namespace FleaMarket
         }
     }
 }
+
+
+

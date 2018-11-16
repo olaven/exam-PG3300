@@ -5,6 +5,12 @@ using Item;
 
 namespace FleaMarket
 {
+    /// <summary>
+    /// This is the market people trade on.
+    /// The market is a singleton, as we want
+    /// to guarantee that everyone is using
+    /// the same market-instance. 
+    /// </summary>
     public class Market
     {
         private static Market _market;
@@ -14,17 +20,21 @@ namespace FleaMarket
         private static readonly object padlock = new object();
 
 
+        //private to prohibit instantiation of market object for other classes.
         private Market()
         {
-            //private to prohibit instantiation of market object for other classes.
             _items = new List<IItem>();
 
         }
-
+        
         public static Market Instance
         {
             get
             {
+                /*
+                 * The market could be null twice in separate threads.
+                 * This would destroy the singletons purpose.
+                 */
                 lock (padlock)
                 {
                     if (_market == null)

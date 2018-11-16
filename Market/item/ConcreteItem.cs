@@ -1,8 +1,10 @@
-using System; 
-using FleaMarket; 
+ using FleaMarket; 
 
 namespace Item
 {
+    /// <summary>
+    /// A basic item. 
+    /// </summary>
     public class ConcreteItem : IItem
     {
         public string Name { get; set; }

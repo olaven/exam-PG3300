@@ -28,18 +28,6 @@ namespace FleaMarket
 
         }
         
-        
-        public override void Act()
-        {
-
-            /*new Thread(() =>
-            {
-                Thread.Sleep(new Random().Next(50, 100));
-                
-                Market.Instance.BuyItem(this);
-            }).Start(); */
-
-        }
     }
 }
 

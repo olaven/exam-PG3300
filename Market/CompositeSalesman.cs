@@ -18,11 +18,11 @@ namespace FleaMarket
             _salesmen.Add(salesman);
         }
 
-        public override void Act()
+        public override void SellItem()
         {
             foreach (var salesman in _salesmen)
             {
-                salesman.Act(); 
+                salesman.SellItem(); 
             }
         }
 
