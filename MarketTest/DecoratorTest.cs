@@ -32,6 +32,14 @@ namespace MarketTest
         }
 
         [Test]
+        public void shouldGiveTerribleCondition()
+        {
+            _item = new TerribleConditionItemDecorator(_item);
+            
+            Assert.That(_item.getCondition(), Is.EqualTo("terrible condition"));
+        }
+
+        [Test]
         public void priceCantBeLessThan0()
         {
             IItem item = new ConcreteItem("Thomas", -100, new Customer("customer name"));
