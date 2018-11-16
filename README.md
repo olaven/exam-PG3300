@@ -21,6 +21,7 @@ Exam in Software Design, at Kristiania University College
     * Der hvor noe er med kun for å være med, må det nevnes BÅDE i kode og i dokumentasjon 
 - [ ] Dokumentasjon
     - [ ] Simulering av folks interagering med et marked, ikke en simulering av et marked 
+    - [ ] Gå igjennom at det ikke finnes variabler som ikke blir brukt. Endre så i klassediagram om det skjer en endring!
     - [ ] Patterns dokumenteres 
         - [ ] Factory -> Itemfactory 
         - [ ] Decorator -> ItemDecorator (Vi har ac, ikke interface -> hvorfor!)

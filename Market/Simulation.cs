@@ -75,7 +75,6 @@ namespace FleaMarket
                     var item = ItemFactory.GetRandomItem(person, 5);
                     person.GetItems().Add(item);
                 }
-                
             }
         }
         

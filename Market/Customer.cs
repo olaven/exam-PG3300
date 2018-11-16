@@ -25,7 +25,6 @@ namespace FleaMarket
                 ItemForSaleEventArgs args = (ItemForSaleEventArgs) e;
                 Market.Instance.BuyItem(this, args.Item);
             }).Start(); 
-
         }
         
     }

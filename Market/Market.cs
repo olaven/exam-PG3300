@@ -16,8 +16,8 @@ namespace FleaMarket
         private static Market _market;
         private List<IItem> _items;
         public EventHandler EventHappening;
-        private readonly object staticLock = new object(); 
-        private static readonly object padlock = new object();
+        private readonly object _staticLock = new object(); 
+        private static readonly object Padlock = new object();
 
 
         //private to prohibit instantiation of market object for other classes.
@@ -35,7 +35,8 @@ namespace FleaMarket
                  * The market could be null twice in separate threads.
                  * This would destroy the singletons purpose.
                  */
-                lock (padlock)
+
+                lock (Padlock)
                 {
                     if (_market == null)
                     {
@@ -49,17 +50,12 @@ namespace FleaMarket
 
         public List<IItem> GetItems()
         {
-            
             return _items;    
         }
 
         public void AddItem(IItem item)
         {
             _items.Add(item);
-            
-
-            
-            
             ItemForSaleEvent(new ItemForSaleEventArgs(item));
         }
 
@@ -73,10 +69,11 @@ namespace FleaMarket
             }
         }
 
+        //TODO: cleanup & refactor?
         public void BuyItem(Customer customer, IItem item)
         {
 
-            lock (staticLock)
+            lock (_staticLock)
             {
                 if (_items.Count != 0 && _items.Contains(item))
                 {
@@ -84,27 +81,17 @@ namespace FleaMarket
                     var seller = (Salesman) item.Owner;
                     var itemPrice = item.getPrice();
                     
-                    if (customerBalance >= itemPrice)
+                    if (customer.Wallet >= itemPrice)
                     {
-                        _items.Remove(item);
-                        customer.Wallet.Balance -= itemPrice;
-                        seller.Wallet.Balance += itemPrice;
-                        item.Owner = customer;
-                       
-                        Console.WriteLine("{0, 50} bought {1}", customer.Name, item.getInformation());
+                        DoTransaction(customer, item, itemPrice, seller);
                     }
                     else
                     {
-                        Console.WriteLine("{0} tries to haggle, offers {1} for item with price {2}", customer.Name, customerBalance, itemPrice);
+                        // Console.WriteLine("{0} tries to haggle, offers {1} for item with price {2}", customer.Name, customerBalance, itemPrice);
                         //customer asks for bargain
                         if (seller.Bargain(itemPrice, customerBalance))
                         {
-                            Console.WriteLine("Haggle accepted");
-                            _items.Remove(item);
-                            customer.Wallet.Balance = 0;
-                            seller.Wallet.Balance += itemPrice;
-                            item.Owner = customer;
-
+                            DoTransaction(customer, item, itemPrice, seller);
                         }
                         else
                         {
@@ -120,6 +107,20 @@ namespace FleaMarket
                 }      
             }
         }
+
+        private void DoTransaction(Customer customer, IItem item, float itemPrice, Salesman seller)
+        {
+            _items.Remove(item);
+            customer.Wallet.Balance -= itemPrice;
+            seller.Wallet.Balance += itemPrice;
             
+            item.Owner = customer;
+
+            
+            seller.GetItems().Remove(item);
+            customer.GetItems().Add(item);
+
+            Console.WriteLine("{0, 50} bought {1}", customer.Name, item.getInformation());
+        }
     }
 }
