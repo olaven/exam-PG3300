@@ -20,7 +20,7 @@ namespace FleaMarket
     {
         public string Name { get; }
         public Wallet Wallet { get; }
-        protected List<IItem> Items;
+        protected readonly List<IItem> Items;
         
         
         protected Person(string name)

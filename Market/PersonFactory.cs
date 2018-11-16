@@ -9,13 +9,13 @@ namespace FleaMarket
     /// </summary>
     public class PersonFactory
     {
-        private static readonly ArrayList _names = new ArrayList
+        private static readonly ArrayList Names = new ArrayList
         {
             "Petter", "Lars", "Carrie", "Nils", "Dormammu", 
             "Hank", "Simon", "Mary", "Elon", "Tom", "Frank Jr.", 
             "Guro", "Toad", "Zelda", "James", "David", "Molly"
         };
-        private static readonly Random _random = new Random();
+        private static readonly Random Random = new Random();
         
         
         /// <summary>
@@ -45,13 +45,13 @@ namespace FleaMarket
         /// <returns>A name</returns>
         private static string GetRandomName()
         {
-            if (_names.Count < 1)
+            if (Names.Count < 1)
             {
                 return "John Doe";
             }
-            var r = _random.Next(0, _names.Count);
-            string name = (string) _names[r];
-            _names.RemoveAt(r);
+            var r = Random.Next(0, Names.Count);
+            string name = (string) Names[r];
+            Names.RemoveAt(r);
             return name;
         }
     }
