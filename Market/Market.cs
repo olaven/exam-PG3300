@@ -85,11 +85,20 @@ namespace FleaMarket
                     }
                     else
                     {
-                        Console.WriteLine("{0} asks for bargain offers {1} for item with price {2}", customer.Name, customerBalance, itemPrice);
+                        Console.WriteLine("{0} tries to haggle, offers {1} for item with price {2}", customer.Name, customerBalance, itemPrice);
                         //customer asks for bargain
                         if (seller.Bargain(itemPrice, customerBalance))
                         {
-                            Console.WriteLine("Bargain accepted");
+                            Console.WriteLine("Haggle accepted");
+                            _items.Remove(item);
+                            customer.Wallet.Balance = 0;
+                            seller.Wallet.Balance += itemPrice;
+                            item.Owner = customer;
+
+                        }
+                        else
+                        {
+                            //Console.WriteLine("Haggle declined");
                         }
                         
                     }

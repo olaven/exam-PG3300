@@ -26,7 +26,9 @@ namespace FleaMarket
         
         public bool Bargain(float itemPrice, float customerBalance)
         {
-            return new Random().Next(0,1)/10 < customerBalance/itemPrice;
+            float f = new Random().Next(0, 100);
+            f = f / 100;
+            return f < customerBalance/itemPrice;
         }
         
     }

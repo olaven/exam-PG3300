@@ -61,7 +61,7 @@ namespace FleaMarket
             foreach (var person in persons)
             {
                 
-                var amount = _random.Next(10, 30); 
+                var amount = _random.Next(5, 8); 
                 for (var i = 0; i < amount; i++)
                 {
                     var item = ItemFactory.GetRandomItem(person, 5);
