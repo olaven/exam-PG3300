@@ -22,7 +22,7 @@ namespace item {
 
     abstract ItemDecorator implements Item {
         - item : Item
-        # random : Random  
+        # random : Random
     }
 
     ItemDecorator "1" o-- Item 
@@ -46,6 +46,7 @@ namespace item {
 
     class ItemFactory {
         + getNew : Item  
+        
     }
 
     ItemFactory -- Item : creates 
@@ -78,10 +79,17 @@ namespace FleaMarket {
     class Salesman extends Person {
         / act void 
     }
-
+    
     class PersonFactory {
-        + 
+        - {static} ArrayList : Names
+        - {static} Random : Random
+        + {static} getPerson(type PersonType) : Person
+        - {static} GetRandomName() : string
     }
+    
+    PersonFactory -- Simulation
+    
+    PersonFactory -- Person
 
     note "Singleton" as singleton
     class Market {
@@ -125,7 +133,7 @@ namespace FleaMarket {
     note "Legg in Flyweight pattern!" as flnote
 
 
-    Salesman -- ItemFactory : gets something to sell 
+    Salesman -- item.ItemFactory : gets something to sell 
 
 }
 
