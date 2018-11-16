@@ -92,6 +92,7 @@ namespace FleaMarket {
         + <<Property>> Instance : Market  
         + addForSale(item : Item) : void  
         + sellItem(item : Item) : void 
+        + Market()
     }
 
     Market .. singleton
@@ -107,7 +108,7 @@ namespace FleaMarket {
         - _customers : List<Customer> 
         - _salesmen : List<Salesman> 
         ~ run() : void 
-        - Simulation(saleCount : int) : Siumlaton
+        - Simulation(saleCount : int)
         - GetRandomSellers(): Salesman
         - GiveItemsTo(persons : IEnumerable<Person>): void
         
