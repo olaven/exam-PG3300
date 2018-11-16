@@ -17,6 +17,10 @@ namespace FleaMarket
         {
             new Thread(() =>
             {
+                if (Wallet.Balance <= 0)
+                {
+                    return;
+                }
                 Thread.Sleep(new Random().Next(50, 100));
                 ItemForSaleEventArgs args = (ItemForSaleEventArgs) e;
                 Market.Instance.BuyItem(this, args.Item);

@@ -1,18 +1,8 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using Item;
-
-/*
- *En simuation skal:
- *
- * 1. lage personer
- * 2. kjøre evig (Thread.sleep mellom) 
- * 3. 
- * 
- */
 
 namespace FleaMarket
 {
@@ -33,14 +23,6 @@ namespace FleaMarket
             _salesmen = PopulateSalesmen();
             _customers = PopulateCustomers(); 
             
-            var x = _saleCount / _salesmen.Count;
-            foreach(var salesman in _salesmen)
-            {
-                for (var y = 0; y < x; y++)
-                {
-                    salesman.AddItem(ItemFactory.GetRandomItem(salesman, 5));
-                }
-            }
         }
 
         public void Run()
@@ -51,12 +33,12 @@ namespace FleaMarket
                 while (true)
                 {
                     Thread.Sleep(2000);
-                    GetRandomSeller().Act(); // may be several sellers / composite 
+                    GetRandomSellers().Act(); // may be several sellers / composite 
                 }
             }).Start();
         }
 
-        private Salesman GetRandomSeller()
+        private Salesman GetRandomSellers()
         {
             var amount = _random.Next(1, 3);
 
@@ -72,31 +54,50 @@ namespace FleaMarket
 
             return salesman; 
         }
+
+
+        private void GiveItemsTo(IEnumerable<Person> persons)
+        {
+            foreach (var person in persons)
+            {
+                
+                var amount = _random.Next(5, 8); 
+                for (var i = 0; i < amount; i++)
+                {
+                    var item = ItemFactory.GetRandomItem(person, 5);
+                    person.GetItems().Add(item);
+                }
+                
+            }
+        }
         
         
         #region populating lists 
         private List<Salesman> PopulateSalesmen()
         {
-            List<Person> persons = PopulatePersons(PersonType.Salesman, 5, 10);
-            return persons.Cast<Salesman>().ToList(); 
+            var persons = PopulatePersons(PersonType.Salesman, 2, 4);
+            GiveItemsTo(persons); 
+            
+            return persons.Cast<Salesman>().ToList();
         }
+        
 
         private List<Customer> PopulateCustomers()
         {
-            List<Person> persons = PopulatePersons(PersonType.Customer, 10, 15);
+            List<Person> persons = PopulatePersons(PersonType.Customer, 3, 6);
             return persons.Cast<Customer>().ToList(); 
         }
+        
 
         private List<Person> PopulatePersons(PersonType type, int min, int max)
         {
-            PersonFactory _personFactory = new PersonFactory();
             
             var _amount = _random.Next(min, max);
             var _list = new List<Person>(); 
 
             for (var i = 0; i < _amount; i++)
             {
-                Person person = _personFactory.getPerson(type); 
+                Person person = PersonFactory.getPerson(type); 
                 _list.Add(person);
             }
 

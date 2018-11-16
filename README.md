@@ -23,7 +23,7 @@ Exam in Software Design, at Kristiania University College
     - [ ] Simulering av folks interagering med et marked, ikke en simulering av et marked 
     - [ ] Patterns dokumenteres 
         - [ ] Factory -> Itemfactory 
-        - [ ] Decorator -> ItemDecorator 
+        - [ ] Decorator -> ItemDecorator (Vi har ac, ikke interface -> hvorfor!)
         - [ ] Singleoton -> Market 
         - [ ] Composite -> ?? Kanskje person sayhi? 
         - [ ] Facade -> Act (?) 
