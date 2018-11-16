@@ -70,14 +70,9 @@ namespace FleaMarket
                     var seller = (Salesman) item.Owner;
                     var itemPrice = item.getPrice();
                     
-                    if (customerBalance >= itemPrice)
+                    if (customer.Wallet >= itemPrice)
                     {
-                        _items.Remove(item);
-                        customer.Wallet.Balance -= itemPrice;
-                        seller.Wallet.Balance += itemPrice;
-                        item.Owner = customer;
-                       
-                        Console.WriteLine("{0, 50} bought {1}", customer.Name, item.getInformation());
+                        DoTransaction(customer, item, itemPrice, seller);
                     }
                     else
                     {
@@ -85,12 +80,7 @@ namespace FleaMarket
                         //customer asks for bargain
                         if (seller.Bargain(itemPrice, customerBalance))
                         {
-                            Console.WriteLine("Haggle accepted");
-                            _items.Remove(item);
-                            customer.Wallet.Balance = 0;
-                            seller.Wallet.Balance += itemPrice;
-                            item.Owner = customer;
-
+                            DoTransaction(customer, item, itemPrice, seller);
                         }
                         else
                         {
@@ -106,6 +96,15 @@ namespace FleaMarket
                 }      
             }
         }
-            
+
+        private void DoTransaction(Customer customer, IItem item, float itemPrice, Salesman seller)
+        {
+            _items.Remove(item);
+            customer.Wallet.Balance -= itemPrice;
+            seller.Wallet.Balance += itemPrice;
+            item.Owner = customer;
+
+            Console.WriteLine("{0, 50} bought {1}", customer.Name, item.getInformation());
+        }
     }
 }
