@@ -74,6 +74,8 @@ namespace FleaMarket
                     {
                         Market.Instance.GetItems().Remove(item);
                         customer.Wallet.Balance -= item.getPrice();
+                        item.Owner.Wallet.Balance += item.getPrice();
+                        item.Owner = customer;
                         Console.WriteLine(customer.Name +  " bought:");
                         Console.WriteLine(item.getInformation());
                     }
