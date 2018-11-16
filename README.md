@@ -15,17 +15,17 @@ Exam in Software Design, at Kristiania University College
     - [X] Bruke c# regions 
     - [X] To namespaces
     - [ ] Unit testing med NUnit
+    - [ ] Gå igjennom at det ikke finnes variabler som ikke blir brukt. Endre så i klassediagram om det skjer en endring!
     * C# sin Random funksjonalitet er i seg selv ikke trådsikker, løsninger på dette kan googles.
     * Det er greit å benytte Sleepfor å simulere at deler av løsningen tar tid/få tiden til å gå. (Ikke der vi har brukt det så langt)
     * Der hvor noe er med kun for å være med, må det nevnes BÅDE i kode og i dokumentasjon 
 - [ ] Dokumentasjon
     - [ ] Simulering av folks interagering med et marked, ikke en simulering av et marked 
-    - [ ] Gå igjennom at det ikke finnes variabler som ikke blir brukt. Endre så i klassediagram om det skjer en endring!
     - [ ] Patterns dokumenteres 
         - [ ] Factory -> Itemfactory 
         - [ ] Decorator -> ItemDecorator 
         - [ ] Singleoton -> Market 
-        - [ ] Composite -> ?? Kanskje person sayhi? 
+        - [ ] Composite -> Salesman (sjekk koden) 
         - [ ] Facade -> Metoder i market   
         - [ ] Flyweight -> ?? 
         - [ ] MVP -> ?? 
