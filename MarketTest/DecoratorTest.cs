@@ -22,6 +22,14 @@ namespace MarketTest
             
             Assert.That(_item.getDamage(), Is.EqualTo("no damage"));
         }
+        
+        [Test]
+        public void shouldGiveMultipleDamage()
+        {
+            _item = new MultipleDamageItemDecorator(_item);
+            
+            Assert.That(_item.getDamage(), Is.EqualTo("with two huge riper and one bump"));
+        }
 
         [Test]
         public void shouldGivePerfectCondition()
@@ -38,7 +46,7 @@ namespace MarketTest
             
             Assert.That(_item.getCondition(), Is.EqualTo("terrible condition"));
         }
-
+    
         [Test]
         public void priceCantBeLessThan0()
         {
