@@ -7,9 +7,9 @@ namespace item {
         + <<Property>> Name : String 
         + <<Property>> Owner : Person 
         # getPrice() : float
-        # getCondition : String
-        # getDamage : String
-        # getModification : String
+        # getCondition() : String
+        # getDamage() : String
+        # getModification() : String
         + getInformation() : String 
     }
 
