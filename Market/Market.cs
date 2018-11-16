@@ -23,7 +23,6 @@ namespace FleaMarket
 
         public static Market Instance
         {
-            //get { return _market ?? (_market = new Market()); }
             get
             {
                 lock (padlock)
@@ -50,10 +49,10 @@ namespace FleaMarket
             
             
             
-            SomeEvent(EventArgs.Empty);
+            ItemForSaleEvent(new ItemForSaleEventArgs(item));
         }
 
-        protected void SomeEvent(EventArgs e)
+        protected void ItemForSaleEvent(EventArgs e)
         {
             EventHandler handler = EventHappening;
             if (handler != null)
@@ -63,21 +62,34 @@ namespace FleaMarket
             }
         }
 
-        public void BuyItem(Customer customer)
+        public void BuyItem(Customer customer, IItem item)
         {
 
             lock (staticLock)
             {
-                if (_items.Count != 0)
-                {                    
-                    IItem item = _items.ToArray()[0];
-                    Market.Instance.GetItems().Remove(item);
+                if (_items.Count != 0 && _items.Contains(item))
+                {
 
-                    Console.WriteLine(customer.Name +  " bought:");
-                    Console.WriteLine(item.getInformation());
-                    Console.WriteLine("\n");
-                }        }
+                    if (customer.Wallet.Balance >= item.getPrice())
+                    {
+                        Market.Instance.GetItems().Remove(item);
+                        customer.Wallet.Balance -= item.getPrice();
+                        Console.WriteLine(customer.Name +  " bought:");
+                        Console.WriteLine(item.getInformation());
+                    }
+                    else
+                    {
+                        Console.WriteLine(customer.Name + " wanted to buy item but could not afford it.");
+                        //prute?
+                    }
+              
+                }
+                else
+                {
+                   // Console.WriteLine(customer.Name + " attempted to buy but was too slow");
+                }      
             }
+        }
             
     }
 }

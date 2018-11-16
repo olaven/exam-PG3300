@@ -11,7 +11,7 @@ namespace Item
         }
 
         
-        public override double getPrice()
+        public override float getPrice()
         {
             return base.getPrice() + _priceAdjustment;
         }

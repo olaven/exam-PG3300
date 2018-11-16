@@ -11,7 +11,7 @@ namespace Item
         Person Owner { get; set; }
 
 
-        double getPrice();
+        float getPrice();
         string getCondition();
         string getDamage();
         string getModification();

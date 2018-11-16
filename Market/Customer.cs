@@ -9,19 +9,31 @@ namespace FleaMarket
         public Customer(string name) : base(name)
         {
             Market.Instance.EventHappening += (sender, eventArgs) => { 
-                Act();
+                AttemptBuy(eventArgs);
             };
-        }        
+        }
 
+        public void AttemptBuy(EventArgs e)
+        {
+            new Thread(() =>
+            {
+                Thread.Sleep(new Random().Next(50, 100));
+                ItemForSaleEventArgs args = (ItemForSaleEventArgs) e;
+                Market.Instance.BuyItem(this, args.Item);
+            }).Start(); 
+
+        }
+        
+        
         public override void Act()
         {
 
-            new Thread(() =>
+            /*new Thread(() =>
             {
                 Thread.Sleep(new Random().Next(50, 100));
                 
                 Market.Instance.BuyItem(this);
-            }).Start(); 
+            }).Start(); */
 
         }
     }

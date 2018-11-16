@@ -46,11 +46,11 @@ namespace FleaMarket
                 while (true)
                 {
                     Thread.Sleep(2000);
+                    Console.WriteLine("\n\n\n");
                     Salesman seller = _salesmen.ToArray()[_random.Next(0, _salesmen.Count())];
                     Salesman otherSeller = _salesmen.ToArray()[_random.Next(0, _salesmen.Count())];
                     seller.Act();
                     otherSeller.Act();
-                    //Console.Write("\n");
                 }
             });
             
