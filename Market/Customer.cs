@@ -21,8 +21,10 @@ namespace FleaMarket
                 {
                     return;
                 }
+                //random reaction time added to customer 
                 Thread.Sleep(new Random().Next(50, 100));
-                ItemForSaleEventArgs args = (ItemForSaleEventArgs) e;
+                
+                var args = (ItemForSaleEventArgs) e;
                 Market.Instance.BuyItem(this, args.Item);
             }).Start(); 
         }
