@@ -56,7 +56,7 @@ namespace FleaMarket {
 
     class Wallet {
         + <<Property>> Balance : float 
-        + Wallet
+        + Wallet ()
     }
 
     abstract Person {
@@ -101,6 +101,8 @@ namespace FleaMarket {
 
     class Program { 
         + main() : void
+        + <<Property>> Wallet : Wallet
+        + <<Property>> string : Name
     }
 
     class Simulation {
