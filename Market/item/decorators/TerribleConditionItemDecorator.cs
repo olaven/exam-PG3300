@@ -5,12 +5,12 @@ namespace Item
 
         public TerribleConditionItemDecorator(IItem original) : base(original)
         {
-            _priceAdjustment = Random.Next(-60, -30); 
+            PriceAdjustment = Random.Next(-60, -30); 
         }
         
         public override float getPrice()
         {
-            return base.getPrice() + _priceAdjustment;
+            return base.getPrice() + PriceAdjustment;
         }
 
         public override string getCondition()

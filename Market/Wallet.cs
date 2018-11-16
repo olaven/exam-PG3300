@@ -13,7 +13,7 @@ namespace FleaMarket
 
         public Wallet()
         {
-            Balance = new Random().Next(200,400);
+            Balance = new Random().Next(800,1400);
         }
         
         //TODO: olav wants comment about operator overloding.

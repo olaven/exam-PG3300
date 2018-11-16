@@ -13,7 +13,7 @@ namespace FleaMarket
             };
         }
 
-        public void AttemptBuy(EventArgs e)
+        private void AttemptBuy(EventArgs e)
         {
             new Thread(() =>
             {
@@ -29,18 +29,3 @@ namespace FleaMarket
         
     }
 }
-
-/*
-
-var items = Market.Instance.GetItems();
-                if (items.Count != 0)
-                {
-                    Console.WriteLine(Name + "Customer acting");
-                    
-                    IItem item = items.ToArray()[0];
-                    Market.Instance.GetItems().Remove(item);
-
-                    Console.WriteLine(Name + " bought:");
-                    Console.WriteLine(item.getInformation());
-                    Console.WriteLine("\n");
-                }*/

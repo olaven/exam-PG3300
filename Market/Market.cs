@@ -14,11 +14,10 @@ namespace FleaMarket
     public class Market
     {
         private static Market _market;
-        private List<IItem> _items;
+        private readonly List<IItem> _items;
         public EventHandler EventHappening;
         private readonly object _staticLock = new object(); 
         private static readonly object Padlock = new object();
-
 
         //private to prohibit instantiation of market object for other classes.
         private Market()
@@ -29,95 +28,71 @@ namespace FleaMarket
         
         public static Market Instance
         {
+            /*
+                 * The market could be null twice in separate threads.
+                 * This would destroy the singletons purpose. Thus a
+                 * lock is needed. 
+                 */
             get
             {
-                /*
-                 * The market could be null twice in separate threads.
-                 * This would destroy the singletons purpose.
-                 */
-
                 lock (Padlock)
                 {
-                    if (_market == null)
-                    {
-                        _market = new Market();
-                    }
-
-                    return _market;
+                    return _market ?? (_market = new Market());
                 }
             }
         }
 
-        public List<IItem> GetItems()
-        {
-            return _items;    
-        }
-
         public void AddItem(IItem item)
         {
-            _items.Add(item);
+            lock (_staticLock)
+            {
+                _items.Add(item);
+            }
+
             ItemForSaleEvent(new ItemForSaleEventArgs(item));
         }
 
-        protected void ItemForSaleEvent(EventArgs e)
+        private void ItemForSaleEvent(EventArgs e)
         {
             EventHandler handler = EventHappening;
-            if (handler != null)
-            {
-                //gi beskjed til customers at de kan kjøpe
-                handler(this, e);
-            }
+            //Notify customers that none item is available
+            handler?.Invoke(this, e); // "?.Invoke -> if handler != null, run it 
         }
 
-        //TODO: cleanup & refactor?
         public void BuyItem(Customer customer, IItem item)
         {
 
             lock (_staticLock)
             {
-                if (_items.Count != 0 && _items.Contains(item))
+                if (_items.Count == 0 || !_items.Contains(item)) return;
+                
+                var customerBalance = customer.Wallet.Balance;
+                var salesman = (Salesman) item.Owner;
+                var priceOfItem = item.getPrice();
+
+                if (customer.Wallet >= priceOfItem || salesman.Bargain(priceOfItem, customerBalance))
                 {
-                    var customerBalance = customer.Wallet.Balance;
-                    var seller = (Salesman) item.Owner;
-                    var itemPrice = item.getPrice();
-                    
-                    if (customer.Wallet >= itemPrice)
-                    {
-                        DoTransaction(customer, item, itemPrice, seller);
-                    }
-                    else
-                    {
-                        // Console.WriteLine("{0} tries to haggle, offers {1} for item with price {2}", customer.Name, customerBalance, itemPrice);
-                        //customer asks for bargain
-                        if (seller.Bargain(itemPrice, customerBalance))
-                        {
-                            DoTransaction(customer, item, itemPrice, seller);
-                        }
-                        else
-                        {
-                            //Console.WriteLine("Haggle declined");
-                        }
-                        
-                    }
-              
+                    DoTransaction(customer, salesman, item, false);
+                } else if (salesman.Bargain(priceOfItem, customerBalance))
+                {
+                    DoTransaction(customer, salesman, item, true);
                 }
-                else
-                {
-                   // Console.WriteLine(customer.Name + " attempted to buy but was too slow");
-                }      
             }
         }
 
-        private void DoTransaction(Customer customer, IItem item, float itemPrice, Salesman seller)
+        private void DoTransaction(Customer customer, Salesman seller, IItem item, bool isBargain)
         {
+            // removed from market 
             _items.Remove(item);
-            customer.Wallet.Balance -= itemPrice;
-            seller.Wallet.Balance += itemPrice;
+            
+            // if this was a bargain, the price is reduced to the money customer can pay 
+            var realCost = (isBargain ? customer.Wallet.Balance : item.getPrice());
+            
+            //transfer money back and forth
+            customer.Wallet.Balance -= realCost; 
+            seller.Wallet.Balance += realCost;
             
             item.Owner = customer;
-
-            
-            seller.GetItems().Remove(item);
             customer.GetItems().Add(item);
 
             Console.WriteLine("{0, 50} bought {1}", customer.Name, item.getInformation());

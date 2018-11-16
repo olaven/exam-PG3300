@@ -5,13 +5,13 @@ namespace Item
         
         public NoDamageItemDecorator(IItem original) : base(original)
         {
-            _priceAdjustment = Random.Next(5, 20); 
+            PriceAdjustment = Random.Next(5, 20); 
         }
-
+        
 
         public override float getPrice()
         {
-            return base.getPrice() + _priceAdjustment;
+            return base.getPrice() + PriceAdjustment;
         }
         
         public override string getDamage()

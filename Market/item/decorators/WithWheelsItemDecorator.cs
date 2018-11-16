@@ -7,12 +7,12 @@ namespace Item
 
         public WithWheelsItemDecorator(IItem original) : base(original)
         {
-            _priceAdjustment = Random.Next(30, 70); 
+            PriceAdjustment = Random.Next(30, 70); 
         }
 
         public override float getPrice()
         {
-            return base.getPrice() + _priceAdjustment;
+            return base.getPrice() + PriceAdjustment;
         }
 
         public override string getModification()

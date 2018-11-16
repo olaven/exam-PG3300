@@ -47,8 +47,8 @@ namespace FleaMarket
         {
             var amount = _random.Next(1, 3);
 
-            int index = _random.Next(_salesmen.Count); 
-            CompositeSalesman salesman = new CompositeSalesman( _salesmen[index]);
+            var index = _random.Next(_salesmen.Count); 
+            var salesman = new CompositeSalesman( _salesmen[index]);
 
             // from 1, as first one is already added through constructor above. 
             for (var i = 1; i < amount; i++)
@@ -112,16 +112,16 @@ namespace FleaMarket
         private List<Person> PopulatePersons(PersonType type, int min, int max)
         {
             
-            var _amount = _random.Next(min, max);
-            var _list = new List<Person>(); 
+            var amount = _random.Next(min, max);
+            var list = new List<Person>(); 
 
-            for (var i = 0; i < _amount; i++)
+            for (var i = 0; i < amount; i++)
             {
-                Person person = PersonFactory.getPerson(type); 
-                _list.Add(person);
+                var person = PersonFactory.getPerson(type); 
+                list.Add(person);
             }
 
-            return _list;
+            return list;
         }
         #endregion
 
