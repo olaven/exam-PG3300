@@ -13,10 +13,15 @@ namespace FleaMarket
 
         public Wallet()
         {
-            Balance = new Random().Next(800,1400);
+            Balance = new Random().Next(2400, 5000);
         }
         
-        //TODO: olav wants comment about operator overloding.
+        /*
+         * The operator overloading below is mainly implemented to
+         * demonstrate the feature, not because it is the most natural
+         * use of it.
+         */
+        
         public static bool operator == (Wallet wallet, float comp)
         {
             if (wallet == null)

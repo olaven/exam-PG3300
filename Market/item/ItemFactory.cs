@@ -6,7 +6,7 @@ namespace Item
 {
     public static class ItemFactory
     {
-        #region getting a decorated item 
+        
         
         /// <summary>
         /// Manufactures and returns a new item
@@ -22,6 +22,7 @@ namespace Item
             return GetItem(decorations, person);
         }
 
+        #region applying decorations 
         /// <summary>
         /// Manufactures and returns a new item 
         /// </summary>
