@@ -6,11 +6,11 @@ namespace item {
     interface Item {
         + <<Property>> Name : String 
         + <<Property>> Owner : Person 
-        # getPrice() : float
-        # getCondition() : String
-        # getDamage() : String
-        # getModification() : String
-        + getInformation() : String 
+        ~ getPrice() : float
+        ~ getCondition() : String
+        ~ getDamage() : String
+        ~ getModification() : String
+        ~ getInformation() : String 
     }
 
     Item o-- "1" FleaMarket.Person 
