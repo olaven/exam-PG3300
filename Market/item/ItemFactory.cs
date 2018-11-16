@@ -15,7 +15,7 @@ namespace Item
         }
 
         private static IItem GetItem(List<Decoration> decorations, Person person)
-        {    
+        {   
             IItem item = new ConcreteItem("Item x", 200 ,person);
             foreach(Decoration dec in decorations)
             {
@@ -82,19 +82,5 @@ namespace Item
             return decorations;
         }
         #endregion
-    }
-    
-    public enum Decoration
-    {
-        ModerateDamage,
-        MultipleDamage,
-        NoDamage,
-        DecentCondition,
-        PerfectCondition,
-        TerribleCondition,
-        WithTrumpStickers,
-        WithWheels,
-        WithWings, 
-        NoDecoration
     }
 }
