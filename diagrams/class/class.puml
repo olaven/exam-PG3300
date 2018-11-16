@@ -61,9 +61,10 @@ namespace FleaMarket {
 
     abstract Person {
         + <<Property>> name : String 
-        # wallet : Wallet 
-        # items : List<Item> 
+        # Wallet : Wallet 
+        # Items : List<Item> 
         + act : void 
+        # Person(name : string)
     }
 
     Wallet "1" *-- Person
@@ -101,13 +102,14 @@ namespace FleaMarket {
 
     class Program { 
         + main() : void
+        # Items : List<IItem>
         + <<Property>> Wallet : Wallet
         + <<Property>> string : Name
     }
 
     class Simulation {
         - _random : Random
-        - _saleCount int
+        - _saleCount : int
         - _customers : List<Customer> 
         - _salesmen : List<Salesman> 
         ~ run() : void 
