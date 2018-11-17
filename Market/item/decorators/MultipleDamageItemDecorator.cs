@@ -15,7 +15,7 @@ namespace Item
         
         public override string GetDamage()
         {
-            return base.GetDamage() +  "with two huge riper and one bump"; 
+            return base.GetDamage() + " with two huge scratches and one bump"; 
         }
     }
 }

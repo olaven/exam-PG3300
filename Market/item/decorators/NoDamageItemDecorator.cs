@@ -15,7 +15,7 @@ namespace Item
         
         public override string GetDamage()
         {
-            return  base.GetDamage() + "no damage"; 
+            return  base.GetDamage() + " that has no damage"; 
         }
     }
 }
