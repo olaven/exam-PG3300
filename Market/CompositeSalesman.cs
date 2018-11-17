@@ -4,7 +4,7 @@ namespace FleaMarket
 {
     public class CompositeSalesman : Salesman
     {
-        private List<Salesman> _salesmen; 
+        private readonly List<Salesman> _salesmen; 
         
         /// <summary>
         /// Constructs a composite salesman.
@@ -14,8 +14,7 @@ namespace FleaMarket
         /// <param name="salesman"></param>
         public CompositeSalesman(Salesman salesman) : base(salesman.Name)
         {
-            _salesmen = new List<Salesman>();
-            _salesmen.Add(salesman);
+            _salesmen = new List<Salesman> {salesman};
         }
 
         public override void SellItem()

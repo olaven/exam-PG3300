@@ -13,10 +13,11 @@ namespace FleaMarket
     /// </summary>
     public class Simulation
     {
-        private readonly Random _random; 
+        private readonly Random _random;    
         private readonly int _saleCount;
         
-        private readonly List<Salesman> _salesmen; 
+        private readonly List<Salesman> _salesmen;
+        // every customer will listen for new items by themselves, through events 
         private readonly List<Customer> _customers;  
         
 
@@ -32,15 +33,11 @@ namespace FleaMarket
 
         public void Run()
         {
-            
-            new Thread(() =>
+            while (true)
             {
-                while (true)
-                {
-                    Thread.Sleep(2000);
-                    GetRandomSellers().SellItem(); // may be several sellers / composite 
-                }
-            }).Start();
+                Thread.Sleep(2000);
+                GetRandomSellers().SellItem(); // may be several sellers / composite 
+            }
         }
 
         private Salesman GetRandomSellers()
@@ -53,7 +50,7 @@ namespace FleaMarket
             // from 1, as first one is already added through constructor above. 
             for (var i = 1; i < amount; i++)
             {
-                Salesman randomSalesman = _salesmen[_random.Next(_salesmen.Count)]; 
+                var randomSalesman = _salesmen[_random.Next(_salesmen.Count)]; 
                 salesman.Add(randomSalesman); 
             }
 
