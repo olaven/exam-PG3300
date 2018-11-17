@@ -12,7 +12,7 @@ namespace FleaMarket
                 AttemptBuy(eventArgs);
             };
         }
-
+        
         private void AttemptBuy(EventArgs e)
         {
             new Thread(() =>
@@ -21,8 +21,10 @@ namespace FleaMarket
                 {
                     return;
                 }
-                //random reaction time added to customer 
-                Thread.Sleep(new Random().Next(50, 100));
+                
+                // random reaction time added to customer 
+                var reactionTime = new Random().Next(50, 100);
+                Thread.Sleep(new Random().Next(reactionTime));
                 
                 var args = (ItemForSaleEventArgs) e;
                 Market.Instance.BuyItem(this, args.Item);
