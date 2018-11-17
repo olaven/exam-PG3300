@@ -15,7 +15,7 @@ namespace Item
 
         public override string getCondition()
         {
-            return base.getCondition() +  "terrible condition"; 
+            return base.getCondition() +  " in terrible condition"; 
         }
     }
 }

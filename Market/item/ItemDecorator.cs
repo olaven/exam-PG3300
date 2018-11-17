@@ -53,11 +53,10 @@ namespace Item
 
         public string getInformation()
         {
-            return "Item" + 
-                   " with " + 
+            return "Item" +  
                    getModification() + 
-                   " in " + getCondition() + 
-                   " that has " + getDamage() +
+                   getCondition() + 
+                   getDamage() +
                    " for " + getPrice() + ",-";
         }
     }

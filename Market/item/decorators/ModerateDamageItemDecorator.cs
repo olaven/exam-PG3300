@@ -16,7 +16,7 @@ namespace Item
         }
         public override string getDamage()
         {
-            return base.getDamage() +  "with a small bump";
+            return base.getDamage() +  " with a small bump";
         }
     }
 }
