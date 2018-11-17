@@ -61,10 +61,12 @@ namespace FleaMarket {
     }
 
     abstract Person {
-        + <<Property>> name : String 
+        + act : void 
+        + <<Property>> Name : String 
+        + <<Property>> Image : String 
         # Wallet : Wallet 
         # Items : List<Item> 
-        + act : void 
+                    
         # Person(name : string)
     }
 
@@ -91,13 +93,26 @@ namespace FleaMarket {
     
     PersonFactory -- Person
 
+    class PersonImage {
+        + <<Property>> string : Image
+    }
+
+    class PersonImagePointer {
+        + <<Property>> {static} PersonImage : PersonImage 
+    }
+
+    note top of PersonImagePointer : minimal Flyweight-pattern implementation
+
+    PersonImagePointer o-- PersonImage
+    Person *-- PersonImagePointer
+
     note "Singleton" as singleton
     class Market {
         
         - _market : Market
         - _items : List<IItem>
         + EvenHappening : EventHandler
-        - _staticLock : object
+        - {static} _staticLock : object
         - Padlock : object
         + <<Property>> Instance : Market  
         + addForSale(item : Item) : void  
@@ -129,9 +144,6 @@ namespace FleaMarket {
 
     Program -- "1" Simulation : starts
     Simulation o-- "*" Market
-
-    note "Legg in Flyweight pattern!" as flnote
-
 
     Salesman -- item.ItemFactory : gets something to sell 
 
