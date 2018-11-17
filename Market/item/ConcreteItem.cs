@@ -9,17 +9,23 @@ namespace Item
     public class ConcreteItem : IItem
     {
         public Person Owner { get; set; }
+        private readonly string _itemName;
+        private readonly float _price;
 
-        private readonly float _price; 
-
-        public ConcreteItem(float price, Person owner)
+        public ConcreteItem(float price, Salesman owner)
         {
             Owner = owner;
-
+            _itemName = owner.Name + "'s item #" + owner.GetItemCount();
+    
             if (price > 0)
             {
-                this._price = price; 
+                _price = price; 
             }
+        }
+
+        public string GetName()
+        {
+            return _itemName;
         }
         
         public float GetPrice()
@@ -44,12 +50,8 @@ namespace Item
 
         public string GetInformation()
         {
-
-            return "Item " +
-                   "\nPrice: " + GetPrice() +
-                   "\nOwner: " + Owner + //TODO: Fix en fin toString på person 
-                   ""
-                ; 
+            return _itemName +  
+                " for " + GetPrice() + ",-";
         }
 
     }

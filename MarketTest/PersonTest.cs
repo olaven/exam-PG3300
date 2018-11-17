@@ -33,7 +33,7 @@ namespace MarketTest
 
             salesman.Wallet.Balance = 1000;
             var previousAmount = salesman.Wallet.Balance;
-            salesman.GetItems().Add(ItemFactory.GetRandomItem(salesman, 5));
+            salesman.GetItems().Add(ItemFactory.GetRandomItem(salesman));
             salesman.SellItem();
             Thread.Sleep(300);
 
@@ -67,7 +67,7 @@ namespace MarketTest
             Salesman salesman = new Salesman("Knut");
             for (int i = 0; i < 20; i++)
             {
-                salesman.GetItems().Add(ItemFactory.GetRandomItem(salesman, 5));
+                salesman.GetItems().Add(ItemFactory.GetRandomItem(salesman));
                 salesman.SellItem();
             }
             Thread.Sleep(500);

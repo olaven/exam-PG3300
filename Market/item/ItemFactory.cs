@@ -11,12 +11,11 @@ namespace Item
         /// Manufactures and returns a new item
         /// with random decorations 
         /// </summary>
-        /// <param name="decorations">The owner of the item</param>
         /// <param name="person">The owner of the item</param>
         /// <returns></returns>
-        public static IItem GetRandomItem(Person person, int numberOfDecorations)
+        public static IItem GetRandomItem(Salesman person)
         {
-            var decorations = GetRandomDecorations(numberOfDecorations);
+            var decorations = GetRandomDecorations();
 
             return GetItem(decorations, person);
         }
@@ -29,7 +28,7 @@ namespace Item
         /// <param name="decorations">The decorations to apply</param>
         /// <param name="person">The owner of the item</param>
         /// <returns></returns>
-        private static IItem GetItem(IEnumerable<Decoration> decorations, Person person)
+        private static IItem GetItem(IEnumerable<Decoration> decorations, Salesman person)
         {   
             IItem item = new ConcreteItem(200 ,person); //FIXME: semi-random name and price 
             foreach(var dec in decorations)
@@ -77,9 +76,8 @@ namespace Item
         /// Gets a list of decorations, chosen at random 
         /// on the item. 
         /// </summary>
-        /// <param name="numberOfDecorations">Amount of decorations</param>
         /// <returns>A list of decorations</returns>
-        private static IEnumerable<Decoration> GetRandomDecorations(int numberOfDecorations)
+        private static IEnumerable<Decoration> GetRandomDecorations()
         {    
 
             var conditions = new List<Decoration>

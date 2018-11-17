@@ -10,6 +10,9 @@ namespace Item
     {
         Person Owner { get; set; }
 
+
+        /// <returns>The name of an item</returns>
+        string GetName();
         /// <returns>The price of an item</returns>
         float GetPrice();
         /// <returns>The price condition of an item</returns>

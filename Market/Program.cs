@@ -8,7 +8,7 @@ namespace FleaMarket
     {
         private static void Main(string[] args)
         {
-           Simulation simulation = new Simulation(10);
+           Simulation simulation = new Simulation();
            simulation.Run();
             
         }

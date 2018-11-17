@@ -9,7 +9,7 @@ namespace FleaMarket
 {
     public class Salesman : Person
     {
-    
+        private int _totalItemCount = 0;
         public Salesman(string name) : base(name)
         {}
         
@@ -33,7 +33,12 @@ namespace FleaMarket
             f = f / 100;
             return f < customerBalance/priceOfItem;
         }
-        
+
+        public int GetItemCount()
+        {
+            return ++_totalItemCount;
+        }
+
     }
 
 }
