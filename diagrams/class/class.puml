@@ -136,6 +136,10 @@ namespace FleaMarket {
         - Simulation(saleCount : int)
         - GetRandomSellers(): Salesman
         - GiveItemsTo(persons : IEnumerable<Person>): void
+        - PopulateSalesmen() List<Salesman>
+        - PopulateCustomers() List<Customer>
+        - PopulatePersons() List<Person>
+        
         
     }
 
