@@ -16,6 +16,14 @@ namespace item {
 
     class ConcreteItem implements Item {
         / Name : String 
+        + <<Property>> Owner : Person
+        - _price : float
+        + ConcreteItem(price : float, owner : Person)
+        + GetPrice() : float
+        + GetCondition() : string
+        + GetDamage() : string
+        + GetModification() : string
+        + GetInformation() : string
     }
 
 
