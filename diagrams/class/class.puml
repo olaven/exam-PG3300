@@ -125,9 +125,6 @@ namespace FleaMarket {
 
     class Program { 
         + main() : void
-        # Items : List<IItem>
-        + <<Property>> Wallet : Wallet
-        + <<Property>> string : Name
     }
 
     class Simulation {
