@@ -15,7 +15,7 @@ namespace Item
         
         public override string GetDamage()
         {
-            return base.GetDamage() +  "severe damage"; 
+            return base.GetDamage() +  " severe damage"; 
         }
     }
 }
