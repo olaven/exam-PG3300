@@ -96,17 +96,20 @@ Controller-prinsippet kan gi god oversikt over hva som skjer og når det skal sk
 
 ## Diagrammer 
 ### Klassediagram 
-![Klassediagram]()
+![Klassediagram](../diagrams/class/class.png) 
 - [ ] Hva modelleres? 
 - [ ] Hva gir diagrammet oss? 
 - [ ] Forskjellige koblinger 
 ### Sekvensdiagram 
+![Sekvensdiagram, ItemFactory](../diagrams/sequence/itemFactory.png)
+![Sekvensdiagram, Velge dekorert item](../diagrams/sequence/chooseDecoratedItem.png)
 - [ ] Hva modelleres? 
 - [ ] Hva gir diagrammet oss? 
 - [ ] Forskjellige koblinger 
 - [ ] Opt vs alt og hvorfor det som er valgt, er valgt 
 - [ ] Nevn annen syntaks som synkron/asynkron
 ### Bruksdiagram ("Use case")- [ ] Hva modelleres? 
+![Usecase-diagram](../diagrams/usecase/usecase.png)
 - [ ] Hva gir diagrammet oss? 
 - [ ] Forskjellige koblinger 
     - [ ] generalisering kan også gjøres mellom use-cases
