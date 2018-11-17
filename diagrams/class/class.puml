@@ -61,7 +61,6 @@ namespace FleaMarket {
     }
 
     abstract Person {
-        + act : void 
         + <<Property>> Name : String 
         + <<Property>> Image : String 
         # Wallet : Wallet 
