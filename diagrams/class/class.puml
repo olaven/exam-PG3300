@@ -75,6 +75,9 @@ namespace FleaMarket {
 
     class Customer extends Person {
         / act : void 
+        + Customer(name : string)
+        - AttemptBut(e : EventArgs) : void
+        
     }
 
     class Salesman extends Person {
