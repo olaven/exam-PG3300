@@ -10,13 +10,13 @@ namespace MarketTest
         private IItem _item; 
 
         [SetUp]
-        public void init()
+        public void Init()
         {
             _item = new ConcreteItem(100, new Customer("customer name"));
         }
        
         [Test]
-        public void shouldGiveNoDamage()
+        public void ShouldGiveNoDamage()
         {
             _item = new NoDamageItemDecorator(_item);
             
@@ -24,14 +24,14 @@ namespace MarketTest
         }
         
         [Test]
-        public void shouldGiveMultipleDamage()
+        public void ShouldGiveMultipleDamage()
         {
             _item = new MultipleDamageItemDecorator(_item);
             Assert.That(_item.GetDamage(), Is.EqualTo(" with two huge scratches and one bump"));
         }
 
         [Test]
-        public void shouldGivePerfectCondition()
+        public void ShouldGivePerfectCondition()
         {
             _item = new PerfectConditionItemDecorator(_item);
             
@@ -39,7 +39,7 @@ namespace MarketTest
         }
 
         [Test]
-        public void shouldGiveTerribleCondition()
+        public void ShouldGiveTerribleCondition()
         {
             _item = new TerribleConditionItemDecorator(_item);
             
@@ -47,19 +47,18 @@ namespace MarketTest
         }
     
         [Test]
-        public void priceCantBeLessThan0()
+        public void PriceCantBeLessThan0()
         {
             IItem item = new ConcreteItem(-100, new Customer("customer name"));
             Assert.That(item.GetPrice(), Is.GreaterThanOrEqualTo(0));
         }
 
         [Test]
-        public void priceAdjustedDownOnDTerribleCondition()
+        public void PriceAdjustedDownOnDTerribleCondition()
         {
             _item = new TerribleConditionItemDecorator(_item);
             
             Assert.That(_item.GetPrice() < 100, Is.True);
-            
         }
     }
 }

@@ -11,9 +11,6 @@ namespace Item
         public Person Owner { get; set; }
 
         private readonly float _price; 
-        
-
-        
 
         public ConcreteItem(float price, Person owner)
         {
