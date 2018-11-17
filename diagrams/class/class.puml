@@ -20,8 +20,13 @@ namespace item {
 
 
     abstract ItemDecorator implements Item {
-        - item : Item
-        # random : Random
+        - _item : IItem
+        # Random : Random
+        + <<Property>> Owner : Person
+        # PriceAdjustment : int
+        # ItemDecorator(original : IItem)
+        + GetInformation() : string
+        
     }
 
     ItemDecorator "1" o-- Item 
