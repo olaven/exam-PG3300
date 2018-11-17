@@ -1,3 +1,5 @@
+using System;
+using System.Collections;
 using System.Threading;
 using FleaMarket;
 using Item;
@@ -45,11 +47,44 @@ namespace MarketTest
 
             salesman.Wallet.Balance = 1000;
             var previousAmount = salesman.Wallet.Balance;
-            salesman.GetItems().Add(ItemFactory.GetRandomItem(salesman, 1));
+            salesman.GetItems().Add(ItemFactory.GetRandomItem(salesman, 5));
             salesman.SellItem();
             Thread.Sleep(300);
 
             Assert.That(previousAmount, Is.LessThan(salesman.Wallet.Balance));
+        }
+
+        [Test]
+        public void shouldBeThreadSafe()
+        {
+            ArrayList customers = new ArrayList();
+            for (int i = 0; i < 10; i++)
+            {
+                customers.Add(PersonFactory.GetPerson(PersonType.Customer));
+            }
+
+            Salesman salesman = new Salesman("Knut");
+            for (int i = 0; i < 20; i++)
+            {
+                salesman.GetItems().Add(ItemFactory.GetRandomItem(salesman, 5));
+                salesman.SellItem();
+            }
+            Thread.Sleep(500);
+
+            int uniqueCount = 0;
+            ArrayList items = new ArrayList();
+            foreach (Customer c in customers)
+            {
+                foreach (IItem item in c.GetItems())
+                {
+                    if (!items.Contains(item))
+                    {
+                        items.Add(item);
+                        uniqueCount++;
+                    }
+                }
+            }
+            Assert.That(uniqueCount, Is.EqualTo(20));
         }
     }
 }

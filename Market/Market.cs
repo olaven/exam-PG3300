@@ -68,12 +68,12 @@ namespace FleaMarket
                 
                 var customerBalance = customer.Wallet.Balance;
                 var salesman = (Salesman) item.Owner;
-                var priceOfItem = item.getPrice();
+                var priceOfItem = item.GetPrice();
 
-                if (customer.Wallet >= priceOfItem || salesman.Bargain(priceOfItem, customerBalance))
+                if (customer.Wallet >= priceOfItem || salesman.Haggle(priceOfItem, customerBalance))
                 {
                     DoTransaction(customer, salesman, item, false);
-                } else if (salesman.Bargain(priceOfItem, customerBalance))
+                } else if (salesman.Haggle(priceOfItem, customerBalance))
                 {
                     DoTransaction(customer, salesman, item, true);
                 }
@@ -86,7 +86,7 @@ namespace FleaMarket
             _items.Remove(item);
             
             // if this was a bargain, the price is reduced to the money customer can pay 
-            var realCost = (isBargain ? customer.Wallet.Balance : item.getPrice());
+            var realCost = (isBargain ? customer.Wallet.Balance : item.GetPrice());
             
             //transfer money back and forth
             customer.Wallet.Balance -= realCost; 
@@ -95,7 +95,7 @@ namespace FleaMarket
             item.Owner = customer;
             customer.GetItems().Add(item);
 
-            Console.WriteLine("{0, 50} bought {1}", customer.Name, item.getInformation());
+            Console.WriteLine("{0, 50} bought {1}", customer.Name, item.GetInformation());
         }
     }
 }

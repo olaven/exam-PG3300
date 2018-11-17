@@ -20,7 +20,7 @@ namespace MarketTest
         {
             _item = new NoDamageItemDecorator(_item);
             
-            Assert.That(_item.getDamage(), Is.EqualTo("no damage"));
+            Assert.That(_item.GetDamage(), Is.EqualTo("no damage"));
         }
         
         [Test]
@@ -28,7 +28,7 @@ namespace MarketTest
         {
             _item = new MultipleDamageItemDecorator(_item);
             
-            Assert.That(_item.getDamage(), Is.EqualTo("with two huge riper and one bump"));
+            Assert.That(_item.GetDamage(), Is.EqualTo("with two huge riper and one bump"));
         }
 
         [Test]
@@ -36,7 +36,7 @@ namespace MarketTest
         {
             _item = new PerfectConditionItemDecorator(_item);
             
-            Assert.That(_item.getCondition(), Is.EqualTo("perfect condition"));
+            Assert.That(_item.GetCondition(), Is.EqualTo("perfect condition"));
         }
 
         [Test]
@@ -44,14 +44,14 @@ namespace MarketTest
         {
             _item = new TerribleConditionItemDecorator(_item);
             
-            Assert.That(_item.getCondition(), Is.EqualTo("terrible condition"));
+            Assert.That(_item.GetCondition(), Is.EqualTo("terrible condition"));
         }
     
         [Test]
         public void priceCantBeLessThan0()
         {
             IItem item = new ConcreteItem("Thomas", -100, new Customer("customer name"));
-            Assert.That(item.getPrice(), Is.GreaterThanOrEqualTo(0));
+            Assert.That(item.GetPrice(), Is.GreaterThanOrEqualTo(0));
         }
 
         [Test]
@@ -59,7 +59,7 @@ namespace MarketTest
         {
             _item = new TerribleConditionItemDecorator(_item);
             
-            Assert.That(_item.getPrice() < 100, Is.True);
+            Assert.That(_item.GetPrice() < 100, Is.True);
             
         }
     }

@@ -19,13 +19,13 @@ namespace FleaMarket
             IItem itemForSale = Items.ToArray()[0];
             Items.Remove(itemForSale);
             Market.Instance.AddItem(itemForSale);
-            Console.WriteLine("{0} put up their item for sale: {1}", Name, itemForSale.getInformation());
+            Console.WriteLine("{0} put up their item for sale: {1}", Name, itemForSale.GetInformation());
         }
         
         
-        public bool Bargain(float priceOfItem, float customerBalance)
+        public bool Haggle(float priceOfItem, float customerBalance)
         {
-            Console.WriteLine("BARGAIN: " + priceOfItem + " _ " + customerBalance);
+            Console.WriteLine("HAGGEL: " + priceOfItem + " _ " + customerBalance);
             float f = new Random().Next(0, 100);
             f = f / 100;
             return f < customerBalance/priceOfItem;

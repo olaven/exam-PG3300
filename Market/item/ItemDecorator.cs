@@ -32,35 +32,35 @@ namespace Item
         
         #region Delegated methods 
         
-        public virtual float getPrice()
+        public virtual float GetPrice()
         {
-            return _item.getPrice();
+            return _item.GetPrice();
         }
 
-        public virtual string getCondition()
+        public virtual string GetCondition()
         {
-            return _item.getCondition(); 
+            return _item.GetCondition(); 
         }
 
-        public virtual string getDamage()
+        public virtual string GetDamage()
         {
-            return _item.getDamage(); 
+            return _item.GetDamage(); 
         }
 
-        public virtual string getModification()
+        public virtual string GetModification()
         {
-            return _item.getModification(); 
+            return _item.GetModification(); 
         }
         #endregion
 
-        public string getInformation()
+        public string GetInformation()
         {
             return "" + Name + 
                    " with " + 
-                   getModification() + 
-                   " in " + getCondition() + 
-                   " that has " + getDamage() +
-                   " for " + getPrice() + ",-";
+                   GetModification() + 
+                   " in " + GetCondition() + 
+                   " that has " + GetDamage() +
+                   " for " + GetPrice() + ",-";
         }
     }
 }
