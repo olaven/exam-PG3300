@@ -117,7 +117,7 @@ namespace FleaMarket
 
             for (var i = 0; i < amount; i++)
             {
-                var person = PersonFactory.getPerson(type); 
+                var person = PersonFactory.GetPerson(type); 
                 list.Add(person);
             }
 

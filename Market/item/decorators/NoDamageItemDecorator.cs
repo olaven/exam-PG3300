@@ -7,16 +7,15 @@ namespace Item
         {
             PriceAdjustment = Random.Next(5, 20); 
         }
-        
 
-        public override float getPrice()
+        public override float GetPrice()
         {
-            return base.getPrice() + PriceAdjustment;
+            return base.GetPrice() + PriceAdjustment;
         }
         
-        public override string getDamage()
+        public override string GetDamage()
         {
-            return  base.getDamage() + " that has no damage"; 
+            return  base.GetDamage() + "no damage"; 
         }
     }
 }

@@ -13,7 +13,7 @@ namespace FleaMarket
             };
         }
 
-        public void AttemptBuy(EventArgs e)
+        private void AttemptBuy(EventArgs e)
         {
             new Thread(() =>
             {

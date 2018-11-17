@@ -25,30 +25,31 @@ namespace Item
             }
         }
         
-        public float getPrice()
+        public float GetPrice()
         {
             return _price;
         }
         
-        public string getCondition()
+        public string GetCondition()
         {
             return ""; 
         }
 
-        public string getDamage()
+        public string GetDamage()
         {
             return ""; 
         }
 
-        public string getModification()
+        public string GetModification()
         {
             return ""; 
         }
 
-        public string getInformation()
+        public string GetInformation()
         {
+
             return "Item " +
-                   "\nPrice: " + getPrice() +
+                   "\nPrice: " + GetPrice() +
                    "\nOwner: " + Owner + //TODO: Fix en fin toString på person 
                    ""
                 ; 

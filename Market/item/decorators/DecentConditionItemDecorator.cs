@@ -9,13 +9,13 @@ namespace Item
         }
 
 
-        public override float getPrice()
+        public override float GetPrice()
         {
-            return base.getPrice() + PriceAdjustment;
+            return base.GetPrice() + PriceAdjustment;
         }
-        public override string getCondition()
+        public override string GetCondition()
         {
-            return base.getCondition() + " in decent condition"; 
+            return base.GetCondition() + " in decent condition"; 
         }
     }
 }

@@ -24,7 +24,7 @@ namespace FleaMarket
         /// <param name="type">The type of person</param>
         /// <returns>A person</returns>
         /// <exception cref="Exception"></exception>
-        public static Person getPerson(PersonType type)
+        public static Person GetPerson(PersonType type)
         {
             switch (type)
             {

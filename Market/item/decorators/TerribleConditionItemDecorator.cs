@@ -8,14 +8,14 @@ namespace Item
             PriceAdjustment = Random.Next(-60, -30); 
         }
         
-        public override float getPrice()
+        public override float GetPrice()
         {
-            return base.getPrice() + PriceAdjustment;
+            return base.GetPrice() + PriceAdjustment;
         }
 
-        public override string getCondition()
+        public override string GetCondition()
         {
-            return base.getCondition() +  " in terrible condition"; 
+            return base.GetCondition() +  " in terrible condition"; 
         }
     }
 }

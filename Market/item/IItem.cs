@@ -11,16 +11,16 @@ namespace Item
         Person Owner { get; set; }
 
         /// <returns>The price of an item</returns>
-        float getPrice();
+        float GetPrice();
         /// <returns>The price condition of an item</returns>
-        string getCondition();
+        string GetCondition();
         /// <returns>The damage level of an item</returns>
-        string getDamage();
+        string GetDamage();
         /// <returns>The modification of an item</returns>
-        string getModification();
+        string GetModification();
         
         /// <returns>All information about the item</returns>
-        string getInformation(); 
+        string GetInformation(); 
     }
     
     
