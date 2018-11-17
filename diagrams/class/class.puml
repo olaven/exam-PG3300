@@ -61,13 +61,12 @@ namespace FleaMarket {
     }
 
     abstract Person {
-        + act : void 
         + <<Property>> Name : String 
         + <<Property>> Image : String 
-        # Wallet : Wallet 
+        # <<Property>> Wallet : Wallet 
         # Items : List<Item> 
-                    
         # Person(name : string)
+        + GetItems() List<IItem>
     }
 
     Wallet "1" *-- Person
@@ -85,7 +84,7 @@ namespace FleaMarket {
     class PersonFactory {
         - {static} ArrayList : Names
         - {static} Random : Random
-        + {static} getPerson(type PersonType) : Person
+        + {static} GetPerson(type PersonType) : Person
         - {static} GetRandomName() : string
     }
     
@@ -125,9 +124,6 @@ namespace FleaMarket {
 
     class Program { 
         + main() : void
-        # Items : List<IItem>
-        + <<Property>> Wallet : Wallet
-        + <<Property>> string : Name
     }
 
     class Simulation {
@@ -139,6 +135,10 @@ namespace FleaMarket {
         - Simulation(saleCount : int)
         - GetRandomSellers(): Salesman
         - GiveItemsTo(persons : IEnumerable<Person>): void
+        - PopulateSalesmen() List<Salesman>
+        - PopulateCustomers() List<Customer>
+        - PopulatePersons() List<Person>
+        
         
     }
 
