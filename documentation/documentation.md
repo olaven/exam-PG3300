@@ -24,9 +24,11 @@ FØR LEVERING:
     - [Om C# og vår kode](#om-c-og-v%C3%A5r-kode)
         - [Event dispatching](#event-dispatching)
         - [Operatoroverlasting](#operatoroverlasting)
-        - [Regions](#regions)
         - [Properties](#properties)
+        - [Namespaces](#namespaces)
+        - [Regions](#regions)
         - [Kommentarer](#kommentarer)
+        - [Filstruktur](#filstruktur)
         - [Konvensjoner](#konvensjoner)
 
 ## Introduksjon 
@@ -184,13 +186,23 @@ EventHandler i Market er ikke en property. Dersom vi har den som en property med
 
 Vår erfaring er at properties er en fin mulighet, som vi savner i Java. Get- og set-metoder kan lett genereres, men det ser penere ut, rent estetisk, å bruke properties.
 
+### Namespaces 
+Vi har organisert klasser inn i tre namespaces som vi mener er logiske. Navnene er korte og presise. `People` er et namespace-navn som skiller seg litt ut. "Person" ville vært mer i tråd med de to andre navnene, men det ville også krasje med navnet til den abstrakte klassen. 
+
+Microsoft [sier selv](https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines/names-of-namespaces) at navn som er flertall kan vurderes der det er naturlig. I og med `People`-namespacet skal beskrive flere variasjoner av personer (som f.eks `System.Colletions` beskriver flere Collection-typer), landet vi på at dette var en av de gangene. 
+
 ### Regions 
 Regioner er en måte å dele opp koden. Regionene legger ikke på funksjonalitet, men kan gjøre det mer oversiktelig for programmereren å gå gjennom den. Vi har anvendt regioner flere steder, blant annet i Simulation-klassen og i ItemFactory. 
 
 ### Kommentarer
 Som hovedregel har vi kommentert koden der vi har følt at det var nødvendig. Det vil si at vi ikke har kommentert der vi mener koden snakker for seg selv. Vi har anvendt C#-doc stil på kommentarene. I blandt kan disse være unødvendig detaljerte. Vi har likevel ønsket å ha det slik for å demonstrere forskjellige tags og liknende. Vi har også kommentert koden der vi kun bruker et konsept for å demonstrere det, slik som oppgaven ber om.
 
+### Filstruktur 
+Vi har valgt en pragmatisk og praktisk tilnærming til filstrukturering. Dette har passet oss godt fordi vi har likt å tilpasse filstrukturen etter hvert som prosjektet vokser og behovene kommer. Opplevelsen vår er at vi lærer mer av den kontinuerlige utviklingen enn av å planlegge all struktur på forhånd for så å følge malen slavisk. 
+
 ### Konvensjoner 
 Vi har etterstrebet å følge navnkonvensjoner som gjelder i C#. Det være seg blant annet "_"-prefiks på private klassevariable, stor forbokstav på metodenavn o.l. Her har vi fått mye støttet fra IDE-et vi brukte. Der hvor den har foreslått endringer, har vi stort sett gjennomført dem. Disse endringene inkluderer ternary-operatorer, null-propagation og bruk av "var"-nøkkelordet. 
+
+
 
 

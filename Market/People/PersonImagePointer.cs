@@ -1,4 +1,4 @@
-namespace FleaMarket
+namespace People
 {
     
     /*

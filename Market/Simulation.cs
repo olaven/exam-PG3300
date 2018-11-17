@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using Item;
+using People;
 
 namespace FleaMarket
 {

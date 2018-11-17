@@ -1,7 +1,7 @@
 using System;
 using System.Collections;
 
-namespace FleaMarket
+namespace People
 {
     /// <summary>
     /// Static class for creating

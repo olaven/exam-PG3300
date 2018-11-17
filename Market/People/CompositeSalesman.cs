@@ -1,7 +1,21 @@
 using System.Collections.Generic;
 
-namespace FleaMarket
+namespace People
 {
+    
+    /*
+    * A remove method is commonly used with this pattern.
+    * It is omitted, as we do not need it 
+    */
+    
+    /// <summary>
+    /// A salesman that may also be several salesmen,
+    /// following the Composite-pattern.
+    ///
+    /// A remove method is commonly used in composite-
+    /// classes like this, but it is omitted here, as
+    /// we do not need it.
+    /// </summary>
     public class CompositeSalesman : Salesman
     {
         private readonly List<Salesman> _salesmen; 
@@ -29,10 +43,6 @@ namespace FleaMarket
         {
            _salesmen.Add(salesman); 
         }
-
-        public void Remove(Salesman salesman)
-        {
-            _salesmen.Remove(salesman); 
-        }
+        
     }
 }

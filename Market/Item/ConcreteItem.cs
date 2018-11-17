@@ -1,4 +1,5 @@
- using FleaMarket; 
+ using FleaMarket;
+ using People;
 
 namespace Item
 {

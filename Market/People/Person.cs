@@ -2,7 +2,7 @@ using System;
 using Item; 
 using System.Collections.Generic;
 
-namespace FleaMarket
+namespace People
 {
     /// <summary>
     /// Encapsulating the concept of

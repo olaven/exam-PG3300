@@ -1,7 +1,7 @@
 using System;
 using Item;
 
-namespace FleaMarket
+namespace Item
 {
     /// <inheritdoc />
     /// <summary>
@@ -16,7 +16,7 @@ namespace FleaMarket
             this.Item = item;
         }
 
-        public IItem Item { get; private set; }
+        public IItem Item { get; }
     }
 
 }

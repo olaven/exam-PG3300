@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Threading;
 using Item;
 
-namespace FleaMarket
+namespace People
 {
     /// <summary>
     /// This is the market people trade on.

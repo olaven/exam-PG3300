@@ -1,6 +1,7 @@
 using FleaMarket;
 using Item;
 using NUnit.Framework;
+using People;
 
 namespace MarketTest
 {

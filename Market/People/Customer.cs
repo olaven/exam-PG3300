@@ -2,7 +2,7 @@ using System;
 using System.Threading;
 using Item;
 
-namespace FleaMarket
+namespace People
 {
     public class Customer : Person
     {

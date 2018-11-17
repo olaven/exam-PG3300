@@ -12,7 +12,7 @@ namespace item {
         ~ GetInformation() : String 
     }
 
-    Item o-- "1" FleaMarket.Person 
+    Item o-- "1" People.Person 
 
     class ConcreteItem implements Item {
         / Name : String 
@@ -64,9 +64,7 @@ namespace item {
     ItemFactory -- Item : creates 
 }
 
-namespace FleaMarket {
-    
-
+namespace People {
     class Wallet {
         + <<Property>> Balance : float 
         + Wallet ()
@@ -82,7 +80,7 @@ namespace FleaMarket {
     }
 
     Wallet "1" *-- Person
-    Person -- Market : trades 
+    Person -- FleaMarket.Market : trades 
 
 
     class Customer extends Person {
@@ -98,6 +96,11 @@ namespace FleaMarket {
         + SellItem() : void
         + Haggle(priceOfItem : float, customerBalance : float) : bool
     }
+
+    class CompositeSalesman extends Salesman {
+        + CompositeSalesman(salesman : Salesman)
+        - _salesmen : List<Salesman>
+    }
     
     class PersonFactory {
         - {static} ArrayList : Names
@@ -106,7 +109,7 @@ namespace FleaMarket {
         - {static} GetRandomName() : string
     }
     
-    PersonFactory -- Simulation
+    PersonFactory -- FleaMarket.Simulation
     
     PersonFactory -- Person
 
@@ -123,6 +126,12 @@ namespace FleaMarket {
     PersonImagePointer o-- PersonImage
     Person *-- PersonImagePointer
 
+}
+
+namespace FleaMarket {
+    
+
+    
     note "Singleton" as singleton
     class Market {
         + AddItem(item : IItem) : void  
@@ -165,7 +174,7 @@ namespace FleaMarket {
     Program -- "1" Simulation : starts
     Simulation o-- "*" Market
 
-    Salesman -- item.ItemFactory : gets something to sell 
+    People.Salesman -- item.ItemFactory : gets something to sell 
 
 }
 

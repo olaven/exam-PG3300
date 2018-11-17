@@ -5,7 +5,7 @@ using FleaMarket;
 using Item;
 
 
-namespace FleaMarket
+namespace People
 {
     public class Salesman : Person
     {

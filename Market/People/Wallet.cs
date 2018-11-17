@@ -1,6 +1,6 @@
 using System;
 
-namespace FleaMarket
+namespace People
 {
     /// <summary>
     /// This class encapsulates the

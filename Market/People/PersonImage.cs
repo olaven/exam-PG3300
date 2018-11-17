@@ -1,6 +1,6 @@
 using System;
 
-namespace FleaMarket
+namespace People
 {
     /*
       * The flyweight pattern is mainly implemented to
