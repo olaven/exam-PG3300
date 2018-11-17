@@ -190,12 +190,16 @@ Creator-prinsippet er et sett med regler for når en klasse skal opprette en ins
 - [ ] Trådsikkerhet i vår kode 
 
 ## Enhetstesting 
-- [ ] Kort om hva det er 
-- [ ] Hvor vi har brukt det 
-- [ ] Hva man oppnår med enhetstester 
-- [ ] Kort om TDD 
+- [X] Kort om hva det er 
+- [X] Hvor vi har brukt det 
+- [X] Hva man oppnår med enhetstester 
+- [X] Kort om TDD 
+Enhetstesting er tester som sjekker om små biter av programmet fungerer hver for seg. Kjører man disse testene hver for seg (f.eks. automatisert etter hver lagring) vil man fort kunne oppdage feil i programmet underveis i utviklingen.
+
+Vi har brukt enhetstesting på Person-funksjonaliteten vår og Decorator-funksjonaliteten. Vi har blant annet en test som vil feile dersom koden vår ikke lenger er trådsikker.  
+
 Test-driven development er en programvareutviklingmetode der man starter med å lage tester for funskjonalitet som skal lages.
-Deretter implementeres koden som trengs for å få testen til å parese. Detteret refakturerer man koden, og gjøre det samme igjen.
+Deretter implementeres koden som trengs for å få testen til å passere. Man refaktorerer så koden, kjører den inn i versjonskontrollsystemet, og gjentar. Da vi skrev våre tester brukte vi denne teknikken.  
 
 ## Om C# og vår kode
 ### Operatoroverlasting 
