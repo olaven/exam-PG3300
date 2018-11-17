@@ -16,11 +16,12 @@ namespace FleaMarket
         {
             if(Items.Count < 1)
                 return;
-            IItem itemForSale = Items.ToArray()[0];
+            var itemForSale = Items[0]; 
             Items.Remove(itemForSale);
             Market.Instance.AddItem(itemForSale);
-            Console.WriteLine("{0} put up their item for sale: {1}", Name, itemForSale.GetInformation());
-        }    
+            
+            Console.WriteLine("{0} {1} put up their item for sale: {2}", Image, Name, itemForSale.GetInformation());
+        }
         
         public bool Haggle(float priceOfItem, float customerBalance)
         {

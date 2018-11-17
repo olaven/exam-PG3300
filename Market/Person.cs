@@ -21,8 +21,10 @@ namespace FleaMarket
         public string Name { get; }
         public Wallet Wallet { get; }
         protected readonly List<IItem> Items;
-        
-        
+
+        public string Image => PersonImageFlyweightPointer.PersonImage.Image;
+
+
         protected Person(string name)
         {
             Name = name;
