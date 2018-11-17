@@ -63,10 +63,10 @@ namespace FleaMarket {
     abstract Person {
         + <<Property>> Name : String 
         + <<Property>> Image : String 
-        # Wallet : Wallet 
+        # <<Property>> Wallet : Wallet 
         # Items : List<Item> 
-                    
         # Person(name : string)
+        + GetItems() List<IItem>
     }
 
     Wallet "1" *-- Person
