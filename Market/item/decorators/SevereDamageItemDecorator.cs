@@ -16,7 +16,7 @@ namespace Item
         
         public override string getDamage()
         {
-            return base.getDamage() +  "severe damage"; 
+            return base.getDamage() +  " that has severe damage"; 
         }
     }
 }

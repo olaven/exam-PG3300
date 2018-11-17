@@ -16,7 +16,7 @@ namespace Item
         
         public override string getDamage()
         {
-            return base.getDamage() +  "with two huge riper and one bump"; 
+            return base.getDamage() +  " with two huge scratches and one bump"; 
         }
     }
 }

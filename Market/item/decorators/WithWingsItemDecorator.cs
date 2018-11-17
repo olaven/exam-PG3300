@@ -17,7 +17,7 @@ namespace Item
 
         public override string getModification()
         {
-            return base.getModification() +  "with wings"; 
+            return base.getModification() +  " with wings"; 
         }
     }
 }

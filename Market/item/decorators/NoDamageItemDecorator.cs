@@ -16,7 +16,7 @@ namespace Item
         
         public override string getDamage()
         {
-            return  base.getDamage() + "no damage"; 
+            return  base.getDamage() + " that has no damage"; 
         }
     }
 }

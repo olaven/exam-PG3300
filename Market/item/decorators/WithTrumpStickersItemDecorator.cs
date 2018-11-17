@@ -18,7 +18,7 @@ namespace Item
         
         public override string getModification()
         {
-            return  base.getModification() + "with Donald Trump stickers"; 
+            return  base.getModification() + " with Donald Trump stickers"; 
         }
     }
 }
