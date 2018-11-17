@@ -16,7 +16,7 @@ namespace Item
 
         public override string GetModification()
         {
-            return  base.GetModification() + "with wheels"; 
+            return  base.GetModification() + " with wheels"; 
         }
     }
 }

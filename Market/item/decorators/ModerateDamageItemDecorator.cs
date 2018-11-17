@@ -15,7 +15,7 @@ namespace Item
         }
         public override string GetDamage()
         {
-            return base.GetDamage() +  "with a small bump";
+            return base.GetDamage() +  " with a small bump";
         }
     }
 }

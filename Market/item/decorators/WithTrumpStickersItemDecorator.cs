@@ -17,7 +17,7 @@ namespace Item
         
         public override string GetModification()
         {
-            return  base.GetModification() + "with Donald Trump stickers"; 
+            return  base.GetModification() + " with Donald Trump stickers"; 
         }
     }
 }
