@@ -183,6 +183,7 @@ Creator-prinsippet er et sett med regler for når en klasse skal opprette en ins
 
 ## Trådsikkerhet 
 - [ ] Kort om multithreading generelt 
+- [ ] Fordeler og ulemper med multithreading 
 - [ ] Hva oppstår ved kode som ikke er trådsikker 
 - [ ] Trådsikkerhet i Random og vår implementasjon 
 - [ ] Et konkret eksempel på bruk av random som ikke ville vært sikker (særlig dersom vår viser seg å være det)

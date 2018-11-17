@@ -27,21 +27,6 @@ namespace MarketTest
         }
 
         [Test]
-        public void PersonShouldLoseMoney()
-        {
-            Salesman salesman = new Salesman("Tor");
-            Customer customer = new Customer("Hans-Arne");
-            
-            customer.Wallet.Balance = 1000;
-            var previousAmount = customer.Wallet.Balance;
-            salesman.GetItems().Add(ItemFactory.GetRandomItem(salesman, 5));
-            salesman.SellItem();
-            Thread.Sleep(300);
-            
-            Assert.That(previousAmount, Is.GreaterThan(customer.Wallet.Balance));   
-        }
-
-        [Test]
         public void SalesmanShouldGetMoney() {
             Salesman salesman = new Salesman("Tor");
             Customer customer = new Customer("Hans");
