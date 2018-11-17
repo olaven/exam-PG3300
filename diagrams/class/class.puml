@@ -4,13 +4,12 @@
 
 namespace item {
     interface Item {
-        + <<Property>> Name : String 
         + <<Property>> Owner : Person 
-        ~ getPrice() : float
-        ~ getCondition() : String
-        ~ getDamage() : String
-        ~ getModification() : String
-        ~ getInformation() : String 
+        ~ GetPrice() : float
+        ~ GetCondition() : String
+        ~ GetDamage() : String
+        ~ GetModification() : String
+        ~ GetInformation() : String 
     }
 
     Item o-- "1" FleaMarket.Person 
@@ -82,6 +81,9 @@ namespace FleaMarket {
 
     class Salesman extends Person {
         / act void 
+        + Salesman(name : string)
+        + SellItem() : void
+        + Haggle(priceOfItem : float, customerBalance : float) : bool
     }
     
     class PersonFactory {
