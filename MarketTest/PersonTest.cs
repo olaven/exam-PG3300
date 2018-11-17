@@ -71,7 +71,7 @@ namespace MarketTest
             }
         }
 
-        public void shouldBeThreadSafe()
+        public void ShouldBeThreadSafe()
         {
             ArrayList customers = new ArrayList();
             for (int i = 0; i < 10; i++)
