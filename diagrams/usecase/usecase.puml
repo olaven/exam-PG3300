@@ -8,40 +8,35 @@ actor salesman
 person <|-- customer
 person <|-- salesman
 
-rectangle "Market" {
+rectangle {
 
     (buy item) 
-    (bargain for item)
+    (haggle for item)
     (put item up for sale)
     (transfer money)
-    (choose item)
-    (consider bargain)
+    (looking for items)
     (transfer money)
 
     note "if enough money" as buyNote
-    note "almost enough money" as bargainNote
-    :customer: -- (choose item) 
+    note "not enough money" as haggleNote
+    :customer: -- (looking for items) 
     :salesman: -- (put item up for sale)
     :salesman: -- (transfer money)
+
+    (put item up for sale) .> (notify customers) : <<include>> 
     
-    buyNote .. (buy item)
-    (choose item) <. buyNote : extends
+    buyNote .. (buy item) : <<extend>>
+    (looking for items) <. buyNote : <<extend>>
 
-    bargainNote .. (bargain for item) 
-    (choose item) <.. bargainNote : extends
+    haggleNote .. (haggle for item) 
+    (looking for items) <.. haggleNote : <<extend>>
 
-    (bargain for item) ..> (consider bargain)
-    (consider bargain) ..> (buy item)
-    (consider bargain) .. (put item up for sale)
-
-
-
-    (buy item) .> (transfer money) : include 
-
-
+    (haggle for item) <.. (buy item) : <<extend>> 
+    (haggle for item) <.. (purchase rejected) : <<extend>> 
     
-
-
+    (purchase rejected) -- salesman
+    note right of (purchase rejected) : Rejected by salesman
+    (buy item) .> (transfer money) : <<include>>
 
 }
 
