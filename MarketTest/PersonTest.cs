@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Threading;
 using FleaMarket;
 using Item;
@@ -9,7 +10,7 @@ namespace MarketTest
     public class PersonTest
     {
         [Test]
-        public void shouldRetrieveNameFromConstructor()
+        public void ShouldRetrieveNameFromConstructor()
         {
             Person person = new Salesman("Petter");
             
@@ -17,14 +18,14 @@ namespace MarketTest
         }
 
         [Test]
-        public void personShouldHaveMoneyInWallet()
+        public void PersonShouldHaveMoneyInWallet()
         {
             Person person = new Salesman("Kjell");
             Assert.True(person.Wallet >= 100);
         }
 
         [Test]
-        public void personShouldLoseMoney()
+        public void PersonShouldLoseMoney()
         {
             Salesman salesman = new Salesman("Tor");
             Customer customer = new Customer("Hans-Arne");
@@ -39,7 +40,7 @@ namespace MarketTest
         }
 
         [Test]
-        public void salesmanShouldGetMoney() {
+        public void SalesmanShouldGetMoney() {
             Salesman salesman = new Salesman("Tor");
             Customer customer = new Customer("Hans");
 
@@ -50,6 +51,22 @@ namespace MarketTest
             Thread.Sleep(300);
 
             Assert.That(previousAmount, Is.LessThan(salesman.Wallet.Balance));
+        }
+
+        [Test]
+        public void EveryImageShouldHaveSameReference()
+        {
+            var people = new List<Person>
+            {
+                new Customer("Customer 1"),
+                new Salesman("Salesman 1"),
+                new Customer("Customer 2")
+            };
+
+            for (var i = 1; i < people.Count; i++)
+            {
+                Assert.That(people[i].Image, Is.EqualTo(people[i - 1].Image));
+            }
         }
     }
 }

@@ -22,7 +22,7 @@ namespace FleaMarket
         public Wallet Wallet { get; }
         protected readonly List<IItem> Items;
 
-        public string Image => PersonImageFlyweightPointer.PersonImage.Image;
+        public string Image => PersonImagePointer.PersonImage.Image;
 
 
         protected Person(string name)
