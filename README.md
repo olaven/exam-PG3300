@@ -1,7 +1,11 @@
 # eksamen-PG3300
 Exam in Software Design, at Kristiania University College
 
+BESKRIVELSE AV PROGRAMMET 
+LINK TIL DOKUMENTASJON
+
 ## Todos 
+- [ ] Flere tester på person mm.
 - [ ] Use case for salesman (i det eksisterende, vise generalisering)
 - [ ] Klassediagram -> Alle patterns 
 - [X] Sekvensdiagram for factory 
