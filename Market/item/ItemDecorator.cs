@@ -22,14 +22,18 @@ namespace Item
         protected ItemDecorator(IItem original)
         {
             _item = original; 
-
             Owner = _item.Owner; 
             Random = new Random();        
             
         }
         
         #region Delegated methods 
-        
+
+        public string GetName()
+        {
+            return _item.GetName();
+        }
+
         public virtual float GetPrice()
         {
             return _item.GetPrice();
@@ -53,7 +57,7 @@ namespace Item
 
         public string GetInformation()
         {
-            return "Item" +  
+            return GetName() +  
                    GetModification() + 
                    GetCondition() + 
                    GetDamage() +

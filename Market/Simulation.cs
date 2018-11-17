@@ -14,16 +14,14 @@ namespace FleaMarket
     public class Simulation
     {
         private readonly Random _random;    
-        private readonly int _saleCount;
         
         private readonly List<Salesman> _salesmen;
         // every customer will listen for new items by themselves, through events 
         private readonly List<Customer> _customers;  
         
 
-        public Simulation(int saleCount)
+        public Simulation()
         {
-            _saleCount = saleCount;
             _random = new Random();
 
             _salesmen = PopulateSalesmen();
@@ -60,17 +58,17 @@ namespace FleaMarket
         /// <summary>
         /// Gives between 5 and 8 items to the given persons 
         /// </summary>
-        /// <param name="persons">Persons to give items to</param>
-        private void GiveItemsTo(IEnumerable<Person> persons)
+        /// <param name="salesmen">Salesmen to give items to</param>
+        private void GiveItemsTo(IEnumerable<Salesman> salesmen)
         {
-            foreach (var person in persons)
+            foreach (var salesman in salesmen)
             {
                 
                 var amount = _random.Next(5, 8); 
                 for (var i = 0; i < amount; i++)
                 {
-                    var item = ItemFactory.GetRandomItem(person, 5);
-                    person.GetItems().Add(item);
+                    var item = ItemFactory.GetRandomItem(salesman);
+                    salesman.GetItems().Add(item);
                 }
             }
         }
@@ -79,11 +77,11 @@ namespace FleaMarket
         #region populating lists 
         private List<Salesman> PopulateSalesmen()
         {
-            var persons = PopulatePersons(PersonType.Salesman, 2, 4);
+            var salesmen = PopulatePersons(PersonType.Salesman, 2, 4).Cast<Salesman>().ToList();
             // salesmen have to own the items they sell 
-            GiveItemsTo(persons); 
+            GiveItemsTo(salesmen); 
             
-            return persons.Cast<Salesman>().ToList();
+            return salesmen;
         }
         
 
