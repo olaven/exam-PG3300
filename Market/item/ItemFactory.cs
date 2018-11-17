@@ -7,8 +7,6 @@ namespace Item
 {
     public static class ItemFactory
     {
-        
-        
         /// <summary>
         /// Manufactures and returns a new item
         /// with random decorations 
