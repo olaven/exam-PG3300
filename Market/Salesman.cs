@@ -20,9 +20,8 @@ namespace FleaMarket
             
             var itemForSale = Items[0];
             Items.Remove(itemForSale);
-            Market.Instance.AddItem(itemForSale);
-
             Console.WriteLine("{0} {1} put up their item for sale: {2}", Image, Name, itemForSale.GetInformation());
+            Market.Instance.AddItem(itemForSale);
 
         }
         

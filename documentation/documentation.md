@@ -120,7 +120,7 @@ Vår `ItemFactory` kunne bruke Decorator til å bygge opp forskjellige varer. Vi
 
 Singleton-patternet brukes også. Vi har valgt å bruke det i `Market` fordi vi vil garantere at alle `Person`-instanser forholder seg til samme marked. Dette er ikke en feil bruk av patternet, men er heller ikke et like naturlig valg som de patternene over, men vi har det hovedsakelig med for å demonstrere det. 
 
-Façade
+Façade handler om å pakke inn større funksjonalitet med mer lettfattelige grensesnitt. Vi har ikke noe tydelig eksempel hvor dette gjøres veldig eksplisitt, men vi gjør det stadig vekk når vi programmerer, blandt annet i `Market` sin `BuyItem`-metode. 
 SKRIV MEG
 TODO SKRIV MEG
 TODO: SKRIV MEG
@@ -174,15 +174,22 @@ Deretter implementeres koden som trengs for å få testen til å passere. Man re
 ## Om C# og vår kode
 ### Event dispatching
 Vi bruker event dispatching for å tillate at customers kan "lytte på markedet" slik at de kan kaste seg over en vare så fort den er tilgjengelig. Vi kunne løst dette uten å bruke event dispatching, men vi synes det var en morsom måte å løse det på, samtidig som vi fikk demonstrert en kul bit av pensum. 
+
 ### Operatoroverlasting 
 Operatoroverlasning er en mulighet C# gir, som lar programmereren bestemme hva vanlige operatorer (+, -, /, *, <, >, osv.) betyr mellom forskjellige typer. Har man en vektor-klasse, kan man for eksempel bestemme hva to instanser addert (+) med hverandre skal være. Vi har ikke funnet et naturlig sted for dette i vår løsning. Vi har allikevel tatt det med i Wallet-klassen for å demonstrere muligheten. 
+
 ### Properties 
-- [ ] Hva det er 
-- [ ] Hvor vi har brukt det 
-- [ ] Hvor vi ikke har brukt det - hvorfor? 
+Vi har stort sett foretrukket å bruke properties i stedet get- og set-metoder som de vi er vant med fra Java.
+EventHandler i Market er ikke en property. Dersom vi har den som en property med set-metode fungerer ikke "+=" når vi legger på lyttere i `Customer` sin konstruktør. 
+
+Vår erfaring er at properties er en fin mulighet, som vi savner i Java. Get- og set-metoder kan lett genereres, men det ser penere ut, rent estetisk, å bruke properties.
+
 ### Regions 
 Regioner er en måte å dele opp koden. Regionene legger ikke på funksjonalitet, men kan gjøre det mer oversiktelig for programmereren å gå gjennom den. Vi har anvendt regioner flere steder, blant annet i Simulation-klassen og i ItemFactory. 
+
 ### Kommentarer
+Som hovedregel har vi kommentert koden der vi har følt at det var nødvendig. Det vil si at vi ikke har kommentert der vi mener koden snakker for seg selv. Vi har anvendt C#-doc stil på kommentarene. I blandt kan disse være unødvendig detaljerte. Vi har likevel ønsket å ha det slik for å demonstrere forskjellige tags og liknende. Vi har også kommentert koden der vi kun bruker et konsept for å demonstrere det, slik som oppgaven ber om.
+
 ### Konvensjoner 
 Vi har etterstrebet å følge navnkonvensjoner som gjelder i C#. Det være seg blant annet "_"-prefiks på private klassevariable, stor forbokstav på metodenavn o.l. Her har vi fått mye støttet fra IDE-et vi brukte. Der hvor den har foreslått endringer, har vi stort sett gjennomført dem. Disse endringene inkluderer ternary-operatorer, null-propagation og bruk av "var"-nøkkelordet. 
 
