@@ -28,7 +28,6 @@ namespace FleaMarket
         
         public bool Haggle(float priceOfItem, float customerBalance)
         {
-            Console.WriteLine("Haggle: " + priceOfItem + " _ " + customerBalance);
             float f = new Random().Next(0, 100);
             f = f / 100;
             return f < customerBalance/priceOfItem;

@@ -13,7 +13,7 @@ namespace FleaMarket
 
         public Wallet()
         {
-            Balance = new Random().Next(2400, 5000);
+            Balance = new Random().Next(800, 1000);
         }
         
         /*

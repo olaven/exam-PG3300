@@ -125,18 +125,17 @@ namespace FleaMarket {
 
     note "Singleton" as singleton
     class Market {
-        
-        - {static}_market : Market
-        - _items : List<IItem>
-        + EvenHappening : EventHandler
-        - _staticLock : object
-        - {static}Padlock : object
-        + {static}<<Property>> Instance : Market  
         + AddItem(item : IItem) : void  
         + sellItem(item : Item) : void 
-        + Market()
-        - ItemForSaleEvent(e : EventArgs) : void
+        + EvenHappening : EventHandler        
+        + {static}<<Property>> Instance : Market  
+        - {static}_market : Market
+        - {static}Padlock : object
+        - _items : List<IItem>
+        - _staticLock : object
         + BuyItem(customer : Customer, item : IItem) : void
+        - Market() : void 
+        - ItemForSaleEvent(e : EventArgs) : void
         - DoTransaction(customer : Customer, seller : Salesman, item : IItem, isBargain : bool) : void
     }
 

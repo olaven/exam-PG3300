@@ -58,7 +58,7 @@ namespace FleaMarket
         }
 
         /// <summary>
-        /// Gives betwenn 5 and 8 items to the given persons 
+        /// Gives between 5 and 8 items to the given persons 
         /// </summary>
         /// <param name="persons">Persons to give items to</param>
         private void GiveItemsTo(IEnumerable<Person> persons)

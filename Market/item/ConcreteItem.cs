@@ -45,11 +45,8 @@ namespace Item
         public string GetInformation()
         {
 
-            return "Item " +
-                   "\nPrice: " + GetPrice() +
-                   "\nOwner: " + Owner + //TODO: Fix en fin toString på person 
-                   ""
-                ; 
+            return "Item" +  
+                   " for " + GetPrice() + ",-";
         }
 
     }
