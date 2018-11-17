@@ -95,7 +95,7 @@ namespace FleaMarket
             item.Owner = customer;
             customer.GetItems().Add(item);
 
-            Console.WriteLine("{0, 50} bought {1}", customer.Name, item.getInformation());
+            Console.WriteLine("{0, 50} bought {1} {2}", customer.Name, item.getInformation(), customer.Image);
         }
     }
 }
