@@ -19,13 +19,6 @@ FØR LEVERING:
         - [Sekvensdiagram](#sekvensdiagram)
         - [Bruksdiagram ("Use case")- [ ] Hva modelleres?](#bruksdiagram-%22use-case%22----hva-modelleres)
     - [Design patterns](#design-patterns)
-        - [Factory](#factory)
-        - [Decorator](#decorator)
-        - [Singleton](#singleton)
-        - [Composite](#composite)
-        - [Facade](#facade)
-        - [Flyweight](#flyweight)
-        - [MVP](#mvp)
     - [Trådsikkerhet](#tr%C3%A5dsikkerhet)
     - [Enhetstesting](#enhetstesting)
     - [Om C# og vår kode](#om-c-og-v%C3%A5r-kode)
@@ -94,6 +87,8 @@ Controller-prinsippet kan gi god oversikt over hva som skjer og når det skal sk
 
 
 
+
+
 ## Diagrammer 
 ### Klassediagram 
 ![Klassediagram](../diagrams/class/class.png) 
@@ -116,36 +111,36 @@ Controller-prinsippet kan gi god oversikt over hva som skjer og når det skal sk
 
 
 ## Design patterns 
-- [ ] Generelt om design patterns 
-- [ ] Hvilke vi har hatt fokus på
-### Factory 
-- [ ] Hva gjør det? 
-- [ ] Hvor bruker vi dem?
-- [ ] Hva oppnår de der de brukes? (GRASP?)
-### Decorator 
-- [ ] Hva gjør det? 
-- [ ] Hvor bruker vi dem?
-- [ ] Hva oppnår de der de brukes? (GRASP?)
-### Singleton 
-- [ ] Hva gjør det? 
-- [ ] Hvor bruker vi dem?
-- [ ] Hva oppnår de der de brukes? (GRASP?)
-### Composite 
-- [ ] Hva gjør det? 
-- [ ] Hvor bruker vi dem?
-- [ ] Hva oppnår de der de brukes? (GRASP?)
-### Facade 
-- [ ] Hva gjør det? 
-- [ ] Hvor bruker vi dem?
-- [ ] Hva oppnår de der de brukes? (GRASP?)
-### Flyweight
-- [ ] Hva gjør det? 
-- [ ] Hvor bruker vi dem?
-- [ ] Hva oppnår de der de brukes? (GRASP?)
-### MVP 
-- [ ] Hva gjør det? 
-- [ ] Hvor bruker vi dem?
-- [ ] Hva oppnår de der de brukes? (GRASP?)
+Vi har forsøkt å få med mange design patterns. Likevel har vi valgt å fokusere på de som er mest naturlige i vår oppgave, men vi har også med et par som ikke er fullt egnet. Decorator- og Factory-pattern er de to som har fått mest oppmerksomhet. 
+
+Decorator-patternet brukes for å gi forskjellige egenskaper til forskjellige varer. Decorator-patternet gir oss stor fleksibilitet når vi skal ha forskjellige type varer. Det støtter også polymorphism-prinsippet i og med at variasjoner defineres i subklasser. Dette ble veldig nyttig for oss da vi skulle lage mange forskjellige varianter av varer på en enkel måte. 
+
+Etter hvert oppdaget vi at dette patternet fungerte svært godt i kombinasjon med Factory-patternet. 
+Vår `ItemFactory` kunne bruke Decorator til å bygge opp forskjellige varer. Vi har også demonstrert Factory-patternet med `PersonFactory`. Med Factory-patternet oppnår vi som nevnt lavere kobling. Dersom vi gjorde endringer i `Person` og `Item` klassene våre var det lettere å tilpasse eksisterende kode, i og med at det holdt å endre Factoryet. Det gjorde det også lettere å ha en standard for hvordan varer og personer skulle være, uavhengig av hvor de ble brukt.
+
+Singleton-patternet brukes også. Vi har valgt å bruke det i `Market` fordi vi vil garantere at alle `Person`-instanser forholder seg til samme marked. Dette er ikke en feil bruk av patternet, men er heller ikke et like naturlig valg som de patternene over, men vi har det hovedsakelig med for å demonstrere det. 
+
+Façade handler om å pakke inn større funksjonalitet med mer lettfattelige grensesnitt. Vi har ikke noe tydelig eksempel hvor dette gjøres veldig eksplisitt, men vi gjør det stadig vekk når vi programmerer, blandt annet i `Market` sin `BuyItem`-metode. 
+SKRIV MEG
+TODO SKRIV MEG
+TODO: SKRIV MEG
+      Marketfacade.sellItem -> MarketFacade -> Market.FindBuyer, Market.findSeller,                                 Market.ConsiderbalanceOfCustomer, Market.GiveMoneyFromSeller,               Market.RemoveMoneyFromCustomer.  
+SKRIV MEG 
+SKRIV meg
+
+
+Da vi skrev `Simulation`-klassen ønsket vi å hente èn eller flere tilfeldige selgere som kunne selge varene sine. Vi oppdaget fort at dette var en perfekt mulighet til å benytte oss av Composite-patternet. Vi ønsket å kunne ha samme kode når vi kun jobbet med èn, som når vi jobbet med flere selgere. Et annet ønske var at dette skulle se ryddig ut. Composite-patternet lot oss gjøre nettopp dette. 
+
+Flyweight handler om å håndtere lik informasjon på en plassbesparende måte. Det være seg grafikk, bilder, eller større dataset. Vi fant ingen naturlig plass for dette i vårt prosjekt, i og med at det ikke er så mye av dette, men vi har tatt det med for å demonstrere muligheten. "Grafikken" som deles er en liten ASCII-emoji som alle `Person`-instanser har til felles. 
+
+Model View Controller handler om å separere programmet inn i lag hvor model-laget holder programmets tilstand (state), view-laget handler om hvordan man skal presentere tilstanden, control-laget kommuniserer mellom og oppdaterer de to andre lagene. Slik vi ser det er dette patternet mest relevant i programmer som håndterer brukerinput. 
+SKRIV MEG 
+SKRIV MEG
+
+
+
+
+
 
 ## Trådsikkerhet 
 Vi kjører i flere tråder (multithreading) når kunder skal forsøke å kjøpe varer. Som oppgaven spesifiserer, skal de "kaste seg over samme vare". Her oppstår det fare for at "race conditions" kan oppstå fordi koden ikke er trådsikker. 
@@ -177,16 +172,24 @@ Test-driven development er en programvareutviklingmetode der man starter med å 
 Deretter implementeres koden som trengs for å få testen til å passere. Man refaktorerer så koden, kjører den inn i versjonskontrollsystemet, og gjentar. Da vi skrev våre tester brukte vi denne teknikken.  
 
 ## Om C# og vår kode
-### Event dispatching 
+### Event dispatching
+Vi bruker event dispatching for å tillate at customers kan "lytte på markedet" slik at de kan kaste seg over en vare så fort den er tilgjengelig. Vi kunne løst dette uten å bruke event dispatching, men vi synes det var en morsom måte å løse det på, samtidig som vi fikk demonstrert en kul bit av pensum. 
+
 ### Operatoroverlasting 
 Operatoroverlasning er en mulighet C# gir, som lar programmereren bestemme hva vanlige operatorer (+, -, /, *, <, >, osv.) betyr mellom forskjellige typer. Har man en vektor-klasse, kan man for eksempel bestemme hva to instanser addert (+) med hverandre skal være. Vi har ikke funnet et naturlig sted for dette i vår løsning. Vi har allikevel tatt det med i Wallet-klassen for å demonstrere muligheten. 
+
+### Properties 
+Vi har stort sett foretrukket å bruke properties i stedet get- og set-metoder som de vi er vant med fra Java.
+EventHandler i Market er ikke en property. Dersom vi har den som en property med set-metode fungerer ikke "+=" når vi legger på lyttere i `Customer` sin konstruktør. 
+
+Vår erfaring er at properties er en fin mulighet, som vi savner i Java. Get- og set-metoder kan lett genereres, men det ser penere ut, rent estetisk, å bruke properties.
+
 ### Regions 
 Regioner er en måte å dele opp koden. Regionene legger ikke på funksjonalitet, men kan gjøre det mer oversiktelig for programmereren å gå gjennom den. Vi har anvendt regioner flere steder, blant annet i Simulation-klassen og i ItemFactory. 
-### Properties 
-- [ ] Hva det er 
-- [ ] Hvor vi har brukt det 
-- [ ] Hvor vi ikke har brukt det - hvorfor? 
+
 ### Kommentarer
+Som hovedregel har vi kommentert koden der vi har følt at det var nødvendig. Det vil si at vi ikke har kommentert der vi mener koden snakker for seg selv. Vi har anvendt C#-doc stil på kommentarene. I blandt kan disse være unødvendig detaljerte. Vi har likevel ønsket å ha det slik for å demonstrere forskjellige tags og liknende. Vi har også kommentert koden der vi kun bruker et konsept for å demonstrere det, slik som oppgaven ber om.
+
 ### Konvensjoner 
 Vi har etterstrebet å følge navnkonvensjoner som gjelder i C#. Det være seg blant annet "_"-prefiks på private klassevariable, stor forbokstav på metodenavn o.l. Her har vi fått mye støttet fra IDE-et vi brukte. Der hvor den har foreslått endringer, har vi stort sett gjennomført dem. Disse endringene inkluderer ternary-operatorer, null-propagation og bruk av "var"-nøkkelordet. 
 

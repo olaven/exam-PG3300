@@ -13,9 +13,10 @@ namespace FleaMarket
     /// </summary>
     public class Market
     {
-        public EventHandler EventHappening;
         private static Market _market;
         private readonly List<IItem> _items;
+        public EventHandler Handler;
+        
         private readonly object _staticLock = new object(); 
         private static readonly object Padlock = new object();
 
@@ -55,7 +56,8 @@ namespace FleaMarket
 
         private void ItemForSaleEvent(EventArgs e)
         {
-            var handler = EventHappening;
+            var handler = Handler;
+
             //Notify customers that none item is available
             handler?.Invoke(this, e); // "?.Invoke -> if handler != null, run it 
         }

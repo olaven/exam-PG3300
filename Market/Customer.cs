@@ -8,7 +8,7 @@ namespace FleaMarket
     {
         public Customer(string name) : base(name)
         {
-            Market.Instance.EventHappening += (sender, eventArgs) => { 
+            Market.Instance.Handler += (sender, eventArgs) => { 
                 AttemptBuy(eventArgs);
             };
         }
