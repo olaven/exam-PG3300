@@ -3,6 +3,7 @@ using Item;
 
 namespace FleaMarket
 {
+    /// <inheritdoc />
     /// <summary>
     /// This EventArg holds an item.
     /// This allows us to pass the item
