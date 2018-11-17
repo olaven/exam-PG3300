@@ -12,7 +12,7 @@ namespace MarketTest
         [SetUp]
         public void init()
         {
-            _item = new ConcreteItem("item name", 100, new Customer("customer name"));
+            _item = new ConcreteItem(100, new Customer("customer name"));
         }
        
         [Test]
@@ -50,7 +50,7 @@ namespace MarketTest
         [Test]
         public void priceCantBeLessThan0()
         {
-            IItem item = new ConcreteItem("Thomas", -100, new Customer("customer name"));
+            IItem item = new ConcreteItem(-100, new Customer("customer name"));
             Assert.That(item.getPrice(), Is.GreaterThanOrEqualTo(0));
         }
 

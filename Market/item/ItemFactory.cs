@@ -31,7 +31,7 @@ namespace Item
         /// <returns></returns>
         private static IItem GetItem(List<Decoration> decorations, Person person)
         {   
-            IItem item = new ConcreteItem("Item x", 200 ,person); //FIXME: semi-random name and price 
+            IItem item = new ConcreteItem(200 ,person); //FIXME: semi-random name and price 
             foreach(Decoration dec in decorations)
             {
                 switch (dec)

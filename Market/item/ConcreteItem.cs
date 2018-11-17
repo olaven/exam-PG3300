@@ -8,7 +8,6 @@ namespace Item
     /// </summary>
     public class ConcreteItem : IItem
     {
-        public string Name { get; set; }
         public Person Owner { get; set; }
 
         private readonly float _price; 
@@ -16,9 +15,8 @@ namespace Item
 
         
 
-        public ConcreteItem(string name, float price, Person owner)
+        public ConcreteItem(float price, Person owner)
         {
-            Name = name;
             Owner = owner;
 
             if (price > 0)
@@ -49,8 +47,7 @@ namespace Item
 
         public string getInformation()
         {
-            return "" +
-                   "Name: " + Name +
+            return "Item " +
                    "\nPrice: " + getPrice() +
                    "\nOwner: " + Owner + //TODO: Fix en fin toString på person 
                    ""
