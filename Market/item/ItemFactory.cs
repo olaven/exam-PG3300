@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using FleaMarket; 
 
@@ -24,15 +25,16 @@ namespace Item
 
         #region applying decorations 
         /// <summary>
-        /// Manufactures and returns a new item 
+        /// Manufactures and returns a new item
+        /// with decorations
         /// </summary>
         /// <param name="decorations">The decorations to apply</param>
         /// <param name="person">The owner of the item</param>
         /// <returns></returns>
-        private static IItem GetItem(List<Decoration> decorations, Person person)
+        private static IItem GetItem(IEnumerable<Decoration> decorations, Person person)
         {   
             IItem item = new ConcreteItem(200 ,person); //FIXME: semi-random name and price 
-            foreach(Decoration dec in decorations)
+            foreach(var dec in decorations)
             {
                 switch (dec)
                 {
@@ -64,7 +66,9 @@ namespace Item
                         item = new ModerateDamageItemDecorator(item);
                         break;
                     case Decoration.NoDecoration:
-                        break;       
+                        break;
+                    default:
+                        throw new ArgumentOutOfRangeException();
                 }
             }
 
@@ -72,26 +76,46 @@ namespace Item
         }
 
         /// <summary>
-        /// Uses the "decorator-pattern"-structure
-        /// to apply different variations (decorations)
+        /// Gets a list of decorations, chosen at random 
         /// on the item. 
         /// </summary>
-        /// <param name="numberOfItems">Amount of decorations</param>
-        /// <returns>A decorated item</returns>
-        private static List<Decoration> GetRandomDecorations(int numberOfItems)
+        /// <param name="numberOfDecorations">Amount of decorations</param>
+        /// <returns>A list of decorations</returns>
+        private static IEnumerable<Decoration> GetRandomDecorations(int numberOfDecorations)
         {    
-            
-            var random = new Random();
-            var decorations = new List<Decoration>();
-            var values = Enum.GetValues(typeof(Decoration));
 
-            for (var i = 1; i < values.Length; i += 3)
+            var conditions = new List<Decoration>
             {
-                var r = random.Next(0, 3) + i;
-                decorations.Add((Decoration) values.GetValue(r));
-            }
+                Decoration.DecentCondition, Decoration.TerribleCondition, 
+                Decoration.PerfectCondition, Decoration.NoDecoration
+            };
 
-            return decorations;
+            var damageLevels = new List<Decoration>
+            {
+                Decoration.NoDamage, Decoration.MultipleDamage,
+                Decoration.ModerateDamage, Decoration.NoDecoration
+            };
+
+            var modifications = new List<Decoration>
+            {
+                Decoration.WithWheels, Decoration.WithWings,
+                Decoration.WithTrumpStickers, Decoration.NoDecoration
+            }; 
+            
+            var decorations = new List<Decoration>();
+            var random = new Random();
+
+
+            var index = random.Next(conditions.Count);
+            decorations.Add(conditions[index]);
+            
+            index = random.Next(damageLevels.Count);
+            decorations.Add(damageLevels[index]);
+            
+            index = random.Next(modifications.Count);
+            decorations.Add(modifications[index]);
+
+            return decorations; 
         }
         #endregion
     }
