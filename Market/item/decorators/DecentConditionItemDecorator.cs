@@ -15,7 +15,7 @@ namespace Item
         }
         public override string GetCondition()
         {
-            return base.GetCondition() + "decent condition"; 
+            return base.GetCondition() + " in decent condition"; 
         }
     }
 }

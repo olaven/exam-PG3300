@@ -8,7 +8,6 @@ namespace Item
     /// </summary>
     public interface IItem
     {
-        String Name { get; set; }
         Person Owner { get; set; }
 
         /// <returns>The price of an item</returns>

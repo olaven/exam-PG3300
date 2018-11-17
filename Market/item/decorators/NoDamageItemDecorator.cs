@@ -7,7 +7,6 @@ namespace Item
         {
             PriceAdjustment = Random.Next(5, 20); 
         }
-        
 
         public override float GetPrice()
         {

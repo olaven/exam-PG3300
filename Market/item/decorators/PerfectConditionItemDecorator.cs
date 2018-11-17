@@ -16,7 +16,7 @@ namespace Item
 
         public override string GetCondition()
         {
-            return  base.GetCondition() + "perfect condition"; 
+            return  base.GetCondition() + " in perfect condition"; 
         }
     }
 }

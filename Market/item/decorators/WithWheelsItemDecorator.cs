@@ -4,7 +4,6 @@ namespace Item
 {
     public class WithWheelsItemDecorator : ItemDecorator
     {
-
         public WithWheelsItemDecorator(IItem original) : base(original)
         {
             PriceAdjustment = Random.Next(30, 70); 

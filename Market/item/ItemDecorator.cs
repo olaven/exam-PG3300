@@ -15,7 +15,6 @@ namespace Item
     {
         private readonly IItem _item;
         protected readonly Random Random;
-        public string Name { get; set; }
         public Person Owner { get; set; }
 
         protected int PriceAdjustment;
@@ -24,7 +23,6 @@ namespace Item
         {
             _item = original; 
 
-            Name = _item.Name;
             Owner = _item.Owner; 
             Random = new Random();        
             
@@ -55,11 +53,10 @@ namespace Item
 
         public string GetInformation()
         {
-            return "" + Name + 
-                   " with " + 
+            return "Item" +  
                    GetModification() + 
-                   " in " + GetCondition() + 
-                   " that has " + GetDamage() +
+                   GetCondition() + 
+                   GetDamage() +
                    " for " + GetPrice() + ",-";
         }
     }

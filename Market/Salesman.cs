@@ -20,8 +20,7 @@ namespace FleaMarket
             Items.Remove(itemForSale);
             Market.Instance.AddItem(itemForSale);
             Console.WriteLine("{0} put up their item for sale: {1}", Name, itemForSale.GetInformation());
-        }
-        
+        }    
         
         public bool Haggle(float priceOfItem, float customerBalance)
         {
