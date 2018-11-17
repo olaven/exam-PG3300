@@ -85,7 +85,7 @@ namespace FleaMarket {
     class PersonFactory {
         - {static} ArrayList : Names
         - {static} Random : Random
-        + {static} getPerson(type PersonType) : Person
+        + {static} GetPerson(type PersonType) : Person
         - {static} GetRandomName() : string
     }
     
