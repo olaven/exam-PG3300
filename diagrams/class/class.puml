@@ -63,7 +63,7 @@ namespace FleaMarket {
     abstract Person {
         + <<Property>> Name : String 
         + <<Property>> Image : String 
-        # <<Property>> Wallet : Wallet 
+        + <<Property>> Wallet : Wallet 
         # Items : List<Item> 
         # Person(name : string)
         + GetItems() List<IItem>
@@ -108,15 +108,18 @@ namespace FleaMarket {
     note "Singleton" as singleton
     class Market {
         
-        - _market : Market
+        - {static}_market : Market
         - _items : List<IItem>
         + EvenHappening : EventHandler
-        - {static} _staticLock : object
-        - Padlock : object
-        + <<Property>> Instance : Market  
-        + addForSale(item : Item) : void  
+        - _staticLock : object
+        - {static}Padlock : object
+        + {static}<<Property>> Instance : Market  
+        + AddItem(item : IItem) : void  
         + sellItem(item : Item) : void 
         + Market()
+        - ItemForSaleEvent(e : EventArgs) : void
+        + BuyItem(customer : Customer, item : IItem) : void
+        - DoTransaction(customer : Customer, seller : Salesman, item : IItem, isBargain : bool) : void
     }
 
     Market .. singleton
