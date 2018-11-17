@@ -23,11 +23,12 @@ namespace FleaMarket
         }
         
         
-        public bool Bargain(float itemPrice, float customerBalance)
+        public bool Bargain(float priceOfItem, float customerBalance)
         {
+            Console.WriteLine("BARGAIN: " + priceOfItem + " _ " + customerBalance);
             float f = new Random().Next(0, 100);
             f = f / 100;
-            return f < customerBalance/itemPrice;
+            return f < customerBalance/priceOfItem;
         }
         
     }

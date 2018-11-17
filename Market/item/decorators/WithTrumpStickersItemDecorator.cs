@@ -7,13 +7,13 @@ namespace Item
         
         public WithTrumpStickersItemDecorator(IItem original) : base(original)
         {
-            _priceAdjustment = Random.Next(-40, -20); 
+            PriceAdjustment = Random.Next(-40, -20); 
         }
 
         
         public override float getPrice()
         {
-            return base.getPrice() + _priceAdjustment;
+            return base.getPrice() + PriceAdjustment;
         }
         
         public override string getModification()

@@ -13,7 +13,7 @@ namespace FleaMarket
             };
         }
 
-        public void AttemptBuy(EventArgs e)
+        private void AttemptBuy(EventArgs e)
         {
             new Thread(() =>
             {
@@ -21,26 +21,13 @@ namespace FleaMarket
                 {
                     return;
                 }
+                //random reaction time added to customer 
                 Thread.Sleep(new Random().Next(50, 100));
-                ItemForSaleEventArgs args = (ItemForSaleEventArgs) e;
+                
+                var args = (ItemForSaleEventArgs) e;
                 Market.Instance.BuyItem(this, args.Item);
             }).Start(); 
         }
         
     }
 }
-
-/*
-
-var items = Market.Instance.GetItems();
-                if (items.Count != 0)
-                {
-                    Console.WriteLine(Name + "Customer acting");
-                    
-                    IItem item = items.ToArray()[0];
-                    Market.Instance.GetItems().Remove(item);
-
-                    Console.WriteLine(Name + " bought:");
-                    Console.WriteLine(item.getInformation());
-                    Console.WriteLine("\n");
-                }*/

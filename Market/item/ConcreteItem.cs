@@ -2,6 +2,7 @@
 
 namespace Item
 {
+    /// <inheritdoc />
     /// <summary>
     /// A basic item. 
     /// </summary>

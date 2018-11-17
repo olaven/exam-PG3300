@@ -8,30 +8,30 @@ Exam in Software Design, at Kristiania University College
 - [ ] Gå over alle klasser og se om klassediagrammet matcher implementasjon 
 - [ ] Multithreaded løsning (trådsikker!)
 - [ ] Implementering 
-    - [ ] Operator overlasting 
-    - [ ] c#-style kommentar-doc
+    - [X] c#-style kommentar-doc
     - [X] Properties 
     - [X] "java-style" felter også, for å vise at vi kan det
     - [X] Ha flere projects i en solution 
     - [X] Bruke c# regions 
     - [X] To namespaces
     - [ ] Unit testing med NUnit
+    - [ ] Gå igjennom at det ikke finnes variabler som ikke blir brukt. Endre så i klassediagram om det skjer en endring!
     * C# sin Random funksjonalitet er i seg selv ikke trådsikker, løsninger på dette kan googles.
     * Det er greit å benytte Sleepfor å simulere at deler av løsningen tar tid/få tiden til å gå. (Ikke der vi har brukt det så langt)
     * Der hvor noe er med kun for å være med, må det nevnes BÅDE i kode og i dokumentasjon 
 - [ ] Dokumentasjon
     - [ ] Simulering av folks interagering med et marked, ikke en simulering av et marked 
-    - [ ] Gå igjennom at det ikke finnes variabler som ikke blir brukt. Endre så i klassediagram om det skjer en endring!
     - [ ] Patterns dokumenteres 
         - [ ] Factory -> Itemfactory 
-        - [ ] Decorator -> ItemDecorator (Vi har ac, ikke interface -> hvorfor!)
+        - [ ] Decorator -> ItemDecorator 
         - [ ] Singleoton -> Market 
-        - [ ] Composite -> ?? Kanskje person sayhi? 
-        - [ ] Facade -> Act (?) 
+        - [ ] Composite -> Salesman (sjekk koden) 
+        - [ ] Facade -> Metoder i market   
         - [ ] Flyweight -> ?? 
         - [ ] MVP -> ?? 
     - [ ] Skriv om regions 
     - [ ] Skriv om kommentar-doc 
+    - [ ] Skriv om at å oppfylle alle navngivningsråd som IDE foreslår er etterstrebet -> følge standard (inkl. var)
     - [ ] Skriv om operator-overlsting - ha med for å ha det med 
     - [ ] Skriv om events (delegation?? slå opp term)
     - [ ] Skriv om Unit testing 
