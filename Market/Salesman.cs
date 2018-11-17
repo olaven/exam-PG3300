@@ -16,7 +16,9 @@ namespace FleaMarket
         {
             if(Items.Count < 1)
                 return;
-            var itemForSale = Items.ToArray()[0];
+
+
+            var itemForSale = Items[0]; 
             Items.Remove(itemForSale);
             Market.Instance.AddItem(itemForSale);
             

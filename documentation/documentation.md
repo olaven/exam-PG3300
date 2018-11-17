@@ -193,6 +193,8 @@ Creator-prinsippet er et sett med regler for når en klasse skal opprette en ins
 - [ ] Hvor vi har brukt det 
 - [ ] Hva man oppnår med enhetstester 
 - [ ] Kort om TDD 
+Test-driven development er en programvareutviklingmetode der man starter med å lage tester for funskjonalitet som skal lages.
+Deretter implementeres koden som trengs for å få testen til å parese. Detteret refakturerer man koden, og gjøre det samme igjen.
 
 ## Om C# og vår kode
 ### Operatoroverlasting 
