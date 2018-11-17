@@ -29,7 +29,8 @@ namespace FleaMarket
         public static Market Instance
         {
             /*
-                 * The market could be null twice in separate threads.
+                 * The market could be "null twice" (race condition)
+                 * in separate threads.
                  * This would destroy the singletons purpose. Thus a
                  * lock is needed. 
                  */

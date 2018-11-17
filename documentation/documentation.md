@@ -189,6 +189,8 @@ Creator-prinsippet er et sett med regler for når en klasse skal opprette en ins
 - [ ] Et konkret eksempel på bruk av random som ikke ville vært sikker (særlig dersom vår viser seg å være det)
 - [ ] Trådsikkerhet i vår kode 
 
+Vi har skrevet kode som kjører i flere tråder. Med tråder kan man kjøre deler av programmet parallelt og dermed gjøre ting raskere. I vårt tilfelle handler det om at alle kunder skal forsøke å kjøpe varer så likt som mulig. 
+
 ## Enhetstesting 
 - [X] Kort om hva det er 
 - [X] Hvor vi har brukt det 
@@ -203,7 +205,7 @@ Deretter implementeres koden som trengs for å få testen til å passere. Man re
 
 ## Om C# og vår kode
 ### Operatoroverlasting 
-Operatoroverlasning er en mulighet C# gir, som lar programmereren omdefinere hva vanlige operatorer (+, -, /, *, <, >, osv.) betyr mellom to typer. Har man en vektor-klasse, kan man for eksempel bestemme hva to instanser addert (+) med hverandre skal være. Vi har ikke funnet et naturlig sted for dette i vår løsning. Vi har allikevel tatt det med i Wallet-klassen for å demonstrere muligheten. 
+Operatoroverlasning er en mulighet C# gir, som lar programmereren bestemme hva vanlige operatorer (+, -, /, *, <, >, osv.) betyr mellom forskjellige typer. Har man en vektor-klasse, kan man for eksempel bestemme hva to instanser addert (+) med hverandre skal være. Vi har ikke funnet et naturlig sted for dette i vår løsning. Vi har allikevel tatt det med i Wallet-klassen for å demonstrere muligheten. 
 ### Regions 
 Regioner er en måte å dele opp koden. Regionene legger ikke på funksjonalitet, men kan gjøre det mer oversiktelig for programmereren å gå gjennom den. Vi har anvendt regioner flere steder, blant annet i Simulation-klassen og i ItemFactory. 
 ### Properties 
