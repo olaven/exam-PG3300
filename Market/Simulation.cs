@@ -114,7 +114,7 @@ namespace FleaMarket
         #region populating lists 
         private List<Salesman> PopulateSalesmen()
         {
-            var salesmen = PopulatePersons(PersonType.Salesman, 2, 4).Cast<Salesman>().ToList();
+            var salesmen = PopulatePersons(PersonType.Salesman, 3, 4).Cast<Salesman>().ToList();
             // salesmen have to own the items they sell 
             GiveItemsTo(salesmen); 
             
