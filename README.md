@@ -7,7 +7,3 @@ Prosjektet er laget med .NET-core og bygger derfor ingen .exe-fil av seg selv.
 Den kan derimot bygges manuelt med `dotnet publish -c Release -r win10-x64` 
 
 [Dokumentasjon](./documentation/documentation.pdf)
-
-## Todos 
-- [X] Få programmet til å stoppe 
-- [ ] Litt mer om vår arbeidsprosess

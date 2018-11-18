@@ -1,11 +1,3 @@
-FØR LEVERING: 
-- [X] Fjern sjekkpunkter i hele documentation.md
-- [ ] Eksporter alle diagrammer på nytt
-- [ ] Legg pdf av dette dokumentet i rot 
-- [ ] Sjekk at løsning kjører som en Visual Studion Solution 
-- [ ] Legg ved en .exe-fil 
-- [ ] Fjern sjekkpunkter i hele documentation.md
-
 # Dokumentasjon 
 - [Dokumentasjon](#dokumentasjon)
     - [Introduksjon](#introduksjon)
