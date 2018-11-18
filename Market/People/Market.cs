@@ -17,9 +17,8 @@ namespace People
         private readonly List<IItem> _items;
         public EventHandler Handler;
         
-        private readonly object _staticLock = new object(); 
-        private readonly object _getLock = new object(); 
-        private static readonly object Padlock = new object();
+        private readonly object _lock = new object(); 
+        private static readonly object StaticLock = new object();
 
         //private to prohibit instantiation of market object for other classes.
         private Market()
@@ -34,11 +33,13 @@ namespace People
                  * The market could be "null twice" (race condition)
                  * in separate threads.
                  * This would destroy the singletons purpose. Thus a
-                 * lock is needed. 
+                 * lock is needed.
+                 *
+                 * Has to be static 
                  */
             get
             {
-                lock (Padlock)
+                lock (StaticLock)
                 {
                     return _market ?? (_market = new Market());
                 }
@@ -47,7 +48,7 @@ namespace People
 
         public List<IItem> GetItems()
         {
-            lock (_getLock )
+            lock (_lock )
             {
                 return _items;
             }
@@ -55,7 +56,7 @@ namespace People
         
         public void AddItem(IItem item)
         {
-            lock (_staticLock)
+            lock (_lock)
             {
                 _items.Add(item);
             }
@@ -74,7 +75,7 @@ namespace People
         public void BuyItem(Customer customer, IItem item)
         {
 
-            lock (_staticLock)
+            lock (_lock)
             {
                 if (_items.Count == 0 || !_items.Contains(item)) return;
                 

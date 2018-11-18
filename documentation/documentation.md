@@ -182,14 +182,13 @@ En race condition kan oppstå her:
 * Tråd 1 kommer gjennom if-setningen fordi Count != 0
 * Tråd 2 kommer også gjennom fordi Tråd 1 ikke har rukket å oppdatere `_items.Count` enda
 
-For å unngå dette har vi brukt C# sitt lock-statement rundt funksjonaliteten i metoden. 
+For å unngå dette har vi brukt C# sitt lock-statement rundt funksjonaliteten i metoden. I og med at dette er en singleton (samme instanse), skal det ikke det være nødvendig med et statisk lock-objekt. 
 
 Oppgaven nevner at Random ikke er trådsikker. Dersom man bruker samme random-objekt i flerer tråder, vil man risikere at den ikke fungerer. Etter å ha studert koden vår nøye, mener vi at dette ikke forekommer hos oss. Vi bruker Random-klassen i ```Customer.AttemptBuy```, men da oppretter vi en ny instanse av den i hver tråd, den samme instansen brukes ikke flere steder. 
 
 Dersom problemet skulle oppstå, finnes det en rekke løsninger, blant annet de man kan lese om [her](https://stackoverflow.com/questions/3049467/is-c-sharp-random-number-generator-thread-safe) og [her](https://stackoverflow.com/questions/19270507/correct-way-to-use-random-in-multithread-application). 
 
-Fordeler ved multithreading er at man kan utnytte flere kjerner i maskinen. En potensiell ulempe er bugs som følge av race coditions og deadlocks (to tråder venter på hverandre).   
-
+Fordeler ved multithreading er at man kan utnytte flere kjerner i maskinens prosessor. Man lar oppgaver kjøre på flere tråder parallelt. En potensiell ulempe er bugs som følge av race coditions og deadlocks (to tråder venter på hverandre). Programmet blir altså kjappere, men koden blir også mer kompleks fordi forutsigbarheten blir lavere. Forutsigbarheten blir lavere fordi det ikke er like lett å vite hva som skjer til enhver tid. 
 
 ## Enhetstesting 
 Enhetstesting er tester som sjekker om små biter av programmet fungerer hver for seg. Kjører man disse testene ofte(f.eks. automatisert etter hver lagring) vil man fort kunne oppdage feil i programmet underveis i utviklingen.
