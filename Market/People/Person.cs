@@ -9,6 +9,11 @@ namespace People
     /// a person. Is never directly instanciated
     /// (is abstract), but is extended by
     /// Salesman and Customer.
+    ///
+    /// It is abstract, as having a person
+    /// without a specialization does not
+    /// make sense in our context.  
+    /// 
     /// Each person has:
     /// <list type="bullet">
     ///    <item>A name</item>

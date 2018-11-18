@@ -118,7 +118,7 @@ namespace People {
     }
     
     class PersonFactory {
-        - {static} ArrayList : Names
+        - {static} Names : ArrayList<string>
         - {static} Random : Random
         + {static} GetPerson(type PersonType) : Person
         - {static} GetRandomName() : string

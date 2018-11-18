@@ -1,5 +1,6 @@
 FØR LEVERING: 
 - [ ] Fjern sjekkpunkter i hele documentation.md
+- [ ] Eksporter alle diagrammer på nytt
 - [ ] Legg pdf af dette dokumentet i rot 
 - [ ] Sjekk at løsning kjører som en Visual Studion Solution 
 - [ ] Legg ved en .exe-fil 
@@ -15,9 +16,9 @@ FØR LEVERING:
         - [prioriteringer](#prioriteringer)
     - [GRASP](#grasp)
     - [Diagrammer](#diagrammer)
+        - [Bruksdiagram ("Use case")](#bruksdiagram-%22use-case%22)
         - [Klassediagram](#klassediagram)
         - [Sekvensdiagram](#sekvensdiagram)
-        - [Bruksdiagram ("Use case")- [ ] Hva modelleres?](#bruksdiagram-%22use-case%22----hva-modelleres)
     - [Design patterns](#design-patterns)
     - [Trådsikkerhet](#tr%C3%A5dsikkerhet)
     - [Enhetstesting](#enhetstesting)
@@ -92,25 +93,48 @@ Controller-prinsippet kan gi god oversikt over hva som skjer og når det skal sk
 
 
 ## Diagrammer 
+Vi har brukt [PlantUML](http://plantuml.com/) til å lage diagrammene. Dette har hatt positive og negative konsekvenser. De positive har vært at tegningene alltid følger de samme standardene og at de har blitt lettere å både lese og lage. 
+
+De negative sidene har vært at renderingen ikke alltid er slik vi ville gjort det - noen klasser står litt rart i forhold til hverandre og noen koblinger er litt mer rotete enn de hadde behøvd å være. 
+
+I sum mener vi allikevel at det har gjort diagrammene langt enklere å forholde seg til enn om vi hadde tegnet dem for hånd. 
+
+### Bruksdiagram ("Use case")
+![Usecase-diagram](../diagrams/usecase/usecase.png)
+Vårt use-case diagram ble laget helt i starten av prosessen. Det var selve grunnlaget for resten av modelleringen og implementeringen 
+
+Vi så for oss et system  der kunder hele tiden var på utkikk etter varer som de kunne kjøpe. Dersom de så en vare, ville de alltid ønske å kjøpe den, selv om de ikke hadde penger til det. Derfor har "looking for items" to muligheter: et kjøps-usecase og et prute-usecase. 
+
+Vi bruker "extends" fordi at pruting og kjøp ikke er ting som skjer hver gang. Kjøping skjer kun dersom det faktisk legges noe ut for salg og pruting skjer kun dersom noe legges ut for salg _og_ kunden ikke har nok penger. 
+
+Mellom "buy item" og "transfer money" har vi derimot brukt "includes". Dette er fordi at penger skal overføres hver gang noe blir kjøpt. 
+
+Vi har også benyttet spesialisering mellom forskellige Actors - Customer og Salesman er begge subtyper av Person. Det er verdt å merke seg at spesialiseringspilen kan brukes mellom usecases også, dersom det er natulig, ikke bare mellom actors. 
+
+
 ### Klassediagram 
 ![Klassediagram](../diagrams/class/class.png) 
-- [ ] Hva modelleres? 
-- [ ] Hva gir diagrammet oss? 
-- [ ] Forskjellige koblinger 
+Vårt klassediagram viser hele programmet vårt. 
+Vi har brukt klassediagrammet aktivt til å vurdere hvorvidt vi følger GRASP-prinsipper, hvor vi bør få med ulike patterns og hvordan prosjektet kan deles inn logisk. Slik har det vært til stor hjelp. 
+
+Vi startet med diagrammet tidlig i prosessen, slik oppgaven foreslår. Etter hvert fikk det mer detaljer og ganske fort nærmet det seg et implementasjosdiagram.
+
+DETALJER OM TANKER OG VALG 
+
+Vi valgte å ha ett stort diagram (fremfor mange små) fordi vi likte den helhelhetelige oversikten det ga oss når vi skulle ta designvurderinger. 
+
+I tillegg til det som står i pensum, har vi blant annet understreket statiske felter, slik som PlantUML foreslår. 
+
 ### Sekvensdiagram 
 ![Sekvensdiagram, ItemFactory](../diagrams/sequence/itemFactory.png)
-![Sekvensdiagram, legge til dekorasjon](../diagrams/sequence/applyDecoration.png)
-- [ ] Hva modelleres? 
-- [ ] Hva gir diagrammet oss? 
-- [ ] Forskjellige koblinger 
-- [ ] Opt vs alt og hvorfor det som er valgt, er valgt 
-- [ ] Nevn annen syntaks som synkron/asynkron
-### Bruksdiagram ("Use case")- [ ] Hva modelleres? 
-![Usecase-diagram](../diagrams/usecase/usecase.png)
-- [ ] Hva gir diagrammet oss? 
-- [ ] Forskjellige koblinger 
-    - [ ] generalisering kan også gjøres mellom use-cases
+Våre sekvensdiagram viser gangen i koden som genererer en ny vare for oss. "Client" representerer en hvilken som helst klasse som kaller `ItemFactory.GetRandomitem()`. 
 
+Dette sekvensdiagrammet sin "ref"-blokk henviser til diagrammet under:
+
+![Sekvensdiagram, legge til dekorasjon](../diagrams/sequence/applyDecoration.png)
+Her har vi valgt å bruke en "alt"-blokk, i og med at det er flere alternativer som vurderes (if/else). Dersom det ikke hadde vært andre alternativer, hadde en "opt"-blokk vært et riktigere valg. 
+
+Vi har ingen asynkrone kall i kodebiten vi har modellert i disse diagrammene. Dersom vi hadde hatt det, hadde interaksjonene blitt tegnet med en annen, åpen pilspiss. 
 
 ## Design patterns 
 Vi har forsøkt å få med mange design patterns. Likevel har vi valgt å fokusere på de som er mest naturlige i vår oppgave, men vi har også med et par som ikke er fullt egnet. Decorator- og Factory-pattern er de to som har fått mest oppmerksomhet. 
