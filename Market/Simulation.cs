@@ -62,8 +62,13 @@ namespace FleaMarket
 
         private static void DisplayEndMessage()
         {
+            List<IItem> items = Market.Instance.GetItems();
+            if (items.Count <= 0)
+            {
+                return;
+            }
             Console.WriteLine("\n\nItems not sold in the market: ");
-            foreach (var item in Market.Instance.GetItems())
+            foreach (var item in items)
             {
                 Console.WriteLine(item.GetInformation());
             }
