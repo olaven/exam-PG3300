@@ -16,7 +16,7 @@ namespace People
         public static readonly PersonImage PersonImage = new PersonImage()
         {
             // Source: https://www.asky.io/191
-            Image = "༼ つ ◕_◕ ༽つ"
+            Image = "<(^_^)>"
         }; 
     }
 }
