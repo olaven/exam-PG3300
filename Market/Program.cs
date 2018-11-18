@@ -10,7 +10,9 @@ namespace FleaMarket
         {
            var simulation = new Simulation();
            simulation.Run();
-            
+           
+           Console.WriteLine("\nPress any key to exit.");
+           Console.ReadKey();
         }
     }
 }
