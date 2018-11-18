@@ -1,5 +1,5 @@
 FØR LEVERING: 
-- [ ] Fjern sjekkpunkter i hele documentation.md
+- [X] Fjern sjekkpunkter i hele documentation.md
 - [ ] Eksporter alle diagrammer på nytt
 - [ ] Legg pdf af dette dokumentet i rot 
 - [ ] Sjekk at løsning kjører som en Visual Studion Solution 

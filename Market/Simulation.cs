@@ -14,17 +14,29 @@ namespace FleaMarket
     /// </summary>
     public class Simulation
     {
-        private readonly Random _random;    
+        private readonly Random _random;
+        private int _tickCount;
+        private int _amountOfItems; 
         
         private readonly List<Salesman> _salesmen;
         // every customer will listen for new items by themselves, through events 
         private readonly List<Customer> _customers;  
         
-
+        /// <summary>
+        /// This is a simulation of a market.
+        ///
+        /// The simulation will run as long as
+        /// each item has been given a chance
+        /// to be bough (everything is not nessecarily
+        /// bought). 
+        /// </summary>
         public Simulation()
         {
             _random = new Random();
-
+            
+            _tickCount = 0; 
+            _amountOfItems = 0;  
+            
             _salesmen = PopulateSalesmen();
             _customers = PopulateCustomers(); 
             
@@ -36,6 +48,12 @@ namespace FleaMarket
             {
                 Thread.Sleep(2000);
                 GetRandomSellers().SellItem(); // may be several sellers / composite 
+
+                _tickCount++; 
+                if (_tickCount > _amountOfItems)
+                {
+                    break;
+                }
             }
         }
 
@@ -70,6 +88,7 @@ namespace FleaMarket
                 {
                     var item = ItemFactory.GetRandomItem(salesman);
                     salesman.GetItems().Add(item);
+                    _amountOfItems++; 
                 }
             }
         }
@@ -88,7 +107,7 @@ namespace FleaMarket
 
         private List<Customer> PopulateCustomers()
         {
-            List<Person> persons = PopulatePersons(PersonType.Customer, 3, 6);
+            var persons = PopulatePersons(PersonType.Customer, 3, 6);
             return persons.Cast<Customer>().ToList(); 
         }
         
