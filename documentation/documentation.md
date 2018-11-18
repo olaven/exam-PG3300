@@ -95,12 +95,13 @@ Controller-prinsippet kan gi god oversikt over hva som skjer og når det skal sk
 ## Diagrammer 
 Vi har brukt [PlantUML](http://plantuml.com/) til å lage diagrammene. Dette har hatt positive og negative konsekvenser. De positive har vært at tegningene alltid følger de samme standardene og at de har blitt lettere å både lese og lage. 
 
-De negative sidene har vært at renderingen ikke alltid er slik vi ville gjort det - noen klasser står litt rart i forhold til hverandre og noen koblinger er litt mer rotete enn de hadde behøvd å være. 
+De negative sidene har vært at renderingen ikke alltid er slik vi ville gjort det - noen klasser står litt rart i forhold til hverandre og noen assiasjoner er litt mer rotete enn de hadde behøvd å være. 
 
 I sum mener vi allikevel at det har gjort diagrammene langt enklere å forholde seg til enn om vi hadde tegnet dem for hånd. 
 
 ### Bruksdiagram ("Use case")
 ![Usecase-diagram](../diagrams/usecase/usecase.png)
+
 Vårt use-case diagram ble laget helt i starten av prosessen. Det var selve grunnlaget for resten av modelleringen og implementeringen 
 
 Vi så for oss et system  der kunder hele tiden var på utkikk etter varer som de kunne kjøpe. Dersom de så en vare, ville de alltid ønske å kjøpe den, selv om de ikke hadde penger til det. Derfor har "looking for items" to muligheter: et kjøps-usecase og et prute-usecase. 
@@ -119,7 +120,19 @@ Vi har brukt klassediagrammet aktivt til å vurdere hvorvidt vi følger GRASP-pr
 
 Vi startet med diagrammet tidlig i prosessen, slik oppgaven foreslår. Etter hvert fikk det mer detaljer og ganske fort nærmet det seg et implementasjosdiagram.
 
-DETALJER OM TANKER OG VALG 
+Mens vi laget klassediagrammet, så vi fort muligheter for arv og agreggering/komposisjon. Dette vises blant annet i `Person`, som arves av `Salesman`og `Customer`. Komposisjon viser vi også her; Person _har_ både en `Wallet`, et `PersonImage` (gjennom flyweight-pointeren) og flere `Item`-instanser.
+
+Vi har inkludert forhold på assosiasjonene der vi mener det er relevant. F.eks har vi presisert at en `Person` har et uvisst antall `Item`-instanser ("*") og bare en `Wallet` ("1"). (Disse er blitt litt små i rendringen av dette forholdsvis store klassediagrammet)
+
+Vi har hatt flere samtaler på gruppen om hvorvidt komposisjon eller agreggering har vært det riktige valget (fylt diamant eller hul diamant). Blant annet har vi diskutert assosiasjonen mellom `Wallet` og `Person`. 
+
+En lommebok slutter ikke å eksistere uten en person. I virkeligheten er de separerte konsepter. I vårt program derimot, gir det aldri mening å ha en lommebok som ikke har en person. En lommebok har også alltid samme eier i programmet. I virkeligheten kan en lommebok ha flere eiere over tid. 
+
+Dette er altså et spørsmål om hvorvidt det er det konseptene skal representere (de virkelige variantene) som skal være toneangivende, eller om bruken i programmet skal være det. 
+
+Når alt kommer til alt er det programmet som skal modelleres, ikke virkeligheten. Derfor konkluderte vi med å se fra programmets perspektiv, ikke virkelighetens. `Wallet` og `Person`er dermed koblet sammen med komposisjon, hvor `Person` er eieren. 
+
+Et `Item` vil derimot ha flere eiere i programmet vårt over tid. Slik vi ser det, er `Item` også mer "frikoblet" fra `Person`enn det `Wallet` er. Dette er definitivt en "edge-case", særlig med tanke på ressonementet vi hadde ovenfor, om å følge programmets regler. I programmet vårt, er et `Item` tross alt bare assosiert med en `Person` _om gangen_. Allikevel er det mest naturlig for oss med aggergering her, silk vi ser det. 
 
 Vi valgte å ha ett stort diagram (fremfor mange små) fordi vi likte den helhelhetelige oversikten det ga oss når vi skulle ta designvurderinger. 
 
@@ -127,6 +140,7 @@ I tillegg til det som står i pensum, har vi blant annet understreket statiske f
 
 ### Sekvensdiagram 
 ![Sekvensdiagram, ItemFactory](../diagrams/sequence/itemFactory.png)
+
 Våre sekvensdiagram viser gangen i koden som genererer en ny vare for oss. "Client" representerer en hvilken som helst klasse som kaller `ItemFactory.GetRandomitem()`. 
 
 Dette sekvensdiagrammet sin "ref"-blokk henviser til diagrammet under:
