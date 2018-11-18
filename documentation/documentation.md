@@ -1,6 +1,7 @@
 # Dokumentasjon 
 - [Dokumentasjon](#dokumentasjon)
     - [Introduksjon](#introduksjon)
+        - [Eksempelkjøring](#eksempelkj%C3%B8ring)
     - [Prosessen](#prosessen)
         - [Planlegging](#planlegging)
         - [Parprogrammering](#parprogrammering)
@@ -35,6 +36,9 @@ Det kan forekomme at en selger forsøker å selge flere ting etter hverandre - d
 Dersom en kunde forsøker å kjøpe en vare de ikke har råd til, vil de forsøke å prute. Hvis selgeren godtar prutingen, får kunden varen til en ny pris. 
 
 Markedet vil (naturlig nok) tape aktivitet så fort kundene går tom for penger. Simuleringen vil etter hvert stoppe når alle varer er forsøkt solgt. 
+
+### Eksempelkjøring
+![Eksempelkjøring, bilde](./eksempelkjoring.png)
 
 
 ## Prosessen 
