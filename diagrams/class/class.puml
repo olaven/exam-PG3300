@@ -54,7 +54,7 @@ namespace item {
     
     class WithWingsModificationItemDecorator extends ItemDecorator{
         + GetPrice() : float
-        + GetModification : string
+        + GetModification() : string
         + WithWingsItemDecorator(original IItem)
     }
 
