@@ -75,7 +75,10 @@ namespace Item
 
         /// <summary>
         /// Gets a list of decorations, chosen at random 
-        /// on the item. 
+        /// on the item.
+        ///
+        /// This is not the most elegant solution. On the other
+        /// hand, it is     quite readable and easy to grasp. 
         /// </summary>
         /// <returns>A list of decorations</returns>
         private static IEnumerable<Decoration> GetRandomDecorations()

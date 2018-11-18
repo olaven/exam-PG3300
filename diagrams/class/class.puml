@@ -79,7 +79,7 @@ namespace People {
         + GetItems() List<IItem>
     }
 
-    Wallet "1" *-- Person
+    Wallet "1" --* Person
     Person -- FleaMarket.Market : trades 
 
 
@@ -170,7 +170,6 @@ namespace FleaMarket {
     }
 
     Program -- "1" Simulation : starts
-    Simulation o-- Market
 
     FleaMarket.Simulation -- item.ItemFactory : gets something to sell 
 

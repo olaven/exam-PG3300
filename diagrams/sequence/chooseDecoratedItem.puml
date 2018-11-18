@@ -1,4 +1,4 @@
-@startuml Choose decorated item 
+@startuml Apply decoration
 
 
 ItemFactory -> ItemFactory 
