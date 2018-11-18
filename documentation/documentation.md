@@ -99,7 +99,7 @@ Controller-prinsippet kan gi god oversikt over hva som skjer og når det skal sk
 - [ ] Forskjellige koblinger 
 ### Sekvensdiagram 
 ![Sekvensdiagram, ItemFactory](../diagrams/sequence/itemFactory.png)
-![Sekvensdiagram, Velge dekorert item](../diagrams/sequence/chooseDecoratedItem.png)
+![Sekvensdiagram, legge til dekorasjon](../diagrams/sequence/applyDecoration.png)
 - [ ] Hva modelleres? 
 - [ ] Hva gir diagrammet oss? 
 - [ ] Forskjellige koblinger 
