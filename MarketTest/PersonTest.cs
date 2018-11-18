@@ -36,7 +36,9 @@ namespace MarketTest
             var previousAmount = salesman.Wallet.Balance;
             salesman.GetItems().Add(ItemFactory.GetRandomItem(salesman));
             salesman.SellItem();
-            Thread.Sleep(300);
+            
+            // Waiting for the logic in other threads to finish 
+            Thread.Sleep(300); 
 
             Assert.That(previousAmount, Is.LessThan(salesman.Wallet.Balance));
         }
@@ -71,6 +73,8 @@ namespace MarketTest
                 salesman.GetItems().Add(ItemFactory.GetRandomItem(salesman));
                 salesman.SellItem();
             }
+            
+            // Waiting for the logic in other threads to finish 
             Thread.Sleep(500);
 
             int uniqueCount = 0;
