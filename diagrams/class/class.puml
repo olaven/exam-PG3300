@@ -40,9 +40,23 @@ namespace item {
     ItemDecorator "1" o-- Item 
 
 
-    class PerfectConditionItemDecorator extends ItemDecorator
-    class NoDamageItemDecorator extends ItemDecorator
-    class WithWingsModificationItemDecorator extends ItemDecorator
+    class PerfectConditionItemDecorator extends ItemDecorator{
+        + GetPrice() : float
+        + GetCondition() : string
+        + PerfectConditionItemDecorator(original IItem)
+    }
+    
+    class NoDamageItemDecorator extends ItemDecorator{
+        + GetPrice() : float
+        + GetDamage() : string
+        + NoDamageItemDecorator(original IItem)
+    }
+    
+    class WithWingsModificationItemDecorator extends ItemDecorator{
+        + GetPrice() : float
+        + GetModification : string
+        + WithWingsItemDecorator(original IItem)
+    }
 
     note "More in implementation" as MoreInImplementation
     MoreInImplementation .. ItemDecorator
@@ -90,9 +104,12 @@ namespace People {
     }
 
     class Salesman extends Person {
+        - _totalItemCount : int
+        + Haggle(priceOfItem : float, customerBalance : float) : bool
         + Salesman(name : string)
         + SellItem() : void
         + Haggle(priceOfItem : float, customerBalance : float) : bool
+        + GetItemCount() : int
     }
 
     class CompositeSalesman extends Salesman {

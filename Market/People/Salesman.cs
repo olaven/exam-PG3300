@@ -9,7 +9,7 @@ namespace People
 {
     public class Salesman : Person
     {
-        private int _totalItemCount = 0;
+        private int _totalItemCount;
         public Salesman(string name) : base(name)
         {}
         
