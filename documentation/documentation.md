@@ -28,9 +28,14 @@ Vår oppgave har vært å simulere et loppemarked.
 Noen av menneskene på markedet er selgere og noen er kunder. Så fort en vare blir lagt ut for salg, forsøker samtlige kunder å kjøpe varen. Hver kunde har en reaksjonstid som varierer litt for hver gang. 
 Flere selgere kan legge ut varer samtidig. 
 
+Når programmet kjører kan man forvente følgende: Et semi-tilfeldig antall selgere velges ut, og det samme med kunder. Kundene har et gitt beløp i lommeboken sin når simuleringen starter. I hver "tick" velges et tilfeldig knippe av selgerene, som selger gjenstander dersom de har dem. 
+
+Det kan forekomme at en selger forsøker å selge flere ting etter hverandre - den samme selgeren kan bli valgt til å selge to ganger i samme "tick". 
+
 Dersom en kunde forsøker å kjøpe en vare de ikke har råd til, vil de forsøke å prute. Hvis selgeren godtar prutingen, får kunden varen til en ny pris. 
 
-Markedet vil (naturlig nok) tape aktivitet så fort kundene går tom for penger og simuleringen vil etter hvert stoppe seg selv.
+Markedet vil (naturlig nok) tape aktivitet så fort kundene går tom for penger. Simuleringen vil etter hvert stoppe når alle varer er forsøkt solgt. 
+
 
 ## Prosessen 
 ### Planlegging 
