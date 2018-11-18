@@ -18,6 +18,7 @@ namespace People
         public EventHandler Handler;
         
         private readonly object _staticLock = new object(); 
+        private readonly object _getLock = new object(); 
         private static readonly object Padlock = new object();
 
         //private to prohibit instantiation of market object for other classes.
@@ -44,6 +45,14 @@ namespace People
             }
         }
 
+        public List<IItem> GetItems()
+        {
+            lock (_getLock )
+            {
+                return _items;
+            }
+        }
+        
         public void AddItem(IItem item)
         {
             lock (_staticLock)
@@ -73,7 +82,7 @@ namespace People
                 var salesman = (Salesman) item.Owner;
                 var priceOfItem = item.GetPrice();
 
-                if (customer.Wallet >= priceOfItem || salesman.Haggle(priceOfItem, customerBalance))
+                if (customer.Wallet >= priceOfItem )
                 {
                     DoTransaction(customer, salesman, item, false);
                 } else if (salesman.Haggle(priceOfItem, customerBalance))
@@ -97,8 +106,14 @@ namespace People
             
             item.Owner = customer;
             customer.GetItems().Add(item);
-
-            Console.WriteLine("{0, 50} bought {1} {2}", customer.Name, item.GetInformation(), customer.Image);
+            if (isBargain)
+            {
+                Console.WriteLine("{0, 50} haggled for {1} and only paid {2},- {3}", customer.Name, item.GetInformation(), realCost, customer.Image);
+            }
+            else
+            {
+                Console.WriteLine("{0, 50} bought {1} {2}", customer.Name, item.GetInformation(), customer.Image);
+            }
         }
     }
 }
