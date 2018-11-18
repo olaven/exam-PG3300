@@ -1,7 +1,7 @@
 FØR LEVERING: 
 - [X] Fjern sjekkpunkter i hele documentation.md
 - [ ] Eksporter alle diagrammer på nytt
-- [ ] Legg pdf af dette dokumentet i rot 
+- [ ] Legg pdf av dette dokumentet i rot 
 - [ ] Sjekk at løsning kjører som en Visual Studion Solution 
 - [ ] Legg ved en .exe-fil 
 - [ ] Fjern sjekkpunkter i hele documentation.md
@@ -45,6 +45,10 @@ Markedet vil (naturlig nok) tape aktivitet så fort kundene går tom for penger.
 ### Planlegging 
 Vi startet prosessen vår med å kladde notater på et digitalt notatark. Vi ønsket å fokusere på å få med design patterns og snakket fort om hvor hvilke patterns kunne høre hjemme. Vi repeterte også deler av pensum for å vite hva vi skulle tenke på når vi fortsatte. Vi bestemte oss også tidlig for å bruke samme IDE for at vi skulle ha like referanserammer dersom problemer skulle oppstå. I og med at to på gruppen bruker Mac, landet vi på [Jetbrains' Rider](https://www.jetbrains.com/rider/) ganske fort. Vår erfaring var at [Visual Studio for Mac](https://visualstudio.microsoft.com/vs/mac/) var dårligere i bruk enn Windows-motparten. Vi har allikevel brukt Visual Studio innimellom for å være sikker på at prosjektet oppførte seg likt begge steder. 
 
+Vi startet med å tegne diagrammer. Vi bygget på dem og snakket om hvordan løsnigen skulle fungere. Vi landet på at vi ønsket et sluttprodukt som gjorde omtrent det samme som det oppgaveeksemplene gjorde. Vi kunne lagt inn enda mer ekstra funksjonalitet enn vi har gjort, men slik vi leste oppgaven, var det ikke det som skulle være fokus. 
+
+Vi hadde en rekke samtaler om hvordan diagrammene skulle bygges opp og hvilke patterns vi skulle prioritere. Disse samtalene kommer frem i dette dokumentet. 
+
 ### Parprogrammering 
 Vi har brukt parprogrammering flere ganger, på store deler av prosjektet. Vår gruppe besto av tre mennesker, og iblant har vi også jobbet tre på samme datamaskin. Dette gjelder blant annet multithreading-koden, decorator-patternet og factory-klassene. 
 
@@ -58,6 +62,7 @@ Opplevelsen var hyggelig og lærerik til tross for disse potensielle ulempene.
 Vi har jobbet på forskjelige steder. Blant annet hjemme hos gruppemedlemmer, på skolen og over nett, med chat-tjenester som [Discord](https://discordapp.com/). De gangene vi ikke var enige om hvor og hvordan vi skulle jobbe, kom vi fort til enighet, gjerne samme morgen. 
 
 Vi har brukt Git og Github for deling av kode gjennom et privat repository som bare gruppemedlemmene hadde tilgang til. Alle på gruppen har brukt Git tidligere, både på skole og fritid/jobb, så det gikk stort sett knirkefritt. 
+
 ### prioriteringer  
 I vårt prosjekt har vi fokusert på å få med patterns. Vi har (som oppgaven nevner) presset inn noen deler av pensum selv om det ikke har vært fullstendig naturlig. Allikevel har vi ikke ønsket å ta det helt ut. I dette dokumentet kommer jeg til å gå i dypere detalj på forskjellige områder, men kort oppsummert har vi fokusert på logisk fordeling av oppgaver og ønske om presis kode som er lett å vedlikeholde. Med dette har vi dekket flere [GRASP-prinsippper](#GRASP). 
 

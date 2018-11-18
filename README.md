@@ -9,7 +9,5 @@ Den kan derimot bygges manuelt med `dotnet publish -c Release -r win10-x64`
 [Dokumentasjon](./documentation/documentation.pdf)
 
 ## Todos 
-- [ ] Få programmet til å stoppe 
-- [ ] En test-klasse til? 
-- [ ] Skriv om hva som er testet i dokumentasjon 
+- [X] Få programmet til å stoppe 
 - [ ] Litt mer om vår arbeidsprosess
