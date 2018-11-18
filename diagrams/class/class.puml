@@ -12,7 +12,7 @@ namespace item {
         ~ GetInformation() : String 
     }
 
-    Item o-- "1" People.Person 
+    People.Person o-- "*" Item
 
     class ConcreteItem implements Item {
         / Name : String 
@@ -84,14 +84,12 @@ namespace People {
 
 
     class Customer extends Person {
-        / act : void 
         + Customer(name : string)
         - AttemptBut(e : EventArgs) : void
         
     }
 
     class Salesman extends Person {
-        / act void 
         + Salesman(name : string)
         + SellItem() : void
         + Haggle(priceOfItem : float, customerBalance : float) : bool
@@ -172,9 +170,9 @@ namespace FleaMarket {
     }
 
     Program -- "1" Simulation : starts
-    Simulation o-- "*" Market
+    Simulation o-- Market
 
-    People.Salesman -- item.ItemFactory : gets something to sell 
+    FleaMarket.Simulation -- item.ItemFactory : gets something to sell 
 
 }
 
