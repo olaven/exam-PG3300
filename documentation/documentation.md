@@ -160,26 +160,14 @@ Vår `ItemFactory` kunne bruke Decorator til å bygge opp forskjellige varer. Vi
 
 Singleton-patternet brukes også. Vi har valgt å bruke det i `Market` fordi vi vil garantere at alle `Person`-instanser forholder seg til samme marked. Dette er ikke en feil bruk av patternet, men er heller ikke et like naturlig valg som de patternene over, men vi har det hovedsakelig med for å demonstrere det. 
 
-Façade handler om å pakke inn større funksjonalitet med mer lettfattelige grensesnitt. Vi har ikke noe tydelig eksempel hvor dette gjøres veldig eksplisitt, men vi gjør det stadig vekk når vi programmerer, blandt annet i `Market` sin `BuyItem`-metode. 
-SKRIV MEG
-TODO SKRIV MEG
-TODO: SKRIV MEG
-      Marketfacade.sellItem -> MarketFacade -> Market.FindBuyer, Market.findSeller,                                 Market.ConsiderbalanceOfCustomer, Market.GiveMoneyFromSeller,               Market.RemoveMoneyFromCustomer.  
-SKRIV MEG 
-SKRIV meg
-
+Façade handler om å pakke inn større funksjonalitet med mer lettfattelige grensesnitt. Vi har ikke noe tydelig eksempel hvor dette gjøres veldig eksplisitt, men vi gjør det til en viss grad stadig vekk når vi programmerer, blant annet i `Market` sin `BuyItem`-metode. Den metode gir et enkelt grensesnitt for den som kaller metoden, selv om den gjør mer kompliserte ting "under panseret". Det samme gjelder `Simulation`. Den tilbyr kun `.run()`, men funksjonaliteten som kommer basert på det kallet er langt mer kompleks enn det `Proram`-klassen (som kaller den) forholder seg til. 
 
 Da vi skrev `Simulation`-klassen ønsket vi å hente èn eller flere tilfeldige selgere som kunne selge varene sine. Vi oppdaget fort at dette var en perfekt mulighet til å benytte oss av Composite-patternet. Vi ønsket å kunne ha samme kode når vi kun jobbet med èn, som når vi jobbet med flere selgere. Et annet ønske var at dette skulle se ryddig ut. Composite-patternet lot oss gjøre nettopp dette. 
 
+Model View Controller handler om å separere programmet inn i lag hvor model-laget holder programmets tilstand (state), view-laget handler om hvordan man skal presentere tilstanden, og control-laget kommuniserer mellom og oppdaterer de to andre lagene. 
+Slik vi ser det er dette patternet mest relevant i programmer som håndterer brukerinput. Funksjonaliteten vår ligger ganske nær den som presenteres i oppgaven. Med den funksjonaliteten tatt i betraktning, har vi valgt å nedprioritere dette patternet. Vi mener allikevel at vi har med såpass mange patterns i vår oppgave at dette ikke burde gå på bekostning av dens kvalitet. 
+
 Flyweight handler om å håndtere lik informasjon på en plassbesparende måte. Det være seg grafikk, bilder, eller større dataset. Vi fant ingen naturlig plass for dette i vårt prosjekt, i og med at det ikke er så mye av dette, men vi har tatt det med for å demonstrere muligheten. "Grafikken" som deles er en liten ASCII-emoji som alle `Person`-instanser har til felles. 
-
-Model View Controller handler om å separere programmet inn i lag hvor model-laget holder programmets tilstand (state), view-laget handler om hvordan man skal presentere tilstanden, control-laget kommuniserer mellom og oppdaterer de to andre lagene. Slik vi ser det er dette patternet mest relevant i programmer som håndterer brukerinput. 
-SKRIV MEG 
-SKRIV MEG
-
-
-
-
 
 
 ## Trådsikkerhet 
@@ -233,7 +221,7 @@ Microsoft [sier selv](https://docs.microsoft.com/en-us/dotnet/standard/design-gu
 Regioner er en måte å dele opp koden. Regionene legger ikke på funksjonalitet, men kan gjøre det mer oversiktelig for programmereren å gå gjennom den. Vi har anvendt regioner flere steder, blant annet i Simulation-klassen og i ItemFactory. 
 
 ### Kommentarer
-Som hovedregel har vi kommentert koden der vi har følt at det var nødvendig. Det vil si at vi ikke har kommentert der vi mener koden snakker for seg selv. Vi har anvendt C#-doc stil på kommentarene. I blandt kan disse være unødvendig detaljerte. Vi har likevel ønsket å ha det slik for å demonstrere forskjellige tags og liknende. Vi har også kommentert koden der vi kun bruker et konsept for å demonstrere det, slik som oppgaven ber om.
+Som hovedregel har vi kommentert koden der vi har følt at det var nødvendig. Det vil si at vi ikke har kommentert der vi mener koden snakker for seg selv. Vi har anvendt C#-doc stil på kommentarene. I blant kan disse være unødvendig detaljerte. Vi har likevel ønsket å ha det slik for å demonstrere forskjellige tags og liknende. Vi har også kommentert koden der vi kun bruker et konsept for å demonstrere det, slik som oppgaven ber om.
 
 ### Filstruktur 
 Vi har valgt en pragmatisk og praktisk tilnærming til filstrukturering. Dette har passet oss godt fordi vi har likt å tilpasse filstrukturen etter hvert som prosjektet vokser og behovene kommer. Opplevelsen vår er at vi lærer mer av den kontinuerlige utviklingen enn av å planlegge all struktur på forhånd, for så å følge malen slavisk. 
