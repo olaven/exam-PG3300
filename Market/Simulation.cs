@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
@@ -46,7 +47,7 @@ namespace FleaMarket
         {
             while (true)
             {
-                Thread.Sleep(2000);
+                Thread.Sleep(1000);
                 GetRandomSellers().SellItem(); // may be several sellers / composite 
 
                 _tickCount++; 
@@ -54,6 +55,17 @@ namespace FleaMarket
                 {
                     break;
                 }
+            }
+
+            DisplayEndMessage();
+        }
+
+        private static void DisplayEndMessage()
+        {
+            Console.WriteLine("\n\nItems not sold in the market: ");
+            foreach (var item in Market.Instance.GetItems())
+            {
+                Console.WriteLine(item.GetInformation());
             }
         }
 

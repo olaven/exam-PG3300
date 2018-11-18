@@ -13,7 +13,7 @@ namespace People
 
         public Wallet()
         {
-            Balance = new Random().Next(800, 1000);
+            Balance = new Random().Next(650, 850);
         }
         
         /*
