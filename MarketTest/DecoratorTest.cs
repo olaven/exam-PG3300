@@ -59,7 +59,7 @@ namespace MarketTest
         {
             _item = new TerribleConditionItemDecorator(_item);
             
-            Assert.That(_item.GetPrice() < 100, Is.True);
+            Assert.That(_item.GetPrice(), Is.LessThan(100)); // 100 is init price
         }
     }
 }
